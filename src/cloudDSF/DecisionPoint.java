@@ -4,15 +4,17 @@ import java.util.HashMap;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-public class DecisionPoint {
-	private final String type = "decisionPoint";
-	private String label;
-	private String classification;
-	// parent has to return null in json
-	private int parent = 0;
-	private int id;
+import com.google.gson.annotations.SerializedName;
 
+public class DecisionPoint {
+	private int id;
+	private final String type = "decisionPoint";
+	private int parent;
+	private String classification;
+	private String label;
+	
 	private transient HashMap<String, Decision> decisions = new HashMap<String, Decision>();
+	@SerializedName("children")
 	private SortedMap<Integer, Decision> decisionsSorted = new TreeMap<Integer, Decision>();
 
 	public DecisionPoint(String label, int id, String classification) {

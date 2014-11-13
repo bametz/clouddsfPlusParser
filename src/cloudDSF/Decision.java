@@ -3,15 +3,19 @@ package cloudDSF;
 import java.util.HashMap;
 import java.util.TreeMap;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Decision {
-	private String label;
-	private String classification;
-	private int parent;
 	private int id;
 	private final String type = "decision";
+	private int parent;
+	private String classification;
+	private String label;
 
 	private transient HashMap<String, Outcome> outcomes = new HashMap<String, Outcome>();
+	@SerializedName("children")
 	private TreeMap<Integer, Outcome> outcomesSorted = new TreeMap<Integer, Outcome>();
+
 
 	public Decision(String label, String classification, int id, int parent) {
 		this.label = label;

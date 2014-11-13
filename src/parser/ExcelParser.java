@@ -1,7 +1,6 @@
 package parser;
 
-import java.io.File;
-import java.io.FileInputStream;
+import java.io.InputStream;
 import java.util.HashMap;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -20,9 +19,9 @@ public class ExcelParser {
 		// TODO Auto-generated method stub
 		CloudDSF cdsf = new CloudDSF();
 		try {
-			FileInputStream file = new FileInputStream(new File(filePath));
 			// Create Workbook instance holding reference to .xlsx file
-			XSSFWorkbook workbook = new XSSFWorkbook(file);
+			InputStream in = getClass().getResourceAsStream(filePath);
+			XSSFWorkbook workbook = new XSSFWorkbook(in);
 			// Get first/desired sheet from the workbook
 			XSSFSheet sheet = workbook.getSheetAt(0);
 			String decisionName = "";
@@ -107,7 +106,7 @@ public class ExcelParser {
 				}
 			}
 
-			file.close();
+			// file.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

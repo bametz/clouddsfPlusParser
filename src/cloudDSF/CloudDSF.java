@@ -4,9 +4,40 @@ import java.util.HashMap;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+import com.google.gson.annotations.SerializedName;
+
 public class CloudDSF {
+	private int id;
+	private String type;
+	private String label;
+	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getLabel() {
+		return label;
+	}
+
+	public void setLabel(String label) {
+		this.label = label;
+	}
 
 	private transient HashMap<String, DecisionPoint> decisionPoints = new HashMap<String, DecisionPoint>();
+	@SerializedName("children")
 	private SortedMap<Integer, DecisionPoint> decisionPointsSorted = new TreeMap<Integer, DecisionPoint>();
 
 	public HashMap<String, DecisionPoint> getDecisionPoints() {
