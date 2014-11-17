@@ -1,0 +1,1401 @@
+{
+  "decisionTree": {
+    "id": -1,
+    "type": "root",
+    "label": "Decision Points",
+    "children": [
+      {
+        "id": 1,
+        "type": "decisionPoint",
+        "parent": 0,
+        "classification": "Cloud Migration specific / Application Migration in General",
+        "label": "Distribute Application",
+        "children": [
+          {
+            "id": 101,
+            "type": "decision",
+            "parent": 1,
+            "classification": "Application Migration in General",
+            "label": "Select Application Layer",
+            "children": [
+              {
+                "id": 10101,
+                "type": "outcome",
+                "parent": 101,
+                "weight": 0.143,
+                "label": "Presentation Layer"
+              },
+              {
+                "id": 10102,
+                "type": "outcome",
+                "parent": 101,
+                "weight": 0.143,
+                "label": "Business Layer"
+              },
+              {
+                "id": 10103,
+                "type": "outcome",
+                "parent": 101,
+                "weight": 0.143,
+                "label": "Resource Layer"
+              },
+              {
+                "id": 10104,
+                "type": "outcome",
+                "parent": 101,
+                "weight": 0.143,
+                "label": "Presentation + Business Layer"
+              },
+              {
+                "id": 10105,
+                "type": "outcome",
+                "parent": 101,
+                "weight": 0.143,
+                "label": "Presentation + Resource Layer"
+              },
+              {
+                "id": 10106,
+                "type": "outcome",
+                "parent": 101,
+                "weight": 0.143,
+                "label": "Business + Resource Layer"
+              },
+              {
+                "id": 10107,
+                "type": "outcome",
+                "parent": 101,
+                "weight": 0.143,
+                "label": "Presentation + Business + Resource Layer"
+              }
+            ]
+          },
+          {
+            "id": 102,
+            "type": "decision",
+            "parent": 1,
+            "classification": "Application Migration in General",
+            "label": "Select Application Tier",
+            "children": [
+              {
+                "id": 10201,
+                "type": "outcome",
+                "parent": 102,
+                "weight": 0.143,
+                "label": "Client Tier"
+              },
+              {
+                "id": 10202,
+                "type": "outcome",
+                "parent": 102,
+                "weight": 0.143,
+                "label": "Application Tier"
+              },
+              {
+                "id": 10203,
+                "type": "outcome",
+                "parent": 102,
+                "weight": 0.143,
+                "label": "Data Tier"
+              },
+              {
+                "id": 10204,
+                "type": "outcome",
+                "parent": 102,
+                "weight": 0.143,
+                "label": "Client + Application Tier"
+              },
+              {
+                "id": 10205,
+                "type": "outcome",
+                "parent": 102,
+                "weight": 0.143,
+                "label": "Client + Data Tier"
+              },
+              {
+                "id": 10206,
+                "type": "outcome",
+                "parent": 102,
+                "weight": 0.143,
+                "label": "Application + Data Tier"
+              },
+              {
+                "id": 10207,
+                "type": "outcome",
+                "parent": 102,
+                "weight": 0.143,
+                "label": "Client + Application + Data Tier"
+              }
+            ]
+          },
+          {
+            "id": 103,
+            "type": "decision",
+            "parent": 1,
+            "classification": "Application Migration in General",
+            "label": "Select Application Components",
+            "children": [
+              {
+                "id": 10301,
+                "type": "outcome",
+                "parent": 103,
+                "weight": 0.125,
+                "label": "Application Component"
+              },
+              {
+                "id": 10302,
+                "type": "outcome",
+                "parent": 103,
+                "weight": 0.125,
+                "label": "Application Components"
+              },
+              {
+                "id": 10303,
+                "type": "outcome",
+                "parent": 103,
+                "weight": 0.125,
+                "label": "Middleware Component"
+              },
+              {
+                "id": 10304,
+                "type": "outcome",
+                "parent": 103,
+                "weight": 0.125,
+                "label": "Middleware Components"
+              },
+              {
+                "id": 10305,
+                "type": "outcome",
+                "parent": 103,
+                "weight": 0.125,
+                "label": "Application + Middleware Component"
+              },
+              {
+                "id": 10306,
+                "type": "outcome",
+                "parent": 103,
+                "weight": 0.125,
+                "label": "Application Component + Middleware Components"
+              },
+              {
+                "id": 10307,
+                "type": "outcome",
+                "parent": 103,
+                "weight": 0.125,
+                "label": "Middleware Component + Application Components"
+              },
+              {
+                "id": 10308,
+                "type": "outcome",
+                "parent": 103,
+                "weight": 0.125,
+                "label": "Application + Middleware Components"
+              }
+            ]
+          },
+          {
+            "id": 104,
+            "type": "decision",
+            "parent": 1,
+            "classification": "Cloud Migration specific",
+            "label": "Select Migration Type",
+            "children": [
+              {
+                "id": 10401,
+                "type": "outcome",
+                "parent": 104,
+                "weight": 0.25,
+                "label": "Migration Type I"
+              },
+              {
+                "id": 10402,
+                "type": "outcome",
+                "parent": 104,
+                "weight": 0.25,
+                "label": "Migration Type II"
+              },
+              {
+                "id": 10403,
+                "type": "outcome",
+                "parent": 104,
+                "weight": 0.25,
+                "label": "Migration Type III"
+              },
+              {
+                "id": 10404,
+                "type": "outcome",
+                "parent": 104,
+                "weight": 0.25,
+                "label": "Migration Type IV"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": "decisionPoint",
+        "parent": 0,
+        "classification": "Cloud Migration specific / Application Migration in General",
+        "label": "Define Elasticity Strategy",
+        "children": [
+          {
+            "id": 201,
+            "type": "decision",
+            "parent": 2,
+            "classification": "Cloud Migration specific / Application Migration in General",
+            "label": "Define Scalability Level",
+            "children": [
+              {
+                "id": 20101,
+                "type": "outcome",
+                "parent": 201,
+                "weight": 0.125,
+                "label": "No Scaling"
+              },
+              {
+                "id": 20102,
+                "type": "outcome",
+                "parent": 201,
+                "weight": 0.125,
+                "label": "OS/VM Level Scaling"
+              },
+              {
+                "id": 20103,
+                "type": "outcome",
+                "parent": 201,
+                "weight": 0.125,
+                "label": "Middleware Level Scaling"
+              },
+              {
+                "id": 20104,
+                "type": "outcome",
+                "parent": 201,
+                "weight": 0.125,
+                "label": "Application Level Scaling"
+              },
+              {
+                "id": 20105,
+                "type": "outcome",
+                "parent": 201,
+                "weight": 0.125,
+                "label": "OS/VM + Middleware Level Scaling"
+              },
+              {
+                "id": 20106,
+                "type": "outcome",
+                "parent": 201,
+                "weight": 0.125,
+                "label": "OS/VM + Application Level Scaling"
+              },
+              {
+                "id": 20107,
+                "type": "outcome",
+                "parent": 201,
+                "weight": 0.125,
+                "label": "Middleware + Application Level Scaling"
+              },
+              {
+                "id": 20108,
+                "type": "outcome",
+                "parent": 201,
+                "weight": 0.125,
+                "label": "OS/VM + Middleware + Application Level Scaling"
+              }
+            ]
+          },
+          {
+            "id": 202,
+            "type": "decision",
+            "parent": 2,
+            "classification": "Cloud Migration specific / Application Migration in General",
+            "label": "Select Scaling Type",
+            "children": [
+              {
+                "id": 20201,
+                "type": "outcome",
+                "parent": 202,
+                "weight": 0.333,
+                "label": "Vertical Scaling"
+              },
+              {
+                "id": 20202,
+                "type": "outcome",
+                "parent": 202,
+                "weight": 0.333,
+                "label": "Horizontal Scaling"
+              },
+              {
+                "id": 20203,
+                "type": "outcome",
+                "parent": 202,
+                "weight": 0.333,
+                "label": "Hybrid Scaling"
+              }
+            ]
+          },
+          {
+            "id": 203,
+            "type": "decision",
+            "parent": 2,
+            "classification": "Cloud Migration specific / Application Migration in General",
+            "label": "Select Elasticity Automation Degree",
+            "children": [
+              {
+                "id": 20301,
+                "type": "outcome",
+                "parent": 203,
+                "weight": 0.2,
+                "label": "Manual Scaling"
+              },
+              {
+                "id": 20302,
+                "type": "outcome",
+                "parent": 203,
+                "weight": 0.2,
+                "label": "Semi-Automatic Scaling"
+              },
+              {
+                "id": 20303,
+                "type": "outcome",
+                "parent": 203,
+                "weight": 0.2,
+                "label": "Semi-Automatic Third-Party Scaling"
+              },
+              {
+                "id": 20304,
+                "type": "outcome",
+                "parent": 203,
+                "weight": 0.2,
+                "label": "Automatic Scaling"
+              },
+              {
+                "id": 20305,
+                "type": "outcome",
+                "parent": 203,
+                "weight": 0.2,
+                "label": "Automatic Third-Party Scaling"
+              }
+            ]
+          },
+          {
+            "id": 204,
+            "type": "decision",
+            "parent": 2,
+            "classification": "Cloud Migration specific / Application Migration in General",
+            "label": "Select Scaling Trigger",
+            "children": [
+              {
+                "id": 20401,
+                "type": "outcome",
+                "parent": 204,
+                "weight": 0.333,
+                "label": "No Trigger"
+              },
+              {
+                "id": 20402,
+                "type": "outcome",
+                "parent": 204,
+                "weight": 0.333,
+                "label": "Event-Driven Trigger"
+              },
+              {
+                "id": 20403,
+                "type": "outcome",
+                "parent": 204,
+                "weight": 0.333,
+                "label": "Proactive Trigger"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "type": "decisionPoint",
+        "parent": 0,
+        "classification": "Cloud Migration specific",
+        "label": "Define Multi-Tenancy Requirements",
+        "children": [
+          {
+            "id": 301,
+            "type": "decision",
+            "parent": 3,
+            "classification": "Cloud Migration specific",
+            "label": "Select Multi-Tenancy Architecture",
+            "children": [
+              {
+                "id": 30101,
+                "type": "outcome",
+                "parent": 301,
+                "weight": 0.25,
+                "label": "Multi-Tenancy Architecture 0"
+              },
+              {
+                "id": 30102,
+                "type": "outcome",
+                "parent": 301,
+                "weight": 0.25,
+                "label": "Multi-Tenancy Architecture 1"
+              },
+              {
+                "id": 30103,
+                "type": "outcome",
+                "parent": 301,
+                "weight": 0.25,
+                "label": "Multi-Tenancy Architecture 2"
+              },
+              {
+                "id": 30104,
+                "type": "outcome",
+                "parent": 301,
+                "weight": 0.25,
+                "label": "Multi-Tenancy Architecture 3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "type": "decisionPoint",
+        "parent": 0,
+        "classification": "Cloud Migration specific / Application Migration in General",
+        "label": "Select Service Provider / Offering",
+        "children": [
+          {
+            "id": 401,
+            "type": "decision",
+            "parent": 4,
+            "classification": "Cloud Migration specific",
+            "label": "Select Cloud Deployment Model",
+            "children": [
+              {
+                "id": 40101,
+                "type": "outcome",
+                "parent": 401,
+                "weight": 0.25,
+                "label": "Public Cloud"
+              },
+              {
+                "id": 40102,
+                "type": "outcome",
+                "parent": 401,
+                "weight": 0.25,
+                "label": "Private Cloud"
+              },
+              {
+                "id": 40103,
+                "type": "outcome",
+                "parent": 401,
+                "weight": 0.25,
+                "label": "Community Cloud"
+              },
+              {
+                "id": 40104,
+                "type": "outcome",
+                "parent": 401,
+                "weight": 0.25,
+                "label": "Hybrid Cloud "
+              }
+            ]
+          },
+          {
+            "id": 402,
+            "type": "decision",
+            "parent": 4,
+            "classification": "Cloud Migration specific",
+            "label": "Select Cloud Service Model",
+            "children": [
+              {
+                "id": 40201,
+                "type": "outcome",
+                "parent": 402,
+                "weight": 0.143,
+                "label": "IaaS"
+              },
+              {
+                "id": 40202,
+                "type": "outcome",
+                "parent": 402,
+                "weight": 0.143,
+                "label": "PaaS "
+              },
+              {
+                "id": 40203,
+                "type": "outcome",
+                "parent": 402,
+                "weight": 0.143,
+                "label": "SaaS"
+              },
+              {
+                "id": 40204,
+                "type": "outcome",
+                "parent": 402,
+                "weight": 0.143,
+                "label": "IaaS + PaaS"
+              },
+              {
+                "id": 40205,
+                "type": "outcome",
+                "parent": 402,
+                "weight": 0.143,
+                "label": "IaaS + SaaS"
+              },
+              {
+                "id": 40206,
+                "type": "outcome",
+                "parent": 402,
+                "weight": 0.143,
+                "label": "PaaS + SaaS"
+              },
+              {
+                "id": 40207,
+                "type": "outcome",
+                "parent": 402,
+                "weight": 0.143,
+                "label": "Iaas + PaaS + SaaS"
+              }
+            ]
+          },
+          {
+            "id": 403,
+            "type": "decision",
+            "parent": 4,
+            "classification": "Cloud Migration specific / Application Migration in General",
+            "label": "Define Cloud Hosting",
+            "children": [
+              {
+                "id": 40301,
+                "type": "outcome",
+                "parent": 403,
+                "weight": 0.333,
+                "label": "On-Premise Hosting"
+              },
+              {
+                "id": 40302,
+                "type": "outcome",
+                "parent": 403,
+                "weight": 0.333,
+                "label": "Off-Premise Hosting"
+              },
+              {
+                "id": 40303,
+                "type": "outcome",
+                "parent": 403,
+                "weight": 0.333,
+                "label": "Hybrid Hosting"
+              }
+            ]
+          },
+          {
+            "id": 404,
+            "type": "decision",
+            "parent": 4,
+            "classification": "Cloud Migration specific / Application Migration in General",
+            "label": "Define Roles of Responsibility",
+            "children": [
+              {
+                "id": 40401,
+                "type": "outcome",
+                "parent": 404,
+                "weight": 0.143,
+                "label": "Role Set 1"
+              },
+              {
+                "id": 40402,
+                "type": "outcome",
+                "parent": 404,
+                "weight": 0.143,
+                "label": "Role Set 7"
+              },
+              {
+                "id": 40403,
+                "type": "outcome",
+                "parent": 404,
+                "weight": 0.143,
+                "label": "Role Set 8"
+              },
+              {
+                "id": 40404,
+                "type": "outcome",
+                "parent": 404,
+                "weight": 0.143,
+                "label": "Role Set 1 + 7"
+              },
+              {
+                "id": 40405,
+                "type": "outcome",
+                "parent": 404,
+                "weight": 0.143,
+                "label": "Role Set 1 + 8"
+              },
+              {
+                "id": 40406,
+                "type": "outcome",
+                "parent": 404,
+                "weight": 0.143,
+                "label": "Role Set 7 + 8"
+              },
+              {
+                "id": 40407,
+                "type": "outcome",
+                "parent": 404,
+                "weight": 0.143,
+                "label": "Role Set 1 + 7 + 8"
+              }
+            ]
+          },
+          {
+            "id": 405,
+            "type": "decision",
+            "parent": 4,
+            "classification": "Cloud Migration specific / Application Migration in General",
+            "label": "Select Cloud Vendor",
+            "children": [
+              {
+                "id": 40501,
+                "type": "outcome",
+                "parent": 405,
+                "weight": 1.0,
+                "label": "Evaluated Cloud Vendor"
+              }
+            ]
+          },
+          {
+            "id": 406,
+            "type": "decision",
+            "parent": 4,
+            "classification": "Cloud Migration specific",
+            "label": "Select Pricing Model",
+            "children": [
+              {
+                "id": 40601,
+                "type": "outcome",
+                "parent": 406,
+                "weight": 0.2,
+                "label": "Free"
+              },
+              {
+                "id": 40602,
+                "type": "outcome",
+                "parent": 406,
+                "weight": 0.2,
+                "label": "Pay-Per-Use"
+              },
+              {
+                "id": 40603,
+                "type": "outcome",
+                "parent": 406,
+                "weight": 0.2,
+                "label": "Pay-Per-Unit"
+              },
+              {
+                "id": 40604,
+                "type": "outcome",
+                "parent": 406,
+                "weight": 0.2,
+                "label": "Charge-Per-Use (Subscription)"
+              },
+              {
+                "id": 40605,
+                "type": "outcome",
+                "parent": 406,
+                "weight": 0.2,
+                "label": "Combined Pricing Model"
+              }
+            ]
+          },
+          {
+            "id": 407,
+            "type": "decision",
+            "parent": 4,
+            "classification": "Cloud Migration specific / Application Migration in General",
+            "label": "Define Resource Location",
+            "children": [
+              {
+                "id": 40701,
+                "type": "outcome",
+                "parent": 407,
+                "weight": 0.5,
+                "label": "Data Location under same jurisdiction as company"
+              },
+              {
+                "id": 40702,
+                "type": "outcome",
+                "parent": 407,
+                "weight": 0.5,
+                "label": "Data Location outside jurisdiction of company"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "linksArray": [
+    {
+      "source": 101,
+      "target": 103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 101,
+      "target": 104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 101,
+      "target": 301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 101,
+      "target": 103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Requiring",
+      "type": "DecRel"
+    },
+    {
+      "source": 102,
+      "target": 103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Requiring",
+      "type": "DecRel"
+    },
+    {
+      "source": 103,
+      "target": 101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 103,
+      "target": 104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 103,
+      "target": 201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 103,
+      "target": 301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 103,
+      "target": 402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 103,
+      "target": 104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Requiring",
+      "type": "DecRel"
+    },
+    {
+      "source": 103,
+      "target": 402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Requiring",
+      "type": "DecRel"
+    },
+    {
+      "source": 104,
+      "target": 101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 104,
+      "target": 103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 104,
+      "target": 201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 104,
+      "target": 301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 104,
+      "target": 402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 104,
+      "target": 103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Requiring",
+      "type": "DecRel"
+    },
+    {
+      "source": 201,
+      "target": 103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 201,
+      "target": 104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 201,
+      "target": 202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 201,
+      "target": 203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 201,
+      "target": 204,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 201,
+      "target": 301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 201,
+      "target": 402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 201,
+      "target": 405,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Affecting",
+      "type": "DecRel"
+    },
+    {
+      "source": 201,
+      "target": 402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Requiring",
+      "type": "DecRel"
+    },
+    {
+      "source": 202,
+      "target": 201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 202,
+      "target": 402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 202,
+      "target": 405,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Affecting",
+      "type": "DecRel"
+    },
+    {
+      "source": 202,
+      "target": 201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Requiring",
+      "type": "DecRel"
+    },
+    {
+      "source": 203,
+      "target": 201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 203,
+      "target": 204,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 203,
+      "target": 402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 203,
+      "target": 405,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Affecting",
+      "type": "DecRel"
+    },
+    {
+      "source": 203,
+      "target": 202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Requiring",
+      "type": "DecRel"
+    },
+    {
+      "source": 203,
+      "target": 204,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Requiring",
+      "type": "DecRel"
+    },
+    {
+      "source": 204,
+      "target": 201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 204,
+      "target": 203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 204,
+      "target": 402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 204,
+      "target": 405,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Affecting",
+      "type": "DecRel"
+    },
+    {
+      "source": 204,
+      "target": 203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Requiring",
+      "type": "DecRel"
+    },
+    {
+      "source": 301,
+      "target": 101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 301,
+      "target": 103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 301,
+      "target": 104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 301,
+      "target": 201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 301,
+      "target": 402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 301,
+      "target": 405,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Affecting",
+      "type": "DecRel"
+    },
+    {
+      "source": 301,
+      "target": 402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Requiring",
+      "type": "DecRel"
+    },
+    {
+      "source": 401,
+      "target": 403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 401,
+      "target": 404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 401,
+      "target": 405,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Affecting",
+      "type": "DecRel"
+    },
+    {
+      "source": 401,
+      "target": 403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Requiring",
+      "type": "DecRel"
+    },
+    {
+      "source": 401,
+      "target": 405,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Requiring",
+      "type": "DecRel"
+    },
+    {
+      "source": 402,
+      "target": 103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 402,
+      "target": 104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 402,
+      "target": 201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 402,
+      "target": 202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 402,
+      "target": 203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 402,
+      "target": 204,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 402,
+      "target": 301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 402,
+      "target": 405,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Affecting",
+      "type": "DecRel"
+    },
+    {
+      "source": 403,
+      "target": 401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 403,
+      "target": 404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 403,
+      "target": 405,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Affecting",
+      "type": "DecRel"
+    },
+    {
+      "source": 403,
+      "target": 407,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 403,
+      "target": 407,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Requiring",
+      "type": "DecRel"
+    },
+    {
+      "source": 404,
+      "target": 401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 404,
+      "target": 403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Influencing",
+      "type": "DecRel"
+    },
+    {
+      "source": 404,
+      "target": 405,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Affecting",
+      "type": "DecRel"
+    },
+    {
+      "source": 405,
+      "target": 201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Binding",
+      "type": "DecRel"
+    },
+    {
+      "source": 405,
+      "target": 202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Binding",
+      "type": "DecRel"
+    },
+    {
+      "source": 405,
+      "target": 203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Binding",
+      "type": "DecRel"
+    },
+    {
+      "source": 405,
+      "target": 204,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Binding",
+      "type": "DecRel"
+    },
+    {
+      "source": 405,
+      "target": 301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Binding",
+      "type": "DecRel"
+    },
+    {
+      "source": 405,
+      "target": 401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Binding",
+      "type": "DecRel"
+    },
+    {
+      "source": 405,
+      "target": 402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Binding",
+      "type": "DecRel"
+    },
+    {
+      "source": 405,
+      "target": 403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Binding",
+      "type": "DecRel"
+    },
+    {
+      "source": 405,
+      "target": 404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Binding",
+      "type": "DecRel"
+    },
+    {
+      "source": 405,
+      "target": 406,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Binding",
+      "type": "DecRel"
+    },
+    {
+      "source": 405,
+      "target": 407,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Binding",
+      "type": "DecRel"
+    },
+    {
+      "source": 406,
+      "target": 405,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Affecting",
+      "type": "DecRel"
+    },
+    {
+      "source": 407,
+      "target": 405,
+      "dir": "auto",
+      "weight": 1,
+      "label": "Affecting",
+      "type": "DecRel"
+    }
+  ]
+}

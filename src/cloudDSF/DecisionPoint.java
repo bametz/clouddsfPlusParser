@@ -1,8 +1,10 @@
 package cloudDSF;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
-import java.util.SortedMap;
-import java.util.TreeMap;
+import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -12,10 +14,19 @@ public class DecisionPoint {
 	private int parent;
 	private String classification;
 	private String label;
-	
+
 	private transient HashMap<String, Decision> decisions = new HashMap<String, Decision>();
+
 	@SerializedName("children")
-	private SortedMap<Integer, Decision> decisionsSorted = new TreeMap<Integer, Decision>();
+	private List<Decision> decisionsSorted = new ArrayList<Decision>();
+
+	public List<Decision> getSortedDecisionList() {
+		return decisionsSorted;
+	}
+
+	public void setSortedDecisionList(List<Decision> sortedDecisionList) {
+		this.decisionsSorted = sortedDecisionList;
+	}
 
 	public DecisionPoint(String label, int id, String classification) {
 		this.label = label;
@@ -23,15 +34,22 @@ public class DecisionPoint {
 		this.id = id;
 	}
 
-	public SortedMap<Integer, Decision> getDecisionsSorted() {
-		return decisionsSorted;
-	}
-
 	public void prepareSortedDecisions() {
-		decisionsSorted.clear();
-		for (Decision d : decisions.values()) {
-			decisionsSorted.put(d.getId(), d);
-		}
+//		decisionsSorted.clear();
+//		for (Decision d : decisions.values()) {
+//			decisionsSorted.add(d);
+//		}
+		Collections.sort(decisionsSorted, new Comparator<Decision>() {
+			public int compare(Decision d1, Decision d2) {
+				int i = d1.getId() - d2.getId();
+				if (i < 0)
+					return -1;
+				if (i > 0)
+					return 1;
+				else
+					return 0;
+			}
+		});
 	}
 
 	public String getType() {
@@ -55,7 +73,6 @@ public class DecisionPoint {
 	}
 
 	public int getParent() {
-		// should return null
 		return parent;
 	}
 
@@ -81,6 +98,7 @@ public class DecisionPoint {
 
 	public void addDecision(Decision decision) {
 		this.decisions.put(decision.getLabel(), decision);
+		this.decisionsSorted.add(decision);
 	}
 
 	public Decision getDecision(String key) {
