@@ -14,7 +14,13 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 
-public class Parser {
+/**
+ * Main class to trigger read of excel file and json generation
+ * 
+ * @author Metz
+ *
+ */
+public class JsonGenerator {
 	private static Gson gson = new GsonBuilder().setPrettyPrinting()
 			.serializeNulls().create();
 
@@ -23,8 +29,8 @@ public class Parser {
 		ExcelParser parser = new ExcelParser();
 		XSSFWorkbook workbook = null;
 		// Create Workbook instance holding reference to .xlsx file
-		InputStream in = Parser.class.getClassLoader().getResourceAsStream(
-				filePath);
+		InputStream in = JsonGenerator.class.getClassLoader()
+				.getResourceAsStream(filePath);
 		try {
 			workbook = new XSSFWorkbook(in);
 		} catch (IOException e) {
@@ -35,7 +41,11 @@ public class Parser {
 		writeDecisionTree(cdsf);
 		// writeDecisionTreeWithoutOutcomes(cdsf);
 	}
-
+/**
+ * Writes json with all outcomes and links list.
+ * @param cdsf
+ * @throws IOException
+ */
 	private static void writeDecisionTree(CloudDSF cdsf) throws IOException {
 		cdsf.setId(-1);
 		cdsf.setType("root");

@@ -8,6 +8,12 @@ import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Represents one Decision Point of the cloudDSF
+ * 
+ * @author Metz
+ *
+ */
 public class DecisionPoint {
 	private int id;
 	private final String type = "decisionPoint";
@@ -34,11 +40,10 @@ public class DecisionPoint {
 		this.id = id;
 	}
 
+	/**
+	 * Sorts decisions by ascending id for json
+	 */
 	public void prepareSortedDecisions() {
-//		decisionsSorted.clear();
-//		for (Decision d : decisions.values()) {
-//			decisionsSorted.add(d);
-//		}
 		Collections.sort(decisionsSorted, new Comparator<Decision>() {
 			public int compare(Decision d1, Decision d2) {
 				int i = d1.getId() - d2.getId();

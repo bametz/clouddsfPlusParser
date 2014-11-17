@@ -15,8 +15,20 @@ import cloudDSF.Decision;
 import cloudDSF.DecisionPoint;
 import cloudDSF.Outcome;
 
+/**
+ * Reads excel file and collects all the data.
+ * 
+ * @author Metz
+ *
+ */
 public class ExcelParser {
-
+	/**
+	 * Retrieves the knowledge base of the CloudDSF from the sheet and trigger
+	 * retrieving of relations.
+	 * 
+	 * @param workbook
+	 * @return
+	 */
 	public CloudDSF readExcel(XSSFWorkbook workbook) {
 		// new CloudDSF representation object
 		CloudDSF cdsf = new CloudDSF();
@@ -96,10 +108,12 @@ public class ExcelParser {
 				}
 			}
 		}
+		// calculate weight of outcomes
 		setWeight(cdsf.getDecisionPoints());
-
+		// parse the relations
 		cdsf = setInfluencingRelations(cdsf, workbook);
 		cdsf = setRequiringRelations(cdsf, workbook);
+		cdsf = setInfluencingOutcomes(cdsf, workbook);
 		for (DecisionPoint dp : cdsf.getDecisionPoints().values()) {
 			dp.prepareSortedDecisions();
 			for (Decision d : dp.getDecisions().values()) {
@@ -110,6 +124,12 @@ public class ExcelParser {
 		return cdsf;
 	}
 
+	/**
+	 * Calculates the weight for each outcome within a decision to the same
+	 * amount by dividing 1 / the amount of outcomes per decision.
+	 * 
+	 * @param decisionPoints
+	 */
 	private void setWeight(HashMap<String, DecisionPoint> decisionPoints) {
 		for (DecisionPoint dp : decisionPoints.values()) {
 			for (Decision d : dp.getDecisions().values()) {
@@ -122,7 +142,15 @@ public class ExcelParser {
 		}
 	}
 
-	private CloudDSF setInfluencingRelations(CloudDSF cdsf, XSSFWorkbook workbook) {
+	/**
+	 * Retrieves influencing relations between decisions from sheet
+	 * 
+	 * @param cdsf
+	 * @param workbook
+	 * @return
+	 */
+	private CloudDSF setInfluencingRelations(CloudDSF cdsf,
+			XSSFWorkbook workbook) {
 		XSSFSheet sheet = workbook.getSheet("Decision Level");
 		// Column B has name of start Decision
 		int startDecisionColumn = 1;
@@ -154,6 +182,14 @@ public class ExcelParser {
 		}
 		return cdsf;
 	}
+
+	/**
+	 * Retrieves requiring relations between decisions
+	 * 
+	 * @param cdsf
+	 * @param workbook
+	 * @return
+	 */
 	private CloudDSF setRequiringRelations(CloudDSF cdsf, XSSFWorkbook workbook) {
 		XSSFSheet sheet = workbook.getSheet("Required Level");
 		// Column B has name of start Decision
@@ -162,7 +198,6 @@ public class ExcelParser {
 		Row endDecisionRow = sheet.getRow(1);
 		// Iterate over all rows starting at 3
 		Iterator<Row> rows = sheet.rowIterator();
-
 		while (rows.hasNext()) {
 			XSSFRow row = (XSSFRow) rows.next();
 			Iterator<Cell> cells = row.cellIterator();
@@ -175,6 +210,42 @@ public class ExcelParser {
 					String endDecision = endDecisionRow.getCell(
 							cell.getColumnIndex()).getStringCellValue();
 					cdsf.setDecisionRelation(startDecision, endDecision,
+							relationName);
+				}
+			}
+		}
+		return cdsf;
+	}
+
+	/**
+	 * Retrieves relations between outcomes from sheet.
+	 * 
+	 * @param cdsf
+	 * @param workbook
+	 * @return
+	 */
+	private CloudDSF setInfluencingOutcomes(CloudDSF cdsf, XSSFWorkbook workbook) {
+		XSSFSheet sheet = workbook.getSheet("Outcome Level");
+		// Column B has name of start Decision
+		int startOutcomeColumn = 1;
+		// Row 1 has names of endDecision
+		Row endOutcomeRow = sheet.getRow(0);
+		// Iterate over all rows
+		Iterator<Row> rows = sheet.rowIterator();
+		while (rows.hasNext()) {
+			XSSFRow row = (XSSFRow) rows.next();
+			Iterator<Cell> cells = row.cellIterator();
+			while (cells.hasNext()) {
+				XSSFCell cell = (XSSFCell) cells.next();
+				String relationName = cell.getStringCellValue();
+				if (relationName.equals("in") || relationName.equals("ex")
+						|| relationName.equals("a")
+						|| relationName.equals("eb")) {
+					String startOutcome = row.getCell(startOutcomeColumn)
+							.getStringCellValue();
+					String endOutcome = endOutcomeRow.getCell(
+							cell.getColumnIndex()).getStringCellValue();
+					cdsf.setOutcomeRelation(startOutcome, endOutcome,
 							relationName);
 				}
 			}

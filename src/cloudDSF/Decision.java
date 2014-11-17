@@ -8,6 +8,12 @@ import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Represents one decision of the cloudDSF
+ * 
+ * @author Metz
+ *
+ */
 public class Decision {
 	private int id;
 	private final String type = "decision";
@@ -18,7 +24,7 @@ public class Decision {
 	private transient HashMap<String, Outcome> outcomes = new HashMap<String, Outcome>();
 	@SerializedName("children")
 	private List<Outcome> outcomesSorted = new ArrayList<Outcome>();
-	
+
 	public List<Outcome> getOutcomesSorted() {
 		return outcomesSorted;
 	}
@@ -34,11 +40,10 @@ public class Decision {
 		this.parent = parent;
 	}
 
+	/**
+	 * Sorts array list to offer outcomes sorted by ascending id for json
+	 */
 	public void prepareSortedOutcomes() {
-//		outcomesSorted.clear();
-//		for (Outcome outcome : outcomes.values()) {
-//			outcomesSorted.add(outcome);
-//		}
 		Collections.sort(outcomesSorted, new Comparator<Outcome>() {
 			public int compare(Outcome o1, Outcome o2) {
 				int i = o1.getId() - o2.getId();

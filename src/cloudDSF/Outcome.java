@@ -4,6 +4,12 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Locale;
 
+/**
+ * Represents one outcome of the cloudDSF
+ * 
+ * @author Metz
+ *
+ */
 public class Outcome {
 	private int id;
 	private final String type = "outcome";
@@ -37,6 +43,11 @@ public class Outcome {
 		return weight;
 	}
 
+	/**
+	 * formats the calculated weight to a two digit number separated with .
+	 * 
+	 * @param weight
+	 */
 	public void setWeight(double weight) {
 		Locale locale = new Locale("en", "UK");
 		String pattern = "#.###";

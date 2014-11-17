@@ -1,12 +1,12 @@
 package cloudDSF;
 
 /**
- * Represents one relation between two decisions.
+ * Represents relation between two outcomes.
  * 
  * @author Metz
  *
  */
-public class DecisionRelation {
+public class OutcomeRelation {
 	private int source;
 	private int target;
 	private String dir;
@@ -14,7 +14,7 @@ public class DecisionRelation {
 	private String label;
 	private String type;
 
-	public DecisionRelation(int source, int target, String dir, int weight,
+	public OutcomeRelation(int source, int target, String dir, int weight,
 			String label, String type) {
 		this.source = source;
 		this.target = target;
