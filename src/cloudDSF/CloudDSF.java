@@ -18,13 +18,18 @@ public class CloudDSF {
 	private String label;
 
 	private transient HashMap<String, DecisionPoint> decisionPoints = new HashMap<String, DecisionPoint>();
+
+	private transient HashMap<String, Task> tasks = new HashMap<String, Task>();
+
 	@SerializedName("children")
 	private List<DecisionPoint> decisionPointsSorted = new ArrayList<DecisionPoint>();
 
 	@SerializedName("linksArray")
-	private transient List<DecisionRelation> influencingRelations = new ArrayList<DecisionRelation>();
+	private transient List<Relation> influencingRelations = new ArrayList<Relation>();
 
 	private transient List<OutcomeRelation> influencingOutcomes = new ArrayList<OutcomeRelation>();
+
+	private transient List<TaskRelation> influencingTasks = new ArrayList<TaskRelation>();
 
 	/**
 	 * Sets relation between two decisions by retrieving their id and putting it
@@ -54,8 +59,7 @@ public class CloudDSF {
 			}
 		}
 		// label is rather type
-		DecisionRelation di = new DecisionRelation(source, target, "auto", 1,
-				label, "DecRel");
+		DecisionRelation di = new DecisionRelation(source, target, label);
 		influencingRelations.add(di);
 	}
 
@@ -89,8 +93,7 @@ public class CloudDSF {
 			}
 		}
 		// label is rather type
-		OutcomeRelation or = new OutcomeRelation(source, target, "auto", 1,
-				label, "OutcomeRelation");
+		OutcomeRelation or = new OutcomeRelation(source, target, label);
 		influencingOutcomes.add(or);
 	}
 
@@ -111,10 +114,10 @@ public class CloudDSF {
 			}
 		});
 		Collections.sort(influencingRelations,
-				new Comparator<DecisionRelation>() {
+				new Comparator<Relation>() {
 					@Override
-					public int compare(DecisionRelation dr1,
-							DecisionRelation dr2) {
+					public int compare(Relation dr1,
+							Relation dr2) {
 						int i = dr1.getSource() - dr2.getSource();
 						if (i < 0)
 							return -1;
@@ -138,6 +141,18 @@ public class CloudDSF {
 							return 0;
 					}
 				});
+		Collections.sort(influencingTasks, new Comparator<TaskRelation>() {
+			@Override
+			public int compare(TaskRelation tr1, TaskRelation tr2) {
+				int i = tr1.getSource() - tr2.getSource();
+				if (i < 0)
+					return -1;
+				if (i > 0)
+					return 1;
+				else
+					return 0;
+			}
+		});
 	}
 
 	/**
@@ -149,6 +164,7 @@ public class CloudDSF {
 		int oamount = 0;
 		int relations = 0;
 		int oRelationsAmount = 0;
+		int tamount = 0;
 
 		for (DecisionPoint dp : getDecisionPointsSorted()) {
 			dpamount++;
@@ -167,7 +183,7 @@ public class CloudDSF {
 				}
 			}
 		}
-		for (DecisionRelation relation : influencingRelations) {
+		for (Relation relation : influencingRelations) {
 			System.out.println(relation.getSource() + " to "
 					+ relation.getTarget() + " label " + relation.getLabel());
 			relations++;
@@ -177,11 +193,34 @@ public class CloudDSF {
 					+ oRelation.getTarget() + " label " + oRelation.getLabel());
 			oRelationsAmount++;
 		}
+		
+		for (Task t : tasks.values()){
+			System.out.println("task label " + t.getLabel() + " " + t.getId());
+			tamount++;
+		}
+		
 		System.out.println("anzahl dp " + dpamount);
 		System.out.println("anzahl d " + damount);
 		System.out.println("anzahl o " + oamount);
 		System.out.println("anzahl rel " + relations);
 		System.out.println("anzahl out rel " + oRelationsAmount);
+		System.out.println(tamount);
+	}
+
+	public HashMap<String, Task> getTasks() {
+		return tasks;
+	}
+
+	public void setTasks(HashMap<String, Task> tasks) {
+		this.tasks = tasks;
+	}
+
+	public List<TaskRelation> getInfluencingTasks() {
+		return influencingTasks;
+	}
+
+	public void setInfluencingTasks(List<TaskRelation> influencingTasks) {
+		this.influencingTasks = influencingTasks;
 	}
 
 	public void addDecisionPoint(DecisionPoint dp) {
@@ -197,12 +236,12 @@ public class CloudDSF {
 		this.influencingOutcomes = influencingOutcomes;
 	}
 
-	public List<DecisionRelation> getInfluencingRelations() {
+	public List<Relation> getInfluencingRelations() {
 		return influencingRelations;
 	}
 
 	public void setInfluencingRelations(
-			List<DecisionRelation> influencingRelations) {
+			List<Relation> influencingRelations) {
 		this.influencingRelations = influencingRelations;
 	}
 
@@ -244,5 +283,43 @@ public class CloudDSF {
 
 	public void setDecisionPoints(HashMap<String, DecisionPoint> decisionPoints) {
 		this.decisionPoints = decisionPoints;
+	}
+
+	public void setTaskRelation(String startTask, String targetDec, String dir,
+			String label) {
+		int source = 0;
+		int target = 0;
+		System.out.println(startTask);
+		System.out.println(targetDec);
+		if (tasks.get(startTask) != null) {
+			source = tasks.get(startTask).getId();
+			for (DecisionPoint dp : getDecisionPoints().values()) {
+				for (Decision d : dp.getDecisions().values()) {
+					if (d.getLabel().equals(targetDec)) {
+						target = d.getId();
+						break;
+					}
+					
+				}
+			}
+		} else {
+			target = tasks.get(targetDec).getId();
+			for (DecisionPoint dp : getDecisionPoints().values()) {
+				for (Decision d : dp.getDecisions().values()) {
+					if (d.getLabel().equals(startTask)) {
+						source = d.getId();
+						break;
+					}
+				}
+			}
+		}
+
+		TaskRelation tr = new TaskRelation(source, target, dir, label);
+		influencingRelations.add(tr);
+		influencingTasks.add(tr);
+	}
+
+	public void addTask(Task task) {
+		tasks.put(task.getLabel(), task);
 	}
 }

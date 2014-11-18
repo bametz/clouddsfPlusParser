@@ -14,6 +14,7 @@ import cloudDSF.CloudDSF;
 import cloudDSF.Decision;
 import cloudDSF.DecisionPoint;
 import cloudDSF.Outcome;
+import cloudDSF.Task;
 
 /**
  * Reads excel file and collects all the data.
@@ -114,6 +115,8 @@ public class ExcelParser {
 		cdsf = setInfluencingRelations(cdsf, workbook);
 		cdsf = setRequiringRelations(cdsf, workbook);
 		cdsf = setInfluencingOutcomes(cdsf, workbook);
+		cdsf = setTasks(cdsf, workbook);
+		cdsf = setInfluencingTasks(cdsf, workbook);
 		for (DecisionPoint dp : cdsf.getDecisionPoints().values()) {
 			dp.prepareSortedDecisions();
 			for (Decision d : dp.getDecisions().values()) {
@@ -249,6 +252,68 @@ public class ExcelParser {
 							relationName);
 				}
 			}
+		}
+		return cdsf;
+	}
+
+	private CloudDSF setInfluencingTasks(CloudDSF cdsf, XSSFWorkbook workbook) {
+		XSSFSheet sheet = workbook.getSheet("Task Level");
+		// Column A has name of start Task
+		int startTaskColumn = 0;
+		// Row 1 has names of endDecision
+		Row endDecisionRow = sheet.getRow(1);
+		// Iterate over all rows
+		Iterator<Row> rows = sheet.rowIterator();
+		while (rows.hasNext()) {
+			XSSFRow row = (XSSFRow) rows.next();
+			Iterator<Cell> cells = row.cellIterator();
+			while (cells.hasNext()) {
+				XSSFCell cell = (XSSFCell) cells.next();
+				String relationName = cell.getStringCellValue();
+				String source;
+				String target;
+
+				switch (relationName) {
+				case "Affecting":
+					source = row.getCell(startTaskColumn).getStringCellValue();
+					target = endDecisionRow.getCell(cell.getColumnIndex())
+							.getStringCellValue();
+					cdsf.setTaskRelation(source, target, "auto", relationName);
+					break;
+				case "Both":
+					source = row.getCell(startTaskColumn).getStringCellValue();
+					target = endDecisionRow.getCell(cell.getColumnIndex())
+							.getStringCellValue();
+					cdsf.setTaskRelation(source, target, "both", relationName);
+					break;
+				case "Affected":
+					// decision to task
+					source = endDecisionRow.getCell(cell.getColumnIndex())
+							.getStringCellValue();
+					target = row.getCell(startTaskColumn).getStringCellValue();
+					cdsf.setTaskRelation(source, target, "auto", relationName);
+					break;
+				}
+			}
+		}
+		return cdsf;
+	}
+
+	private CloudDSF setTasks(CloudDSF cdsf, XSSFWorkbook workbook) {
+		// Get first/desired sheet from the workbook
+		XSSFSheet sheet = workbook.getSheet("Task Level");
+
+		int taskID = 901;
+		// iterate over all rows
+		// skip headline
+		for (int j = 2; j < 12; j++) {
+			// row 2 gets selected
+			Row row = sheet.getRow(j);
+			// select cell A
+			Cell cell = row.getCell(0);
+			Task task = new Task(taskID, cell.getStringCellValue());
+			taskID++;
+			cdsf.addTask(task);
 		}
 		return cdsf;
 	}
