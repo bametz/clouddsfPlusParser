@@ -1397,5 +1397,9695 @@
       "label": "Affecting",
       "type": "DecRel"
     }
+  ],
+  "linksArrayOutcomes": [
+    {
+      "source": 10101,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10101,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10101,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10101,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10101,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10101,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10101,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10101,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10101,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10101,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10101,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10101,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10101,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10101,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10101,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10102,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10102,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10102,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10102,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10102,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10102,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10102,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10102,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10102,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10102,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10102,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10102,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10102,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10102,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10102,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10103,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10103,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10103,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10103,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10103,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10103,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10103,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10103,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10103,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10103,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10103,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10103,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10103,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10103,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10103,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10104,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10104,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10104,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10104,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10104,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10104,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10104,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10104,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10104,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10104,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10104,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10104,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10104,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10104,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10104,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10105,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10105,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10105,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10105,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10105,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10105,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10105,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10105,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10105,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10105,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10105,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10105,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10105,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10105,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10105,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10106,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10106,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10106,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10106,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10106,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10106,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10106,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10106,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10106,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10106,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10106,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10106,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10106,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10106,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10106,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10107,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10107,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10107,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10107,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10107,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10107,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10107,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10107,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10107,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10107,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10107,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10107,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10107,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10107,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10107,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10201,
+      "target": 10201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10201,
+      "target": 10202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10201,
+      "target": 10203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10202,
+      "target": 10201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10202,
+      "target": 10202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10202,
+      "target": 10203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10203,
+      "target": 10201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10203,
+      "target": 10202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10203,
+      "target": 10203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10204,
+      "target": 10201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10204,
+      "target": 10202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10204,
+      "target": 10203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10205,
+      "target": 10201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10205,
+      "target": 10202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10205,
+      "target": 10203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10206,
+      "target": 10201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10206,
+      "target": 10202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10206,
+      "target": 10203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10207,
+      "target": 10201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10207,
+      "target": 10202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10207,
+      "target": 10203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10301,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10302,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10303,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10304,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10305,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10306,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10307,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10308,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10401,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10402,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10403,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 10404,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20101,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20102,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20103,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20104,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20105,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20106,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20107,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20108,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20201,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20201,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20201,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20201,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20201,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20201,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20201,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20201,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20201,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20202,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20202,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20202,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20202,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20202,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20202,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20202,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20202,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20202,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20203,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20203,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20203,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20203,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20203,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20203,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20203,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20203,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20203,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20301,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20301,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20301,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20301,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20301,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20301,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20301,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20301,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20301,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20301,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20301,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20301,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20301,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20301,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20301,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20302,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20302,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20302,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20302,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20302,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20302,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20302,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20302,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20302,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20302,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20302,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20302,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20302,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20302,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20302,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20303,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20303,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20303,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20303,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20303,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20303,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20303,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20303,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20303,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20303,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20303,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20303,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20303,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20303,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20304,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20304,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20304,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20304,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20304,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20304,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20304,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20304,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20304,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20304,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20304,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20304,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20304,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20304,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20304,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20305,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20305,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20305,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20305,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20305,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20305,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20305,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20305,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20305,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20305,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20305,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20305,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20305,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20401,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20401,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20401,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20401,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20401,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20401,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20401,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20401,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20401,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20401,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20401,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20401,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20401,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20401,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20401,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20402,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20402,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20402,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20402,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20402,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20402,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20402,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20402,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20402,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20402,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20402,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20402,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20402,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20402,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20403,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20403,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20403,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20403,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20403,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20403,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20403,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20403,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20403,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20403,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20403,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20403,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 20403,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30101,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30102,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30103,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 10101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 10102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 10103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 30104,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40101,
+      "target": 40101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40101,
+      "target": 40102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40101,
+      "target": 40103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40101,
+      "target": 40104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40101,
+      "target": 40301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40101,
+      "target": 40302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40101,
+      "target": 40401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40101,
+      "target": 40402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40101,
+      "target": 40403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40102,
+      "target": 40101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40102,
+      "target": 40102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40102,
+      "target": 40103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40102,
+      "target": 40104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40102,
+      "target": 40301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40102,
+      "target": 40302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40102,
+      "target": 40401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40102,
+      "target": 40402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40102,
+      "target": 40403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40103,
+      "target": 40101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40103,
+      "target": 40102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40103,
+      "target": 40103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40103,
+      "target": 40104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40103,
+      "target": 40301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40103,
+      "target": 40302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40103,
+      "target": 40401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40103,
+      "target": 40402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40103,
+      "target": 40403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40104,
+      "target": 40101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40104,
+      "target": 40102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40104,
+      "target": 40103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40104,
+      "target": 40104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40104,
+      "target": 40301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40104,
+      "target": 40302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40104,
+      "target": 40401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40104,
+      "target": 40402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40104,
+      "target": 40403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40201,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40202,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40203,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40204,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40205,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "eb",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40206,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 10301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 10302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 10303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 10304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 10401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 10402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 10403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 10404,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 20101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 20102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 20103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 20104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 20201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 20202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 20301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 20302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 20303,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 20304,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 20305,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 20401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 20402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 20403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 30101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 30102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 30103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 30104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 40201,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 40202,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40207,
+      "target": 40203,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40301,
+      "target": 40101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40301,
+      "target": 40102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40301,
+      "target": 40103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40301,
+      "target": 40301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40301,
+      "target": 40302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40301,
+      "target": 40401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40301,
+      "target": 40402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40301,
+      "target": 40403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40301,
+      "target": 40701,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40301,
+      "target": 40702,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40302,
+      "target": 40101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40302,
+      "target": 40102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40302,
+      "target": 40103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40302,
+      "target": 40301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40302,
+      "target": 40302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40302,
+      "target": 40401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40302,
+      "target": 40402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40302,
+      "target": 40403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40302,
+      "target": 40701,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40302,
+      "target": 40702,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40303,
+      "target": 40101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40303,
+      "target": 40102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40303,
+      "target": 40103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40303,
+      "target": 40301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40303,
+      "target": 40302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40303,
+      "target": 40401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40303,
+      "target": 40402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40303,
+      "target": 40403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40303,
+      "target": 40701,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40303,
+      "target": 40702,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40401,
+      "target": 40101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40401,
+      "target": 40102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40401,
+      "target": 40103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40401,
+      "target": 40104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40401,
+      "target": 40301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40401,
+      "target": 40302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40401,
+      "target": 40401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40401,
+      "target": 40402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40401,
+      "target": 40403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40402,
+      "target": 40101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40402,
+      "target": 40102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40402,
+      "target": 40103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40402,
+      "target": 40104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40402,
+      "target": 40301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40402,
+      "target": 40302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40402,
+      "target": 40401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40402,
+      "target": 40402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40402,
+      "target": 40403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40403,
+      "target": 40101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40403,
+      "target": 40102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40403,
+      "target": 40103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40403,
+      "target": 40104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40403,
+      "target": 40301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40403,
+      "target": 40302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40403,
+      "target": 40401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40403,
+      "target": 40402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40403,
+      "target": 40403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40404,
+      "target": 40101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40404,
+      "target": 40102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40404,
+      "target": 40103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40404,
+      "target": 40104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40404,
+      "target": 40301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40404,
+      "target": 40302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40404,
+      "target": 40401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40404,
+      "target": 40402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40404,
+      "target": 40403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40405,
+      "target": 40101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40405,
+      "target": 40102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40405,
+      "target": 40103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40405,
+      "target": 40104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40405,
+      "target": 40301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40405,
+      "target": 40302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40405,
+      "target": 40401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40405,
+      "target": 40402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40405,
+      "target": 40403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40406,
+      "target": 40101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40406,
+      "target": 40102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40406,
+      "target": 40103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40406,
+      "target": 40104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40406,
+      "target": 40301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40406,
+      "target": 40302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40406,
+      "target": 40401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40406,
+      "target": 40402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40406,
+      "target": 40403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40407,
+      "target": 40101,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40407,
+      "target": 40102,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40407,
+      "target": 40103,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40407,
+      "target": 40104,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40407,
+      "target": 40301,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40407,
+      "target": 40302,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40407,
+      "target": 40401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40407,
+      "target": 40402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40407,
+      "target": 40403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40601,
+      "target": 40601,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40601,
+      "target": 40602,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40601,
+      "target": 40603,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40601,
+      "target": 40604,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40602,
+      "target": 40601,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40602,
+      "target": 40602,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40602,
+      "target": 40603,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40602,
+      "target": 40604,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40603,
+      "target": 40601,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40603,
+      "target": 40602,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40603,
+      "target": 40603,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40603,
+      "target": 40604,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40604,
+      "target": 40601,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40604,
+      "target": 40602,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40604,
+      "target": 40603,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40604,
+      "target": 40604,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40605,
+      "target": 40601,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40605,
+      "target": 40602,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40605,
+      "target": 40603,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40605,
+      "target": 40604,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40701,
+      "target": 40401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40701,
+      "target": 40402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40701,
+      "target": 40403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "ex",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40701,
+      "target": 40701,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40701,
+      "target": 40702,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40702,
+      "target": 40401,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40702,
+      "target": 40402,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40702,
+      "target": 40403,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40702,
+      "target": 40701,
+      "dir": "auto",
+      "weight": 1,
+      "label": "a",
+      "type": "OutcomeRelation"
+    },
+    {
+      "source": 40702,
+      "target": 40702,
+      "dir": "auto",
+      "weight": 1,
+      "label": "in",
+      "type": "OutcomeRelation"
+    }
   ]
 }

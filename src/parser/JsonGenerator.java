@@ -37,7 +37,7 @@ public class JsonGenerator {
 			e.printStackTrace();
 		}
 		CloudDSF cdsf = parser.readExcel(workbook);
-		cdsf.printCloudDSF();
+		//cdsf.printCloudDSF();
 		writeDecisionTree(cdsf);
 		// writeDecisionTreeWithoutOutcomes(cdsf);
 	}
@@ -50,11 +50,12 @@ public class JsonGenerator {
 		cdsf.setId(-1);
 		cdsf.setType("root");
 		cdsf.setLabel("Decision Points");
-		JsonObject decisionTree = new JsonObject();
-		decisionTree.add("decisionTree", gson.toJsonTree(cdsf));
-		decisionTree.add("linksArray",
+		JsonObject cloudDSFJson = new JsonObject();
+		cloudDSFJson.add("decisionTree", gson.toJsonTree(cdsf));
+		cloudDSFJson.add("linksArray",
 				gson.toJsonTree(cdsf.getInfluencingRelations()));
-		String json = gson.toJson(decisionTree);
+		cloudDSFJson.add("linksArrayOutcomes", gson.toJsonTree(cdsf.getInfluencingOutcomes()));
+		String json = gson.toJson(cloudDSFJson);
 		File jsonFile = new File("outputTree.json");
 		BufferedWriter bw = new BufferedWriter(new FileWriter(jsonFile));
 		bw.write(json);
