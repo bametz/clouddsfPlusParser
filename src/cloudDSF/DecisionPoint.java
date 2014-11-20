@@ -3,7 +3,6 @@ package cloudDSF;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
@@ -21,18 +20,8 @@ public class DecisionPoint {
 	private String classification;
 	private String label;
 
-	private transient HashMap<String, Decision> decisions = new HashMap<String, Decision>();
-
 	@SerializedName("children")
-	private List<Decision> decisionsSorted = new ArrayList<Decision>();
-
-	public List<Decision> getSortedDecisionList() {
-		return decisionsSorted;
-	}
-
-	public void setSortedDecisionList(List<Decision> sortedDecisionList) {
-		this.decisionsSorted = sortedDecisionList;
-	}
+	private List<Decision> decisions = new ArrayList<Decision>();
 
 	public DecisionPoint(String label, int id, String classification) {
 		this.label = label;
@@ -44,7 +33,7 @@ public class DecisionPoint {
 	 * Sorts decisions by ascending id for json
 	 */
 	public void prepareSortedDecisions() {
-		Collections.sort(decisionsSorted, new Comparator<Decision>() {
+		Collections.sort(decisions, new Comparator<Decision>() {
 			public int compare(Decision d1, Decision d2) {
 				int i = d1.getId() - d2.getId();
 				if (i < 0)
@@ -55,6 +44,23 @@ public class DecisionPoint {
 					return 0;
 			}
 		});
+	}
+
+	public Decision getDecision(String key) {
+		for (Decision decision : decisions) {
+			if (decision.getLabel().equals(key)) {
+				return decision;
+			}
+		}
+		return null;
+	}
+
+	public List<Decision> getDecisions() {
+		return decisions;
+	}
+
+	public void setDecisions(List<Decision> sortedDecisionList) {
+		this.decisions = sortedDecisionList;
 	}
 
 	public String getType() {
@@ -93,20 +99,7 @@ public class DecisionPoint {
 		this.id = id;
 	}
 
-	public HashMap<String, Decision> getDecisions() {
-		return decisions;
-	}
-
-	public void setDecisions(HashMap<String, Decision> decisions) {
-		this.decisions = decisions;
-	}
-
 	public void addDecision(Decision decision) {
-		this.decisions.put(decision.getLabel(), decision);
-		this.decisionsSorted.add(decision);
-	}
-
-	public Decision getDecision(String key) {
-		return this.decisions.get(key);
+		this.decisions.add(decision);
 	}
 }

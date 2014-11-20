@@ -23,6 +23,20 @@ public class Outcome {
 		this.setParent(parent);
 	}
 
+	/**
+	 * formats the calculated weight to a two digit number separated with .
+	 * 
+	 * @param weight
+	 */
+	public void setWeight(double weight) {
+		Locale locale = new Locale("en", "UK");
+		String pattern = "#.###";
+		DecimalFormat decimalFormat = (DecimalFormat) NumberFormat
+				.getNumberInstance(locale);
+		decimalFormat.applyPattern(pattern);
+		this.weight = Double.valueOf(decimalFormat.format(weight));
+	}
+
 	public String getLabel() {
 		return label;
 	}
@@ -41,20 +55,6 @@ public class Outcome {
 
 	public double getWeight() {
 		return weight;
-	}
-
-	/**
-	 * formats the calculated weight to a two digit number separated with .
-	 * 
-	 * @param weight
-	 */
-	public void setWeight(double weight) {
-		Locale locale = new Locale("en", "UK");
-		String pattern = "#.###";
-		DecimalFormat decimalFormat = (DecimalFormat) NumberFormat
-				.getNumberInstance(locale);
-		decimalFormat.applyPattern(pattern);
-		this.weight = Double.valueOf(decimalFormat.format(weight));
 	}
 
 	public String getType() {

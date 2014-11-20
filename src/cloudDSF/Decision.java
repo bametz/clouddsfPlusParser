@@ -3,7 +3,6 @@ package cloudDSF;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
@@ -15,23 +14,15 @@ import com.google.gson.annotations.SerializedName;
  *
  */
 public class Decision {
+
 	private int id;
 	private final String type = "decision";
 	private int parent;
 	private String classification;
 	private String label;
 
-	private transient HashMap<String, Outcome> outcomes = new HashMap<String, Outcome>();
 	@SerializedName("children")
-	private List<Outcome> outcomesSorted = new ArrayList<Outcome>();
-
-	public List<Outcome> getOutcomesSorted() {
-		return outcomesSorted;
-	}
-
-	public void setOutcomesSorted(List<Outcome> outcomesSorted) {
-		this.outcomesSorted = outcomesSorted;
-	}
+	private List<Outcome> outcomes = new ArrayList<Outcome>();
 
 	public Decision(String label, String classification, int id, int parent) {
 		this.label = label;
@@ -44,7 +35,7 @@ public class Decision {
 	 * Sorts array list to offer outcomes sorted by ascending id for json
 	 */
 	public void prepareSortedOutcomes() {
-		Collections.sort(outcomesSorted, new Comparator<Outcome>() {
+		Collections.sort(outcomes, new Comparator<Outcome>() {
 			public int compare(Outcome o1, Outcome o2) {
 				int i = o1.getId() - o2.getId();
 				if (i < 0)
@@ -55,6 +46,15 @@ public class Decision {
 					return 0;
 			}
 		});
+	}
+
+	public Outcome getOutcome(String key) {
+		for (Outcome outcome : outcomes) {
+			if (outcome.getLabel().equals(key)) {
+				return outcome;
+			}
+		}
+		return null;
 	}
 
 	public String getType() {
@@ -93,16 +93,15 @@ public class Decision {
 		this.id = id;
 	}
 
-	public HashMap<String, Outcome> getOutcomes() {
+	public void addOutcome(Outcome outcome) {
+		outcomes.add(outcome);
+	}
+
+	public List<Outcome> getOutcomes() {
 		return outcomes;
 	}
 
-	public void addOutcome(Outcome outcome) {
-		outcomes.put(outcome.getLabel(), outcome);
-		outcomesSorted.add(outcome);
-	}
-
-	public Outcome getOutcome(String key) {
-		return outcomes.get(key);
+	public void setOutcomes(List<Outcome> outcomes) {
+		this.outcomes = outcomes;
 	}
 }
