@@ -5,12 +5,15 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import cloudDSF.CloudDSF;
 import cloudDSF.Decision;
 import cloudDSF.DecisionPoint;
+import cloudDSF.Relation;
 import cloudDSF.TaskTree;
 
 import com.google.gson.Gson;
@@ -25,12 +28,9 @@ import com.google.gson.JsonObject;
  *
  */
 public class JsonGenerator {
-	private static Gson gson = new GsonBuilder().setPrettyPrinting()
-			.serializeNulls().create();
-
+	
 	public static void main(String[] args) throws IOException {
 		String filePath = "Matrix.xlsx";
-		ExcelParser parser = new ExcelParser();
 		XSSFWorkbook workbook = null;
 		// Create Workbook instance holding reference to .xlsx file
 		InputStream in = JsonGenerator.class.getClassLoader()
@@ -40,9 +40,10 @@ public class JsonGenerator {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		CloudDSF cdsf = parser.readExcel(workbook);
+		ExcelParser parser = new ExcelParser(workbook);
+		CloudDSF cdsf = parser.readExcel();
 		cdsf.printCloudDSF();
-		writeDecisionTree(cdsf);
+		writeLegacyJson(cdsf);
 		// writeDecisionTreeWithoutOutcomes(cdsf);
 	}
 
@@ -52,26 +53,36 @@ public class JsonGenerator {
 	 * @param cdsf
 	 * @throws IOException
 	 */
-	private static void writeDecisionTree(CloudDSF cdsf) throws IOException {
+	private static void writeLegacyJson(CloudDSF cdsf) throws IOException {
+		//gson
+		Gson gson = new GsonBuilder().setPrettyPrinting()
+				.serializeNulls().create();
+		JsonObject cloudDSFLegacyJson = new JsonObject();
+		JsonElement cloudDSFJson = gson.toJsonTree(cdsf);
+		//Set attribute of CloudDSF Object to match legacyJson
 		cdsf.setId(-1);
 		cdsf.setType("root");
 		cdsf.setLabel("Decision Points");
-		JsonObject cloudDSFJson = new JsonObject();
-		JsonElement decisionTree = gson.toJsonTree(cdsf);
-
+		
+		//Array with all relations
 		JsonElement linksArray = gson
 				.toJsonTree(cdsf.getInfluencingRelations());
+		//Relations = relatios of tasks AND Decisions
+		List<Relation> influencingRelations = new ArrayList<Relation>();
+		influencingRelations.addAll(cdsf.getInfluencingDecisions());
+		influencingRelations.addAll(cdsf.getInfluencingTasks());
+		//sort by id
+		cdsf.sortInfluencingRelations();
 
-		// cloudDSFJson.add("linksArrayOutcomes",
-		// gson.toJsonTree(cdsf.getInfluencingOutcomes()));
-		TaskTree tasks = new TaskTree();
-		tasks.setChildren(cdsf.getTasks());
-		tasks.prepareSortedTasks();
-		JsonElement taskTree = gson.toJsonTree(tasks);
+		//Tasks
+		TaskTree taskTree = new TaskTree();
+		// get Tasks 
+		taskTree.setTasks(cdsf.getTasks());
+		JsonElement taskTreeJson = gson.toJsonTree(taskTree);
 
-		for (DecisionPoint dp : cdsf.getDecisionPoints().values()) {
-			for (Decision d : dp.getDecisions().values()) {
-				d.setOutcomesSorted(null);
+		for (DecisionPoint dp : cdsf.getDecisionPoints()) {
+			for (Decision d : dp.getDecisions()) {
+				d.setOutcomes(null);
 			}
 		}
 		Gson gsonONull = new GsonBuilder().setPrettyPrinting().create();
@@ -80,17 +91,18 @@ public class JsonGenerator {
 		cdsf.setLabel("");
 		JsonElement decisionTreeWithoutOutcomes = gsonONull.toJsonTree(cdsf);
 
-		cloudDSFJson.add("decisionTreeWithoutOutcomes",
+		cloudDSFLegacyJson.add("decisionTreeWithoutOutcomes",
 				decisionTreeWithoutOutcomes);
-		cloudDSFJson.add("decisionTree", decisionTree);
-		cloudDSFJson.add("taskTree", taskTree);
-		cloudDSFJson.add("linksArray", linksArray);
+		cloudDSFLegacyJson.add("decisionTree", cloudDSFJson);
+		cloudDSFLegacyJson.add("taskTree", taskTreeJson);
+		cloudDSFLegacyJson.add("linksArray", linksArray);
 
-		String json = gson.toJson(cloudDSFJson);
+		String json = gson.toJson(cloudDSFLegacyJson);
 		File jsonFile = new File("elaboratedDSF.json");
 		BufferedWriter bw = new BufferedWriter(new FileWriter(jsonFile));
 		bw.write(json);
 		bw.flush();
 		bw.close();
 	}
+
 }

@@ -1,6 +1,5 @@
 package parser;
 
-import java.util.HashMap;
 import java.util.Iterator;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -23,6 +22,14 @@ import cloudDSF.Task;
  *
  */
 public class ExcelParser {
+	
+	private final CloudDSF cdsf;
+	private final XSSFWorkbook workbook;
+	
+	public ExcelParser(XSSFWorkbook workbook) {
+		this.cdsf = new CloudDSF();
+		this.workbook = workbook;
+	}
 	/**
 	 * Retrieves the knowledge base of the CloudDSF from the sheet and trigger
 	 * retrieving of relations.
@@ -30,9 +37,7 @@ public class ExcelParser {
 	 * @param workbook
 	 * @return
 	 */
-	public CloudDSF readExcel(XSSFWorkbook workbook) {
-		// new CloudDSF representation object
-		CloudDSF cdsf = new CloudDSF();
+	public CloudDSF readExcel() {
 		// Get first/desired sheet from the workbook
 		XSSFSheet sheet = workbook.getSheet("Knowledge Base");
 		// XSSFSheet sheet = workbook.getSheetAt(0);
@@ -95,7 +100,7 @@ public class ExcelParser {
 					outcome = new Outcome(outcomeCell.getStringCellValue(),
 							outcomeID, decisionID);
 					decision.addOutcome(outcome);
-					cdsf.getDecisionPoints().get(decisionPointName)
+					cdsf.getDecisionPoint(decisionPointName)
 							.addDecision(decision);
 				} else {
 					// if no text in dp or d than new outcome
@@ -104,25 +109,25 @@ public class ExcelParser {
 					Cell outcomeCell = row.getCell(2);
 					outcome = new Outcome(outcomeCell.getStringCellValue(),
 							outcomeID, decisionID);
-					cdsf.getDecisionPoints().get(decisionPointName)
+					cdsf.getDecisionPoint(decisionPointName)
 							.getDecision(decisionName).addOutcome(outcome);
 				}
 			}
 		}
 		// calculate weight of outcomes
-		setWeight(cdsf.getDecisionPoints());
+		setWeight();
 		// parse the relations
-		cdsf = setInfluencingRelations(cdsf, workbook);
-		cdsf = setRequiringRelations(cdsf, workbook);
-		cdsf = setInfluencingOutcomes(cdsf, workbook);
-		cdsf = setTasks(cdsf, workbook);
-		cdsf = setInfluencingTasks(cdsf, workbook);
-		for (DecisionPoint dp : cdsf.getDecisionPoints().values()) {
+		setInfluencingRelations();
+		setRequiringRelations();
+		setInfluencingOutcomes();
+		setTasks();
+		setInfluencingTasks();
+		for (DecisionPoint dp : cdsf.getDecisionPointsSorted()) {
 			dp.prepareSortedDecisions();
-			for (Decision d : dp.getDecisions().values()) {
+			for (Decision d : dp.getDecisions()) {
 				d.prepareSortedOutcomes();
 			}
-			cdsf.prepareSortedDPs();
+			cdsf.sortAllLists();
 		}
 		return cdsf;
 	}
@@ -133,12 +138,12 @@ public class ExcelParser {
 	 * 
 	 * @param decisionPoints
 	 */
-	private void setWeight(HashMap<String, DecisionPoint> decisionPoints) {
-		for (DecisionPoint dp : decisionPoints.values()) {
-			for (Decision d : dp.getDecisions().values()) {
+	private void setWeight() {
+		for (DecisionPoint dp : cdsf.getDecisionPointsSorted()) {
+			for (Decision d : dp.getDecisions()) {
 				double amount = d.getOutcomes().size();
 				double weight = 1 / amount;
-				for (Outcome o : d.getOutcomes().values()) {
+				for (Outcome o : d.getOutcomes()) {
 					o.setWeight(weight);
 				}
 			}
@@ -148,12 +153,9 @@ public class ExcelParser {
 	/**
 	 * Retrieves influencing relations between decisions from sheet
 	 * 
-	 * @param cdsf
-	 * @param workbook
 	 * @return
 	 */
-	private CloudDSF setInfluencingRelations(CloudDSF cdsf,
-			XSSFWorkbook workbook) {
+	private void setInfluencingRelations() {
 		XSSFSheet sheet = workbook.getSheet("Decision Level");
 		// Column B has name of start Decision
 		int startDecisionColumn = 1;
@@ -183,17 +185,14 @@ public class ExcelParser {
 				}
 			}
 		}
-		return cdsf;
 	}
 
 	/**
 	 * Retrieves requiring relations between decisions
 	 * 
-	 * @param cdsf
-	 * @param workbook
 	 * @return
 	 */
-	private CloudDSF setRequiringRelations(CloudDSF cdsf, XSSFWorkbook workbook) {
+	private void setRequiringRelations() {
 		XSSFSheet sheet = workbook.getSheet("Required Level");
 		// Column B has name of start Decision
 		int startDecisionColumn = 1;
@@ -217,17 +216,15 @@ public class ExcelParser {
 				}
 			}
 		}
-		return cdsf;
 	}
 
 	/**
 	 * Retrieves relations between outcomes from sheet.
+	 * @return 
 	 * 
-	 * @param cdsf
-	 * @param workbook
 	 * @return
 	 */
-	private CloudDSF setInfluencingOutcomes(CloudDSF cdsf, XSSFWorkbook workbook) {
+	private void setInfluencingOutcomes() {
 		XSSFSheet sheet = workbook.getSheet("Outcome Level");
 		// Column B has name of start Decision
 		int startOutcomeColumn = 1;
@@ -253,10 +250,9 @@ public class ExcelParser {
 				}
 			}
 		}
-		return cdsf;
 	}
 
-	private CloudDSF setInfluencingTasks(CloudDSF cdsf, XSSFWorkbook workbook) {
+	private void setInfluencingTasks() {
 		XSSFSheet sheet = workbook.getSheet("Task Level");
 		// Column A has name of start Task
 		int startTaskColumn = 0;
@@ -270,39 +266,27 @@ public class ExcelParser {
 			while (cells.hasNext()) {
 				XSSFCell cell = (XSSFCell) cells.next();
 				String relationName = cell.getStringCellValue();
-				String source;
-				String target;
-
+				String sourceDesc = row.getCell(startTaskColumn).getStringCellValue();
+				String targetDesc = endDecisionRow.getCell(cell.getColumnIndex())
+						.getStringCellValue();
 				switch (relationName) {
 				case "Affecting":
-					source = row.getCell(startTaskColumn).getStringCellValue();
-					target = endDecisionRow.getCell(cell.getColumnIndex())
-							.getStringCellValue();
-					cdsf.setTaskRelation(source, target, "auto", relationName);
+					cdsf.setTaskRelation(sourceDesc, targetDesc, "oneWay", relationName);
 					break;
 				case "Both":
-					source = row.getCell(startTaskColumn).getStringCellValue();
-					target = endDecisionRow.getCell(cell.getColumnIndex())
-							.getStringCellValue();
-					cdsf.setTaskRelation(source, target, "both", relationName);
+				cdsf.setTaskRelation(sourceDesc, targetDesc, "twoWay", relationName);
 					break;
 				case "Affected":
-					// decision to task
-					source = endDecisionRow.getCell(cell.getColumnIndex())
-							.getStringCellValue();
-					target = row.getCell(startTaskColumn).getStringCellValue();
-					cdsf.setTaskRelation(source, target, "auto", relationName);
+					cdsf.setTaskRelation(sourceDesc, targetDesc, "backwards", relationName);
 					break;
 				}
 			}
 		}
-		return cdsf;
 	}
 
-	private CloudDSF setTasks(CloudDSF cdsf, XSSFWorkbook workbook) {
+	private void setTasks() {
 		// Get first/desired sheet from the workbook
 		XSSFSheet sheet = workbook.getSheet("Task Level");
-
 		int taskID = 901;
 		// iterate over all rows
 		// skip headline
@@ -315,6 +299,5 @@ public class ExcelParser {
 			taskID++;
 			cdsf.addTask(task);
 		}
-		return cdsf;
 	}
 }
