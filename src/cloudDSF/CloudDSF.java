@@ -320,44 +320,9 @@ public class CloudDSF {
 					return 0;
 			}
 		});
-		Collections.sort(influencingDecisions, new Comparator<Relation>() {
-			@Override
-			public int compare(Relation dr1, Relation dr2) {
-				int i = dr1.getSource() - dr2.getSource();
-				if (i < 0)
-					return -1;
-				if (i > 0)
-					return 1;
-				else
-					return 0;
-			}
-
-		});
-		Collections.sort(influencingOutcomes,
-				new Comparator<OutcomeRelation>() {
-					@Override
-					public int compare(OutcomeRelation or1, OutcomeRelation or2) {
-						int i = or1.getSource() - or2.getSource();
-						if (i < 0)
-							return -1;
-						if (i > 0)
-							return 1;
-						else
-							return 0;
-					}
-				});
-		Collections.sort(influencingTasks, new Comparator<TaskRelation>() {
-			@Override
-			public int compare(TaskRelation tr1, TaskRelation tr2) {
-				int i = tr1.getSource() - tr2.getSource();
-				if (i < 0)
-					return -1;
-				if (i > 0)
-					return 1;
-				else
-					return 0;
-			}
-		});
+		Collections.sort(influencingDecisions, new RelationComparator());	
+		Collections.sort(influencingOutcomes,new RelationComparator());
+		Collections.sort(influencingTasks, new RelationComparator());
 
 		Collections.sort(tasks, new Comparator<Task>() {
 			@Override
@@ -374,17 +339,6 @@ public class CloudDSF {
 	}
 
 	public void sortInfluencingRelations() {
-		Collections.sort(influencingRelations, new Comparator<Relation>() {
-			@Override
-			public int compare(Relation r1, Relation r2) {
-				int i = r1.getSource() - r2.getSource();
-				if (i < 0)
-					return -1;
-				if (i > 0)
-					return 1;
-				else
-					return 0;
-			}
-		});
+		Collections.sort(influencingRelations, new RelationComparator());
 	}
 }
