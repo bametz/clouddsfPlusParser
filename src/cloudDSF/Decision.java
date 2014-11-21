@@ -5,8 +5,10 @@ import java.util.Collections;
 import java.util.List;
 
 import util.CloudDSFEntityComparator;
+import util.Views;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonView;
 
 /**
  * Represents one decision of the cloudDSF
@@ -15,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  *
  */
 public class Decision extends CloudDSFEntity {
-
+	@JsonView(Views.NoOutcomes.class)
 	private List<Outcome> outcomes = new ArrayList<Outcome>();
 
 	public Decision(String label, String classification, int id, int parent) {

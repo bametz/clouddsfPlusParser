@@ -7,9 +7,8 @@ import java.util.List;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import util.Views;
 import cloudDSF.CloudDSF;
-import cloudDSF.Decision;
-import cloudDSF.DecisionPoint;
 import cloudDSF.Relation;
 import cloudDSF.TaskTree;
 
@@ -18,6 +17,7 @@ import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
@@ -27,14 +27,14 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
  * @author Metz
  *
  */
-public class JsonGenerator {
+public class JsonWriter {
 
 	public static void main(String[] args) throws IOException {
 		String filePath = "Matrix.xlsx";
 		XSSFWorkbook workbook = null;
 		// Create Workbook instance holding reference to .xlsx file
-		InputStream in = JsonGenerator.class.getClassLoader()
-				.getResourceAsStream(filePath);
+		InputStream in = JsonWriter.class.getClassLoader().getResourceAsStream(
+				filePath);
 		try {
 			workbook = new XSSFWorkbook(in);
 		} catch (IOException e) {
@@ -61,37 +61,34 @@ public class JsonGenerator {
 		influencingRelations.addAll(cdsf.getInfluencingTasks());
 		// sort by id
 		cdsf.sortInfluencingRelations();
+		// new CloudDSF Object without Outcomes to avoid annotations or
+		// appending on file
+		//
+		// cloudDSFwithoutOutcomes.setId(-3);
+		// cloudDSFwithoutOutcomes.setType("rootTestDec");
+		// cloudDSFwithoutOutcomes.setLabel("");
 
-		ObjectMapper mapper = new ObjectMapper(); // can reuse, share globally
+		TaskTree taskTree = new TaskTree();
+		taskTree.setTasks(cdsf.getTasks());
+
+		// Jackson objectmapper and settings
+		ObjectMapper mapper = new ObjectMapper();
 		mapper.enable(SerializationFeature.INDENT_OUTPUT);
-
-		// factory.objectNode().
 		mapper.setVisibilityChecker(mapper.getSerializationConfig()
 				.getDefaultVisibilityChecker()
 				.withFieldVisibility(JsonAutoDetect.Visibility.ANY)
 				.withGetterVisibility(JsonAutoDetect.Visibility.NONE));
 
-		JsonNode rootNode = mapper.createObjectNode(); // will be of type
-														// ObjectNode
-		((ObjectNode) rootNode).putPOJO("deicisonTree", cdsf);
-		// Array with all relations
-		((ObjectNode) rootNode).putPOJO("linksArray", influencingRelations);
+		JsonNode rootNode = mapper.createObjectNode();
+		ObjectWriter w = mapper.writerWithView(Views.NoOutcomes.class);
 
-		// Tasks
-		TaskTree taskTree = new TaskTree();
-		// get Tasks
-		taskTree.setTasks(cdsf.getTasks());
-		//((ObjectNode) rootNode).putPOJO("taskTree", taskTree);
-		
-		cdsf.setId(-3);
-		cdsf.setType("rootTestDec");
-		cdsf.setLabel("");
-		for (DecisionPoint dp : cdsf.getDecisionPoints()) {
-			for (Decision d : dp.getDecisions()) {
-				d.setOutcomes(null);
-			}
-		}
-		((ObjectNode) rootNode).putPOJO("decisionWithoutOutcomes", cdsf);
-		mapper.writeValue(new File("elaboratedDSF.json"), rootNode);
+//		((ObjectNode) rootNode).putPOJO("decisionTreeWithoutOutcomes",
+//				w.writ(cdsf));
+
+		((ObjectNode) rootNode).putPOJO("decisionTree", cdsf);
+		((ObjectNode) rootNode).putPOJO("taskTree", taskTree);
+		((ObjectNode) rootNode).putPOJO("linksArray", influencingRelations);
+		File f = new File("elaboratedDSF.json");
+		mapper.writeValue(f, rootNode);
 	}
 }
