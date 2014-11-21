@@ -9,7 +9,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import cloudDSF.CloudDSF;
+import cloudDSF.CloudDSFMaster;
 import cloudDSF.Decision;
 import cloudDSF.DecisionPoint;
 import cloudDSF.Outcome;
@@ -23,11 +23,11 @@ import cloudDSF.Task;
  */
 public class ExcelParser {
 	
-	private final CloudDSF cdsf;
+	private final CloudDSFMaster cdsf;
 	private final XSSFWorkbook workbook;
 	
 	public ExcelParser(XSSFWorkbook workbook) {
-		this.cdsf = new CloudDSF();
+		this.cdsf = new CloudDSFMaster();
 		this.workbook = workbook;
 	}
 	/**
@@ -37,7 +37,7 @@ public class ExcelParser {
 	 * @param workbook
 	 * @return
 	 */
-	public CloudDSF readExcel() {
+	public CloudDSFMaster readExcel() {
 		// Get first/desired sheet from the workbook
 		XSSFSheet sheet = workbook.getSheet("Knowledge Base");
 		// XSSFSheet sheet = workbook.getSheetAt(0);
