@@ -1,11 +1,8 @@
 package parser;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -16,10 +13,13 @@ import cloudDSF.DecisionPoint;
 import cloudDSF.Relation;
 import cloudDSF.TaskTree;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.core.JsonGenerationException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 /**
  * Main class to trigger read of excel file and json generation
@@ -43,27 +43,16 @@ public class JsonGenerator {
 		ExcelParser parser = new ExcelParser(workbook);
 		CloudDSF cdsf = parser.readExcel();
 		cdsf.printCloudDSF();
-		writeLegacyJson(cdsf);
+		// writeLegacyJson(cdsf);
+		writeJsonJackson(cdsf);
 		// writeDecisionTreeWithoutOutcomes(cdsf);
 	}
 
-	/**
-	 * Writes json with all outcomes and links list.
-	 * 
-	 * @param cdsf
-	 * @throws IOException
-	 */
-	private static void writeLegacyJson(CloudDSF cdsf) throws IOException {
-		// gson
-		Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls()
-				.create();
-		JsonObject cloudDSFLegacyJson = new JsonObject();
-		JsonElement cloudDSFJson = gson.toJsonTree(cdsf);
-		// Set attribute of CloudDSF Object to match legacyJson
+	private static void writeJsonJackson(CloudDSF cdsf)
+			throws JsonGenerationException, JsonMappingException, IOException {
 		cdsf.setId(-1);
 		cdsf.setType("root");
 		cdsf.setLabel("Decision Points");
-
 
 		// Relations = relatios of tasks AND Decisions
 		List<Relation> influencingRelations = cdsf.getInfluencingRelations();
@@ -72,39 +61,37 @@ public class JsonGenerator {
 		influencingRelations.addAll(cdsf.getInfluencingTasks());
 		// sort by id
 		cdsf.sortInfluencingRelations();
+
+		ObjectMapper mapper = new ObjectMapper(); // can reuse, share globally
+		mapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+		// factory.objectNode().
+		mapper.setVisibilityChecker(mapper.getSerializationConfig()
+				.getDefaultVisibilityChecker()
+				.withFieldVisibility(JsonAutoDetect.Visibility.ANY)
+				.withGetterVisibility(JsonAutoDetect.Visibility.NONE));
+
+		JsonNode rootNode = mapper.createObjectNode(); // will be of type
+														// ObjectNode
+		((ObjectNode) rootNode).putPOJO("deicisonTree", cdsf);
 		// Array with all relations
-		JsonElement linksArray = gson
-				.toJsonTree(influencingRelations);
-		
+		((ObjectNode) rootNode).putPOJO("linksArray", influencingRelations);
+
 		// Tasks
 		TaskTree taskTree = new TaskTree();
 		// get Tasks
 		taskTree.setTasks(cdsf.getTasks());
-		JsonElement taskTreeJson = gson.toJsonTree(taskTree);
-
+		//((ObjectNode) rootNode).putPOJO("taskTree", taskTree);
+		
+		cdsf.setId(-3);
+		cdsf.setType("rootTestDec");
+		cdsf.setLabel("");
 		for (DecisionPoint dp : cdsf.getDecisionPoints()) {
 			for (Decision d : dp.getDecisions()) {
 				d.setOutcomes(null);
 			}
 		}
-		Gson gsonONull = new GsonBuilder().setPrettyPrinting().create();
-		cdsf.setId(-3);
-		cdsf.setType("rootTestDec");
-		cdsf.setLabel("");
-		JsonElement decisionTreeWithoutOutcomes = gsonONull.toJsonTree(cdsf);
-
-		cloudDSFLegacyJson.add("decisionTreeWithoutOutcomes",
-				decisionTreeWithoutOutcomes);
-		cloudDSFLegacyJson.add("decisionTree", cloudDSFJson);
-		cloudDSFLegacyJson.add("taskTree", taskTreeJson);
-		cloudDSFLegacyJson.add("linksArray", linksArray);
-
-		String json = gson.toJson(cloudDSFLegacyJson);
-		File jsonFile = new File("elaboratedDSF.json");
-		BufferedWriter bw = new BufferedWriter(new FileWriter(jsonFile));
-		bw.write(json);
-		bw.flush();
-		bw.close();
+		((ObjectNode) rootNode).putPOJO("decisionWithoutOutcomes", cdsf);
+		mapper.writeValue(new File("elaboratedDSF.json"), rootNode);
 	}
-
 }

@@ -3,11 +3,8 @@ package cloudDSF;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.google.gson.annotations.SerializedName;
-
 public class TaskTree extends CloudDSFEntity {
 	
-	@SerializedName("children")
 	private List<Task> tasks = new ArrayList<Task>();
 
 	public TaskTree() {

@@ -6,7 +6,7 @@ import java.util.List;
 
 import util.CloudDSFEntityComparator;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Represents one decision of the cloudDSF
@@ -16,7 +16,6 @@ import com.google.gson.annotations.SerializedName;
  */
 public class Decision extends CloudDSFEntity {
 
-	@SerializedName("children")
 	private List<Outcome> outcomes = new ArrayList<Outcome>();
 
 	public Decision(String label, String classification, int id, int parent) {
@@ -46,7 +45,7 @@ public class Decision extends CloudDSFEntity {
 	public void addOutcome(Outcome outcome) {
 		outcomes.add(outcome);
 	}
-
+	@JsonProperty("children")
 	public List<Outcome> getOutcomes() {
 		return outcomes;
 	}

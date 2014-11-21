@@ -7,15 +7,14 @@ import java.util.List;
 import util.CloudDSFEntityComparator;
 import util.RelationComparator;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author Metz Main class to represent the CloudDSF object with dps, ds and os.
  */
 
 public class CloudDSF extends CloudDSFEntity {
-
-	@SerializedName("children")
+	// instead of transient annotations possible
 	private List<DecisionPoint> decisionPoints = new ArrayList<DecisionPoint>();
 
 	private transient List<DecisionRelation> influencingDecisions = new ArrayList<DecisionRelation>();
@@ -26,8 +25,7 @@ public class CloudDSF extends CloudDSFEntity {
 
 	private transient List<Task> tasks = new ArrayList<Task>();
 
-	@SerializedName("linksArray")
-	private List<Relation> influencingRelations = new ArrayList<Relation>();
+	private transient List<Relation> influencingRelations = new ArrayList<Relation>();
 
 	public DecisionPoint getDecisionPoint(String decisionPointName) {
 		for (DecisionPoint decisionPoint : decisionPoints) {
@@ -181,6 +179,7 @@ public class CloudDSF extends CloudDSFEntity {
 		this.influencingOutcomes = influencingOutcomes;
 	}
 
+	@JsonProperty("children")
 	public List<DecisionPoint> getDecisionPoints() {
 		return decisionPoints;
 	}
