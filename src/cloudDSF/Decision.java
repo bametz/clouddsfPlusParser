@@ -30,7 +30,7 @@ public class Decision extends CloudDSFEntity {
 	/**
 	 * Sorts array list to offer outcomes sorted by ascending id for json
 	 */
-	public void prepareSortedOutcomes() {
+	public void sortOutcomes() {
 		Collections.sort(outcomes, new CloudDSFEntityComparator());
 	}
 

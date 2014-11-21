@@ -29,7 +29,7 @@ public class DecisionPoint extends CloudDSFEntity {
 	/**
 	 * Sorts decisions by ascending id for json
 	 */
-	public void prepareSortedDecisions() {
+	public void sortDecisions() {
 		Collections.sort(decisions, new CloudDSFEntityComparator());
 	}
 

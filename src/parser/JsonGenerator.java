@@ -28,7 +28,7 @@ import com.google.gson.JsonObject;
  *
  */
 public class JsonGenerator {
-	
+
 	public static void main(String[] args) throws IOException {
 		String filePath = "Matrix.xlsx";
 		XSSFWorkbook workbook = null;
@@ -54,29 +54,31 @@ public class JsonGenerator {
 	 * @throws IOException
 	 */
 	private static void writeLegacyJson(CloudDSF cdsf) throws IOException {
-		//gson
-		Gson gson = new GsonBuilder().setPrettyPrinting()
-				.serializeNulls().create();
+		// gson
+		Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls()
+				.create();
 		JsonObject cloudDSFLegacyJson = new JsonObject();
 		JsonElement cloudDSFJson = gson.toJsonTree(cdsf);
-		//Set attribute of CloudDSF Object to match legacyJson
+		// Set attribute of CloudDSF Object to match legacyJson
 		cdsf.setId(-1);
 		cdsf.setType("root");
 		cdsf.setLabel("Decision Points");
-		
-		//Array with all relations
-		JsonElement linksArray = gson
-				.toJsonTree(cdsf.getInfluencingRelations());
-		//Relations = relatios of tasks AND Decisions
-		List<Relation> influencingRelations = new ArrayList<Relation>();
+
+
+		// Relations = relatios of tasks AND Decisions
+		List<Relation> influencingRelations = cdsf.getInfluencingRelations();
+		influencingRelations.clear();
 		influencingRelations.addAll(cdsf.getInfluencingDecisions());
 		influencingRelations.addAll(cdsf.getInfluencingTasks());
-		//sort by id
+		// sort by id
 		cdsf.sortInfluencingRelations();
-
-		//Tasks
+		// Array with all relations
+		JsonElement linksArray = gson
+				.toJsonTree(influencingRelations);
+		
+		// Tasks
 		TaskTree taskTree = new TaskTree();
-		// get Tasks 
+		// get Tasks
 		taskTree.setTasks(cdsf.getTasks());
 		JsonElement taskTreeJson = gson.toJsonTree(taskTree);
 

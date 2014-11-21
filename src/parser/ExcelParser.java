@@ -22,14 +22,15 @@ import cloudDSF.Task;
  *
  */
 public class ExcelParser {
-	
+
 	private final CloudDSF cdsf;
 	private final XSSFWorkbook workbook;
-	
+
 	public ExcelParser(XSSFWorkbook workbook) {
 		this.cdsf = new CloudDSF();
 		this.workbook = workbook;
 	}
+
 	/**
 	 * Retrieves the knowledge base of the CloudDSF from the sheet and trigger
 	 * retrieving of relations.
@@ -100,8 +101,8 @@ public class ExcelParser {
 					outcome = new Outcome(outcomeCell.getStringCellValue(),
 							outcomeID, decisionID);
 					decision.addOutcome(outcome);
-					cdsf.getDecisionPoint(decisionPointName)
-							.addDecision(decision);
+					cdsf.getDecisionPoint(decisionPointName).addDecision(
+							decision);
 				} else {
 					// if no text in dp or d than new outcome
 					outcomeID++;
@@ -122,13 +123,8 @@ public class ExcelParser {
 		setInfluencingOutcomes();
 		setTasks();
 		setInfluencingTasks();
-		for (DecisionPoint dp : cdsf.getDecisionPointsSorted()) {
-			dp.prepareSortedDecisions();
-			for (Decision d : dp.getDecisions()) {
-				d.prepareSortedOutcomes();
-			}
-			cdsf.sortAllLists();
-		}
+		cdsf.sortEntities();
+		cdsf.sortLists();
 		return cdsf;
 	}
 
@@ -139,7 +135,7 @@ public class ExcelParser {
 	 * @param decisionPoints
 	 */
 	private void setWeight() {
-		for (DecisionPoint dp : cdsf.getDecisionPointsSorted()) {
+		for (DecisionPoint dp : cdsf.getDecisionPoints()) {
 			for (Decision d : dp.getDecisions()) {
 				double amount = d.getOutcomes().size();
 				double weight = 1 / amount;
@@ -220,7 +216,8 @@ public class ExcelParser {
 
 	/**
 	 * Retrieves relations between outcomes from sheet.
-	 * @return 
+	 * 
+	 * @return
 	 * 
 	 * @return
 	 */
@@ -265,20 +262,29 @@ public class ExcelParser {
 			Iterator<Cell> cells = row.cellIterator();
 			while (cells.hasNext()) {
 				XSSFCell cell = (XSSFCell) cells.next();
-				String relationName = cell.getStringCellValue();
-				String sourceDesc = row.getCell(startTaskColumn).getStringCellValue();
-				String targetDesc = endDecisionRow.getCell(cell.getColumnIndex())
-						.getStringCellValue();
-				switch (relationName) {
-				case "Affecting":
-					cdsf.setTaskRelation(sourceDesc, targetDesc, "oneWay", relationName);
-					break;
-				case "Both":
-				cdsf.setTaskRelation(sourceDesc, targetDesc, "twoWay", relationName);
-					break;
-				case "Affected":
-					cdsf.setTaskRelation(sourceDesc, targetDesc, "backwards", relationName);
-					break;
+				if ((cell == null)
+						|| ((cell != null) && (cell.getCellType() == Cell.CELL_TYPE_BLANK))) {
+
+				} else {
+					String relationName = cell.getStringCellValue();
+					String sourceDesc = row.getCell(startTaskColumn)
+							.getStringCellValue();
+					String targetDesc = endDecisionRow.getCell(
+							cell.getColumnIndex()).getStringCellValue();
+					switch (relationName) {
+					case "Affecting":
+						cdsf.setTaskRelation(sourceDesc, targetDesc, "oneWay",
+								relationName);
+						break;
+					case "Both":
+						cdsf.setTaskRelation(sourceDesc, targetDesc, "twoWay",
+								relationName);
+						break;
+					case "Affected":
+						cdsf.setTaskRelation(sourceDesc, targetDesc,
+								"backwards", relationName);
+						break;
+					}
 				}
 			}
 		}

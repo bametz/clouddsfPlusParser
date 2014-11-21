@@ -2,7 +2,6 @@ package cloudDSF;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import util.CloudDSFEntityComparator;
@@ -61,7 +60,10 @@ public class CloudDSF extends CloudDSFEntity {
 	private Outcome getOutcome(String outcomeName) {
 		for (DecisionPoint dp : decisionPoints) {
 			for (Decision d : dp.getDecisions()) {
-				return d.getOutcome(outcomeName);
+				Outcome o = d.getOutcome(outcomeName);
+				if (o != null) {
+					return o;
+				}
 			}
 		}
 		return null;
@@ -95,26 +97,6 @@ public class CloudDSF extends CloudDSFEntity {
 	 */
 	public void setOutcomeRelation(String startOutcome, String endOutcome,
 			String label) {
-		// int source = 0;
-		// int target = 0;
-		// for (DecisionPoint dp : decisionPoints) {
-		// for (Decision d : dp.getDecisions()) {
-		// for (Outcome o : d.getOutcomes()) {
-		// if (o.getLabel().equals(startOutcome)) {
-		// source = o.getId();
-		// }
-		// if (o.getLabel().equals(endOutcome)) {
-		// target = o.getId();
-		// }
-		// if (source != 0 && target != 0) {
-		// break;
-		// }
-		// }
-		// }
-		// }
-		// int source =
-		// label is rather type
-
 		int source = getOutcome(startOutcome).getId();
 		int target = getOutcome(endOutcome).getId();
 		OutcomeRelation or = new OutcomeRelation(source, target, label);
@@ -137,8 +119,8 @@ public class CloudDSF extends CloudDSFEntity {
 			dir = "both";
 			break;
 		case "backwards":
-			source = getDecision(sourceDesc).getId();
-			target = getTask(targetDesc).getId();
+			source = getDecision(targetDesc).getId();
+			target = getTask(sourceDesc).getId();
 			dir = "auto";
 			break;
 		}
@@ -146,56 +128,37 @@ public class CloudDSF extends CloudDSFEntity {
 		influencingTasks.add(tr);
 	}
 
+	public void addTask(Task task) {
+		tasks.add(task);
+	}
+
 	/**
-	 * Helper Method to print out content of cloudDSF to check content.
+	 * Sort of all ArrayLists to produce sorted Output in id ascending order
 	 */
-	public void printCloudDSF() {
-		int dpamount = 0;
-		int damount = 0;
-		int oamount = 0;
-		int relations = 0;
-		int oRelationsAmount = 0;
-		int tamount = 0;
+	public void sortLists() {
+		CloudDSFEntityComparator cec = new CloudDSFEntityComparator();
+		RelationComparator rc = new RelationComparator();
+		Collections.sort(decisionPoints, cec);
+		Collections.sort(influencingDecisions, rc);
+		Collections.sort(influencingOutcomes, rc);
+		Collections.sort(influencingTasks, rc);
 
-		for (DecisionPoint dp : getDecisionPointsSorted()) {
-			dpamount++;
-			System.out.println("Decision Point Name = " + dp.getLabel()
-					+ " ID " + dp.getId());
+	}
+
+	public void sortEntities() {
+		CloudDSFEntityComparator cec = new CloudDSFEntityComparator();
+		Collections.sort(decisionPoints, cec);
+		Collections.sort(tasks, cec);
+		for (DecisionPoint dp : decisionPoints) {
 			for (Decision d : dp.getDecisions()) {
-				damount++;
-				System.out.println("Decision " + d.getLabel() + " ID "
-						+ d.getId() + " parentId " + d.getParent());
-
-				for (Outcome o : d.getOutcomes()) {
-					oamount++;
-					System.out.println("Outcome " + o.getLabel() + " ID "
-							+ o.getId() + " parentId " + o.getParent()
-							+ " Weight " + o.getWeight());
-				}
+				d.sortOutcomes();
 			}
+			dp.sortDecisions();
 		}
-		for (Relation relation : influencingDecisions) {
-			System.out.println(relation.getSource() + " to "
-					+ relation.getTarget() + " label " + relation.getLabel());
-			relations++;
-		}
-		for (OutcomeRelation oRelation : influencingOutcomes) {
-			System.out.println(oRelation.getSource() + " to "
-					+ oRelation.getTarget() + " label " + oRelation.getLabel());
-			oRelationsAmount++;
-		}
+	}
 
-		for (Task t : tasks) {
-			System.out.println("task label " + t.getLabel() + " " + t.getId());
-			tamount++;
-		}
-
-		System.out.println("anzahl dp " + dpamount);
-		System.out.println("anzahl d " + damount);
-		System.out.println("anzahl o " + oamount);
-		System.out.println("anzahl rel " + relations);
-		System.out.println("anzahl out rel " + oRelationsAmount);
-		System.out.println(tamount);
+	public void sortInfluencingRelations() {
+		Collections.sort(influencingRelations, new RelationComparator());
 	}
 
 	public List<TaskRelation> getInfluencingTasks() {
@@ -216,14 +179,6 @@ public class CloudDSF extends CloudDSFEntity {
 
 	public void setInfluencingOutcomes(List<OutcomeRelation> influencingOutcomes) {
 		this.influencingOutcomes = influencingOutcomes;
-	}
-
-	public List<DecisionPoint> getDecisionPointsSorted() {
-		return decisionPoints;
-	}
-
-	public void setDecisionPointsSorted(List<DecisionPoint> decisionPointsSorted) {
-		this.decisionPoints = decisionPointsSorted;
 	}
 
 	public List<DecisionPoint> getDecisionPoints() {
@@ -259,24 +214,67 @@ public class CloudDSF extends CloudDSFEntity {
 		this.influencingRelations = influencingRelations;
 	}
 
-	public void addTask(Task task) {
-		tasks.add(task);
-	}
-
 	/**
-	 * Sort of all ArrayLists to produce sorted Output in id ascending order
+	 * Helper Method to print out content of cloudDSF to check content.
 	 */
-	public void sortAllLists() {
-		CloudDSFEntityComparator cec = new CloudDSFEntityComparator();
-		RelationComparator rc = new RelationComparator();
-		Collections.sort(decisionPoints, cec);
-		Collections.sort(influencingDecisions, rc);
-		Collections.sort(influencingOutcomes, rc);
-		Collections.sort(influencingTasks, rc);
-		Collections.sort(tasks, cec);
-	}
+	public void printCloudDSF() {
+		int dpamount = 0;
+		int damount = 0;
+		int oamount = 0;
+		int dRelations = 0;
+		int tRelations = 0;
+		int oRelationsAmount = 0;
+		int tamount = 0;
 
-	public void sortInfluencingRelations() {
-		Collections.sort(influencingRelations, new RelationComparator());
+		for (DecisionPoint dp : getDecisionPoints()) {
+			dpamount++;
+			System.out.println("Decision Point Name = " + dp.getLabel()
+					+ " ID " + dp.getId());
+			for (Decision d : dp.getDecisions()) {
+				damount++;
+				System.out.println("Decision " + d.getLabel() + " ID "
+						+ d.getId() + " parentId " + d.getParent());
+
+				for (Outcome o : d.getOutcomes()) {
+					oamount++;
+					System.out.println("Outcome " + o.getLabel() + " ID "
+							+ o.getId() + " parentId " + o.getParent()
+							+ " Weight " + o.getWeight());
+				}
+			}
+		}
+		for (Task t : tasks) {
+			System.out.println("Task " + t.getLabel() + " " + t.getId());
+			tamount++;
+		}
+
+		for (DecisionRelation dRelation : influencingDecisions) {
+			System.out.println("Decision Relationship from "
+					+ dRelation.getSource() + " to " + dRelation.getTarget()
+					+ " with 'type' " + dRelation.getLabel());
+			dRelations++;
+		}
+		for (OutcomeRelation oRelation : influencingOutcomes) {
+			System.out.println("Outcome Relationship from "
+					+ oRelation.getSource() + " to " + oRelation.getTarget()
+					+ " with 'type' " + oRelation.getLabel());
+			oRelationsAmount++;
+		}
+
+		for (TaskRelation tRelation : influencingTasks) {
+			System.out.println("Task Relationshipt from "
+					+ tRelation.getSource() + " to " + tRelation.getTarget()
+					+ " with type " + tRelation.getDir());
+			tRelations++;
+		}
+		System.out.println("##################################");
+		System.out.println("#Decision Points = " + dpamount);
+		System.out.println("#Decision = " + damount);
+		System.out.println("#Number Outcomes = " + oamount);
+		System.out.println("#Number Tasks = " + tamount);
+		System.out.println("#Relations between Decisions = " + dRelations);
+		System.out.println("#Relations between Outcomes = " + oRelationsAmount);
+		System.out.println("#Relations between Tasks and Decision = "
+				+ tRelations);
 	}
 }
