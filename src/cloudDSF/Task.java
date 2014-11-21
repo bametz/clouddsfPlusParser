@@ -1,32 +1,10 @@
 package cloudDSF;
 
-public class Task {
-	private int id;
-	private final String type = "task";
-	private String label;
+public class Task extends CloudDSFEntity {
 
 	public Task(int id, String label) {
-		this.id = id;
-		this.label = label;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public String getLabel() {
-		return label;
-	}
-
-	public void setLabel(String label) {
-		this.label = label;
+		this.setType("task");
+		this.setId(id);
+		this.setLabel(label);
 	}
 }

@@ -5,16 +5,16 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import util.CloudDSFEntityComparator;
+import util.RelationComparator;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
  * @author Metz Main class to represent the CloudDSF object with dps, ds and os.
  */
 
-public class CloudDSF {
-	private int id;
-	private String type;
-	private String label;
+public class CloudDSF extends CloudDSFEntity {
 
 	@SerializedName("children")
 	private List<DecisionPoint> decisionPoints = new ArrayList<DecisionPoint>();
@@ -78,22 +78,6 @@ public class CloudDSF {
 	 */
 	public void setDecisionRelation(String startDecision, String endDecision,
 			String label) {
-		// int source = 0;
-		// int target = 0;
-		// for (DecisionPoint dp : decisionPoints) {
-		//
-		// for (Decision d : dp.getDecisions()) {
-		// if (d.getLabel().equals(startDecision)) {
-		// source = d.getId();
-		// }
-		// if (d.getLabel().equals(endDecision)) {
-		// target = d.getId();
-		// }
-		// if (source != 0 && target != 0) {
-		// break;
-		// }
-		// }
-		// }
 		int source = getDecision(startDecision).getId();
 		int target = getDecision(endDecision).getId();
 		// label is rather type
@@ -133,7 +117,6 @@ public class CloudDSF {
 
 		int source = getOutcome(startOutcome).getId();
 		int target = getOutcome(endOutcome).getId();
-
 		OutcomeRelation or = new OutcomeRelation(source, target, label);
 		influencingOutcomes.add(or);
 	}
@@ -243,30 +226,6 @@ public class CloudDSF {
 		this.decisionPoints = decisionPointsSorted;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public String getLabel() {
-		return label;
-	}
-
-	public void setLabel(String label) {
-		this.label = label;
-	}
-
 	public List<DecisionPoint> getDecisionPoints() {
 		return decisionPoints;
 	}
@@ -308,34 +267,13 @@ public class CloudDSF {
 	 * Sort of all ArrayLists to produce sorted Output in id ascending order
 	 */
 	public void sortAllLists() {
-		Collections.sort(decisionPoints, new Comparator<DecisionPoint>() {
-			@Override
-			public int compare(DecisionPoint dp1, DecisionPoint dp2) {
-				int i = dp1.getId() - dp2.getId();
-				if (i < 0)
-					return -1;
-				if (i > 0)
-					return 1;
-				else
-					return 0;
-			}
-		});
-		Collections.sort(influencingDecisions, new RelationComparator());	
-		Collections.sort(influencingOutcomes,new RelationComparator());
-		Collections.sort(influencingTasks, new RelationComparator());
-
-		Collections.sort(tasks, new Comparator<Task>() {
-			@Override
-			public int compare(Task t1, Task t2) {
-				int i = t1.getId() - t2.getId();
-				if (i < 0)
-					return -1;
-				if (i > 0)
-					return 1;
-				else
-					return 0;
-			}
-		});
+		CloudDSFEntityComparator cec = new CloudDSFEntityComparator();
+		RelationComparator rc = new RelationComparator();
+		Collections.sort(decisionPoints, cec);
+		Collections.sort(influencingDecisions, rc);
+		Collections.sort(influencingOutcomes, rc);
+		Collections.sort(influencingTasks, rc);
+		Collections.sort(tasks, cec);
 	}
 
 	public void sortInfluencingRelations() {

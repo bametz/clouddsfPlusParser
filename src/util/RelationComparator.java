@@ -1,6 +1,8 @@
-package cloudDSF;
+package util;
 
 import java.util.Comparator;
+
+import cloudDSF.Relation;
 
 public class RelationComparator implements Comparator<Relation>{
 

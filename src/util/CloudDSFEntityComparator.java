@@ -1,6 +1,8 @@
-package cloudDSF;
+package util;
 
 import java.util.Comparator;
+
+import cloudDSF.CloudDSFEntity;
 
 public class CloudDSFEntityComparator implements Comparator<CloudDSFEntity> {
 
