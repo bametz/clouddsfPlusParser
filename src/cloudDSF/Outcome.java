@@ -10,17 +10,15 @@ import java.util.Locale;
  * @author Metz
  *
  */
-public class Outcome {
-	private int id;
-	private final String type = "outcome";
-	private int parent;
+public class Outcome extends CloudDSFEntity {
+
 	private double weight;
-	private String label;
 
 	public Outcome(String label, int id, int parent) {
-		this.label = label;
+		this.setLabel(label);
 		this.setId(id);
 		this.setParent(parent);
+		this.setType("outcome");
 	}
 
 	/**
@@ -37,35 +35,7 @@ public class Outcome {
 		this.weight = Double.valueOf(decimalFormat.format(weight));
 	}
 
-	public String getLabel() {
-		return label;
-	}
-
-	public void setLabel(String label) {
-		this.label = label;
-	}
-
-	public int getParent() {
-		return parent;
-	}
-
-	public void setParent(int parent) {
-		this.parent = parent;
-	}
-
 	public double getWeight() {
 		return weight;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 }
