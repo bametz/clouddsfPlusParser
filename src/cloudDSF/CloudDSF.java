@@ -11,7 +11,7 @@ import com.google.gson.annotations.SerializedName;
  * @author Metz Main class to represent the CloudDSF object with dps, ds and os.
  */
 
-public class CloudDSFMaster {
+public class CloudDSF {
 	private int id;
 	private String type;
 	private String label;

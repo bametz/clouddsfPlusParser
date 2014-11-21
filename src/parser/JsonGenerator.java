@@ -10,7 +10,7 @@ import java.util.List;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import cloudDSF.CloudDSFMaster;
+import cloudDSF.CloudDSF;
 import cloudDSF.Decision;
 import cloudDSF.DecisionPoint;
 import cloudDSF.Relation;
@@ -41,7 +41,7 @@ public class JsonGenerator {
 			e.printStackTrace();
 		}
 		ExcelParser parser = new ExcelParser(workbook);
-		CloudDSFMaster cdsf = parser.readExcel();
+		CloudDSF cdsf = parser.readExcel();
 		cdsf.printCloudDSF();
 		writeLegacyJson(cdsf);
 		// writeDecisionTreeWithoutOutcomes(cdsf);
@@ -53,7 +53,7 @@ public class JsonGenerator {
 	 * @param cdsf
 	 * @throws IOException
 	 */
-	private static void writeLegacyJson(CloudDSFMaster cdsf) throws IOException {
+	private static void writeLegacyJson(CloudDSF cdsf) throws IOException {
 		//gson
 		Gson gson = new GsonBuilder().setPrettyPrinting()
 				.serializeNulls().create();
