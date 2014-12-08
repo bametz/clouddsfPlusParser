@@ -24,7 +24,7 @@ public class Decision extends CloudDSFEntity {
 		this.setClassification(classification);
 		this.setDescription(description);
 		this.setCluster(cluster);
-		this.setGroup("dec" + id);
+		this.setGroup("dec" + cluster);
 		this.setParent(parent);
 		// todo
 		// this.setAdditionalInfo(additionalInfo);

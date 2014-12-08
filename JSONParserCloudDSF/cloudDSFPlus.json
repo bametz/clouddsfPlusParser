@@ -20,7 +20,7 @@
         "parent" : 1,
         "classification" : "Application Migration in General",
         "cluster" : 1,
-        "group" : "dec101",
+        "group" : "dec1",
         "children" : [ {
           "id" : 10101,
           "label" : "Presentation Layer",
@@ -78,7 +78,7 @@
         "parent" : 1,
         "classification" : "Application Migration in General",
         "cluster" : 1,
-        "group" : "dec102",
+        "group" : "dec1",
         "children" : [ {
           "id" : 10201,
           "label" : "Client Tier",
@@ -136,7 +136,7 @@
         "parent" : 1,
         "classification" : "Application Migration in General",
         "cluster" : 1,
-        "group" : "dec103",
+        "group" : "dec1",
         "children" : [ {
           "id" : 10301,
           "label" : "Application Component",
@@ -201,7 +201,7 @@
         "parent" : 1,
         "classification" : "Cloud Migration specific",
         "cluster" : 1,
-        "group" : "dec104",
+        "group" : "dec1",
         "children" : [ {
           "id" : 10401,
           "label" : "Migration Type I",
@@ -247,7 +247,7 @@
         "parent" : 2,
         "classification" : "Cloud Migration specific / Application Migration in General",
         "cluster" : 2,
-        "group" : "dec201",
+        "group" : "dec2",
         "children" : [ {
           "id" : 20101,
           "label" : "No Scaling",
@@ -312,7 +312,7 @@
         "parent" : 2,
         "classification" : "Cloud Migration specific / Application Migration in General",
         "cluster" : 2,
-        "group" : "dec202",
+        "group" : "dec2",
         "children" : [ {
           "id" : 20201,
           "label" : "Vertical Scaling",
@@ -342,7 +342,7 @@
         "parent" : 2,
         "classification" : "Cloud Migration specific / Application Migration in General",
         "cluster" : 2,
-        "group" : "dec203",
+        "group" : "dec2",
         "children" : [ {
           "id" : 20301,
           "label" : "Manual Scaling",
@@ -386,7 +386,7 @@
         "parent" : 2,
         "classification" : "Cloud Migration specific / Application Migration in General",
         "cluster" : 2,
-        "group" : "dec204",
+        "group" : "dec2",
         "children" : [ {
           "id" : 20401,
           "label" : "No Trigger",
@@ -425,7 +425,7 @@
         "parent" : 3,
         "classification" : "Cloud Migration specific",
         "cluster" : 3,
-        "group" : "dec301",
+        "group" : "dec3",
         "children" : [ {
           "id" : 30101,
           "label" : "Multi-Tenancy Architecture 0",
@@ -471,7 +471,7 @@
         "parent" : 4,
         "classification" : "Cloud Migration specific",
         "cluster" : 4,
-        "group" : "dec401",
+        "group" : "dec4",
         "children" : [ {
           "id" : 40101,
           "label" : "Public Cloud",
@@ -508,7 +508,7 @@
         "parent" : 4,
         "classification" : "Cloud Migration specific",
         "cluster" : 4,
-        "group" : "dec402",
+        "group" : "dec4",
         "children" : [ {
           "id" : 40201,
           "label" : "IaaS",
@@ -566,7 +566,7 @@
         "parent" : 4,
         "classification" : "Cloud Migration specific / Application Migration in General",
         "cluster" : 4,
-        "group" : "dec403",
+        "group" : "dec4",
         "children" : [ {
           "id" : 40301,
           "label" : "On-Premise Hosting",
@@ -596,7 +596,7 @@
         "parent" : 4,
         "classification" : "Cloud Migration specific / Application Migration in General",
         "cluster" : 4,
-        "group" : "dec404",
+        "group" : "dec4",
         "children" : [ {
           "id" : 40401,
           "label" : "Role Set 1",
@@ -654,7 +654,7 @@
         "parent" : 4,
         "classification" : "Cloud Migration specific / Application Migration in General",
         "cluster" : 4,
-        "group" : "dec405",
+        "group" : "dec4",
         "children" : [ {
           "id" : 40501,
           "label" : "Evaluated Cloud Vendor",
@@ -670,7 +670,7 @@
         "parent" : 4,
         "classification" : "Cloud Migration specific",
         "cluster" : 4,
-        "group" : "dec406",
+        "group" : "dec4",
         "children" : [ {
           "id" : 40601,
           "label" : "Free",
@@ -714,7 +714,7 @@
         "parent" : 4,
         "classification" : "Cloud Migration specific / Application Migration in General",
         "cluster" : 4,
-        "group" : "dec407",
+        "group" : "dec4",
         "children" : [ {
           "id" : 40701,
           "label" : "Data Location under same jurisdiction as company",
