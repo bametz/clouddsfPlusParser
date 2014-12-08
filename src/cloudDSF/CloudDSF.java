@@ -33,6 +33,7 @@ public class CloudDSF extends CloudDSFEntity {
 
 	public CloudDSF(int id, String type, String label) {
 		super(id, type, label);
+		this.setGroup("root");
 	}
 
 	public void setDecisionRelation(String startDecision, String endDecision,
