@@ -3,12 +3,10 @@ package parser;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import cloudDSF.CloudDSF;
-import cloudDSF.Relation;
 import cloudDSF.TaskTree;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
@@ -63,13 +61,14 @@ public class JsonWriter {
 		mapper.setSerializationInclusion(Include.NON_NULL);
 
 		cdsf.setInfluencingRelations();
-		List<Relation> influencingRelations = cdsf.getInfluencingRelations();
+		// List<Relation> influencingRelations = cdsf.getInfluencingRelations();
 
 		JsonNode rootNode = mapper.createObjectNode();
 
 		((ObjectNode) rootNode).putPOJO("decisionTree", cdsf);
 		((ObjectNode) rootNode).putPOJO("taskTree", taskTree);
-		((ObjectNode) rootNode).putPOJO("linksArray", influencingRelations);
+		((ObjectNode) rootNode).putPOJO("linksArray",
+				cdsf.getInfluencingRelations());
 		File f = new File("elaboratedDSF.json");
 		mapper.writeValue(f, rootNode);
 	}
