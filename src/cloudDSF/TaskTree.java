@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * Class represents object with all tasks of the legacy cloudDSF
+ * 
  * @author Metz
  *
  */

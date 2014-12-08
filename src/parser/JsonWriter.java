@@ -38,10 +38,18 @@ public class JsonWriter {
 			e.printStackTrace();
 		}
 		writeLegacyJson(workbook);
-		// writeForceLayout(workbook);
-		// writeInfluencingLayout(workbook);
+		writeCloudDSFPlusJson(workbook);
 	}
 
+	/**
+	 * Generates json file for the legacy CloudDSF. Avoids any unnecessary
+	 * attribute serialization
+	 * 
+	 * @param workbook
+	 * @throws JsonGenerationException
+	 * @throws JsonMappingException
+	 * @throws IOException
+	 */
 	private static void writeLegacyJson(XSSFWorkbook workbook)
 			throws JsonGenerationException, JsonMappingException, IOException {
 		CloudDSFParser parser = new CloudDSFParser(workbook);
@@ -54,124 +62,58 @@ public class JsonWriter {
 		ObjectMapper mapper = new ObjectMapper();
 		// Pretty Print
 		mapper.enable(SerializationFeature.INDENT_OUTPUT);
+		// If getter is found value will be serialized
+		// Avoids unnecessary attributes
+		mapper.setVisibilityChecker(mapper.getSerializationConfig()
+				.getDefaultVisibilityChecker()
+				.withFieldVisibility(JsonAutoDetect.Visibility.DEFAULT)
+				.withGetterVisibility(JsonAutoDetect.Visibility.DEFAULT));
+		// Ignore fields with null values
+		mapper.setSerializationInclusion(Include.NON_NULL);
+
+		cdsf.setInfluencingRelations();
+
+		JsonNode rootNode = mapper.createObjectNode();
+		((ObjectNode) rootNode).putPOJO("decisionTree", cdsf);
+		((ObjectNode) rootNode).putPOJO("taskTree", taskTree);
+		((ObjectNode) rootNode).putPOJO("linksArray",
+				cdsf.getInfluencingRelations());
+
+		File f = new File("legacyCloudDSF.json");
+		mapper.writeValue(f, rootNode);
+	}
+
+	/**
+	 * Creates json file for the cloudDSFPlus with all new attributes
+	 * 
+	 * @param workbook
+	 * @throws JsonGenerationException
+	 * @throws JsonMappingException
+	 * @throws IOException
+	 */
+	private static void writeCloudDSFPlusJson(XSSFWorkbook workbook)
+			throws JsonGenerationException, JsonMappingException, IOException {
+		CloudDSFPlusParser cloudDSFPlusParser = new CloudDSFPlusParser(workbook);
+		CloudDSF cdsf = cloudDSFPlusParser.readExcel();
+
+		// Jackson objectmapper and settings
+		ObjectMapper mapper = new ObjectMapper();
+		mapper.enable(SerializationFeature.INDENT_OUTPUT);
+		// Ignore missing getters to serialize all values
 		mapper.setVisibilityChecker(mapper.getSerializationConfig()
 				.getDefaultVisibilityChecker()
 				.withFieldVisibility(JsonAutoDetect.Visibility.ANY)
 				.withGetterVisibility(JsonAutoDetect.Visibility.NONE));
 		mapper.setSerializationInclusion(Include.NON_NULL);
 
-		cdsf.setInfluencingRelations();
-		// List<Relation> influencingRelations = cdsf.getInfluencingRelations();
-
 		JsonNode rootNode = mapper.createObjectNode();
+		((ObjectNode) rootNode).putPOJO("cdsfPlus", cdsf);
+		((ObjectNode) rootNode)
+				.putPOJO("links", cdsf.getInfluencingDecisions());
+		((ObjectNode) rootNode).putPOJO("outcomeLinks",
+				cdsf.getInfluencingOutcomes());
 
-		((ObjectNode) rootNode).putPOJO("decisionTree", cdsf);
-		((ObjectNode) rootNode).putPOJO("taskTree", taskTree);
-		((ObjectNode) rootNode).putPOJO("linksArray",
-				cdsf.getInfluencingRelations());
-		File f = new File("elaboratedDSF.json");
+		File f = new File("cloudDSFPlus.json");
 		mapper.writeValue(f, rootNode);
 	}
-
-	// private static void writeForceLayout(XSSFWorkbook workbook)
-	// throws JsonGenerationException, JsonMappingException, IOException {
-	// CloudDSFPlusParser ForceLayoutParser = new CloudDSFPlusParser(workbook);
-	// CloudDSFPlus cdsf = ForceLayoutParser.readExcel();
-	//
-	// // for (DecisionPoint dp : cdsf.getDecisionPoints()) {
-	// // dp.setSize(60);
-	// // for (Decision d : dp.getDecisions()) {
-	// // d.setSize(30);
-	// // d.setOutcomes(null);
-	// // }
-	// // }
-	// cdsf.setId(-1);
-	// cdsf.setType("root");
-	// // cdsf.setSize(0);
-	// cdsf.setLabel("Decision Points");
-	//
-	// // Relations = relatios of tasks AND Decisions
-	// List<Relation> influencingRelations = cdsf.getInfluencingRelations();
-	// influencingRelations.clear();
-	// influencingRelations.addAll(cdsf.getInfluencingDecisions());
-	// // sort by id
-	// cdsf.sortInfluencingRelations();
-	// // new CloudDSF Object without Outcomes to avoid annotations or
-	// // appending on file
-	// //
-	// // cloudDSFwithoutOutcomes.setId(-3);
-	// // cloudDSFwithoutOutcomes.setType("rootTestDec");
-	// // cloudDSFwithoutOutcomes.setLabel("");
-	//
-	// // Jackson objectmapper and settings
-	// ObjectMapper mapper = new ObjectMapper();
-	// mapper.enable(SerializationFeature.INDENT_OUTPUT);
-	// mapper.setVisibilityChecker(mapper.getSerializationConfig()
-	// .getDefaultVisibilityChecker()
-	// .withFieldVisibility(JsonAutoDetect.Visibility.ANY)
-	// .withGetterVisibility(JsonAutoDetect.Visibility.NONE));
-	//
-	// JsonNode rootNode = mapper.createObjectNode();
-	// // weight null setzen dass es nicht exportiert wird
-	// ((ObjectNode) rootNode).putPOJO("decisionTree", cdsf);
-	// ((ObjectNode) rootNode).putPOJO("links", influencingRelations);
-	// File f = new File("forceLayout.json");
-	// mapper.writeValue(f, rootNode);
-	// }
-	//
-	// private static void writeInfluencingLayout(XSSFWorkbook workbook)
-	// throws JsonGenerationException, JsonMappingException, IOException {
-	// CloudDSFPlusParser parser = new CloudDSFPlusParser(workbook);
-	// CloudDSFPlus cdsf = parser.readExcel();
-	//
-	// List<Decision> decisions = new ArrayList<Decision>();
-	// for (DecisionPoint dp : cdsf.getDecisionPoints()) {
-	// for (Decision d : dp.getDecisions()) {
-	// //d.setSize(30);
-	// d.setOutcomes(null);
-	// decisions.add(d);
-	// }
-	//
-	// }
-	//
-	// List<DecisionRelation> requiringRelations = new
-	// ArrayList<DecisionRelation>();
-	// // Relations = relatios of tasks AND Decisions
-	//
-	// for (Relation relation : cdsf.getInfluencingDecisions()) {
-	// if (relation.getLabel().equals("Requiring")) {
-	// // System.out.println("found one");
-	// DecisionRelation dr = (DecisionRelation) relation;
-	// requiringRelations.add(dr);
-	// }
-	// }
-	// // for (DecisionRelation relation : requiringRelations) {
-	// // for (Decision d : decisions) {
-	// //
-	// // if (relation.getSource()== d.getId()){
-	// // relation.setSource(decisions.indexOf(d));
-	// // }
-	// // if (relation.getTarget()==d.getId()){
-	// // relation.setTarget(decisions.indexOf(d));
-	// //
-	// // }
-	// // }
-	// // }
-	// // Jackson objectmapper and settings
-	// ObjectMapper mapper = new ObjectMapper();
-	// mapper.enable(SerializationFeature.INDENT_OUTPUT);
-	// // mapper.setVisibilityChecker(mapper.getSerializationConfig()
-	// // .getDefaultVisibilityChecker()
-	// // .withFieldVisibility(JsonAutoDetect.Visibility.ANY)
-	// // .withGetterVisibility(JsonAutoDetect.Visibility.NONE));
-	//
-	// JsonNode rootNode = mapper.createObjectNode();
-	// // weight null setzen dass es nicht exportiert wird
-	// ((ObjectNode) rootNode).putPOJO("nodes", decisions);
-	// ((ObjectNode) rootNode)
-	// .putPOJO("links", cdsf.getInfluencingDecisions());
-	// File f = new File("influencingLayout.json");
-	// mapper.writeValue(f, rootNode);
-	// }
-
 }

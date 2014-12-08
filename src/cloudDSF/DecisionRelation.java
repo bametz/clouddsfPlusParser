@@ -12,12 +12,14 @@ public class DecisionRelation extends Relation {
 			String explanation, String additionalInfo) {
 		super(source, target, type);
 		this.setRelationGroup("decRel");
+		// todo
 		// this.setAdditionalInfo(additionalInfo);
 		// this.setExplanation(explanation);
 	}
 
 	/**
 	 * Decision relation constructor for legacy cloudDSF
+	 * 
 	 * @param source
 	 * @param target
 	 */

@@ -16,6 +16,7 @@ public class Outcome extends CloudDSFEntity {
 		this.setCluster(cluster);
 		this.setGroup("out" + cluster);
 		this.setParent(parent);
+		// todo
 		// this.setAdditionalInfo(additionalInfo);
 	}
 

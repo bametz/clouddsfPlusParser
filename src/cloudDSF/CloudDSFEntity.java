@@ -1,5 +1,7 @@
 package cloudDSF;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Superclass for all entities of the cloudDSF
  * 
@@ -57,20 +59,16 @@ public class CloudDSFEntity {
 		this.type = type;
 	}
 
-	public int getParent() {
-		return parent;
-	}
-
 	public void setParent(int parent) {
 		this.parent = parent;
 	}
 
-	public String getClassification() {
-		return classification;
-	}
-
 	public void setClassification(String classification) {
 		this.classification = classification;
+	}
+
+	public String getClassification() {
+		return classification;
 	}
 
 	public void setCluster(int cluster) {
@@ -87,5 +85,9 @@ public class CloudDSFEntity {
 
 	public void setAdditionalInfo(String additionalInfo) {
 		this.additionalInfo = additionalInfo;
+	}
+
+	public int getParent() {
+		return this.parent;
 	}
 }

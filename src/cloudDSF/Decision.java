@@ -26,6 +26,7 @@ public class Decision extends CloudDSFEntity {
 		this.setCluster(cluster);
 		this.setGroup("dec" + id);
 		this.setParent(parent);
+		// todo
 		// this.setAdditionalInfo(additionalInfo);
 	}
 
@@ -66,9 +67,5 @@ public class Decision extends CloudDSFEntity {
 	@JsonProperty("children")
 	public List<Outcome> getOutcomes() {
 		return outcomes;
-	}
-
-	public void setOutcomes(List<Outcome> outcomes) {
-		this.outcomes = outcomes;
 	}
 }

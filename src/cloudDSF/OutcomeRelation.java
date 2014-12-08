@@ -12,10 +12,11 @@ public class OutcomeRelation extends Relation {
 			String explanation, String additionalInfo) {
 		super(source, target, type);
 		this.setRelationGroup("outRel");
+		// Todo
 		// this.setAdditionalInfo(additionalInfo);
 		// this.setExplanation(explanation);
 	}
-	
+
 	public OutcomeRelation(int source, int target, String type) {
 		super(source, target, type);
 	}

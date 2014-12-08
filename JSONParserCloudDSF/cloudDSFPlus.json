@@ -1,0 +1,7383 @@
+{
+  "cdsfPlus" : {
+    "id" : 0,
+    "label" : "CloudDSFPlus",
+    "type" : "root",
+    "parent" : 0,
+    "cluster" : 0,
+    "children" : [ {
+      "id" : 1,
+      "label" : "Distribute Application",
+      "type" : "dP",
+      "parent" : 0,
+      "classification" : "Cloud Migration specific / Application Migration in General",
+      "cluster" : 1,
+      "group" : "dP1",
+      "children" : [ {
+        "id" : 101,
+        "label" : "Select Application Layer",
+        "type" : "dec",
+        "parent" : 1,
+        "classification" : "Application Migration in General",
+        "cluster" : 1,
+        "group" : "dec101",
+        "children" : [ {
+          "id" : 10101,
+          "label" : "Presentation Layer",
+          "type" : "out",
+          "parent" : 101,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10102,
+          "label" : "Business Layer",
+          "type" : "out",
+          "parent" : 101,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10103,
+          "label" : "Resource Layer",
+          "type" : "out",
+          "parent" : 101,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10104,
+          "label" : "Presentation + Business Layer",
+          "type" : "out",
+          "parent" : 101,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10105,
+          "label" : "Presentation + Resource Layer",
+          "type" : "out",
+          "parent" : 101,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10106,
+          "label" : "Business + Resource Layer",
+          "type" : "out",
+          "parent" : 101,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10107,
+          "label" : "Presentation + Business + Resource Layer",
+          "type" : "out",
+          "parent" : 101,
+          "cluster" : 1,
+          "group" : "out1"
+        } ]
+      }, {
+        "id" : 102,
+        "label" : "Select Application Tier",
+        "type" : "dec",
+        "parent" : 1,
+        "classification" : "Application Migration in General",
+        "cluster" : 1,
+        "group" : "dec102",
+        "children" : [ {
+          "id" : 10201,
+          "label" : "Client Tier",
+          "type" : "out",
+          "parent" : 102,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10202,
+          "label" : "Application Tier",
+          "type" : "out",
+          "parent" : 102,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10203,
+          "label" : "Data Tier",
+          "type" : "out",
+          "parent" : 102,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10204,
+          "label" : "Client + Application Tier",
+          "type" : "out",
+          "parent" : 102,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10205,
+          "label" : "Client + Data Tier",
+          "type" : "out",
+          "parent" : 102,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10206,
+          "label" : "Application + Data Tier",
+          "type" : "out",
+          "parent" : 102,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10207,
+          "label" : "Client + Application + Data Tier",
+          "type" : "out",
+          "parent" : 102,
+          "cluster" : 1,
+          "group" : "out1"
+        } ]
+      }, {
+        "id" : 103,
+        "label" : "Select Application Components",
+        "type" : "dec",
+        "parent" : 1,
+        "classification" : "Application Migration in General",
+        "cluster" : 1,
+        "group" : "dec103",
+        "children" : [ {
+          "id" : 10301,
+          "label" : "Application Component",
+          "type" : "out",
+          "parent" : 103,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10302,
+          "label" : "Application Components",
+          "type" : "out",
+          "parent" : 103,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10303,
+          "label" : "Middleware Component",
+          "type" : "out",
+          "parent" : 103,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10304,
+          "label" : "Middleware Components",
+          "type" : "out",
+          "parent" : 103,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10305,
+          "label" : "Application + Middleware Component",
+          "type" : "out",
+          "parent" : 103,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10306,
+          "label" : "Application Component + Middleware Components",
+          "type" : "out",
+          "parent" : 103,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10307,
+          "label" : "Middleware Component + Application Components",
+          "type" : "out",
+          "parent" : 103,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10308,
+          "label" : "Application + Middleware Components",
+          "type" : "out",
+          "parent" : 103,
+          "cluster" : 1,
+          "group" : "out1"
+        } ]
+      }, {
+        "id" : 104,
+        "label" : "Select Migration Type",
+        "type" : "dec",
+        "parent" : 1,
+        "classification" : "Cloud Migration specific",
+        "cluster" : 1,
+        "group" : "dec104",
+        "children" : [ {
+          "id" : 10401,
+          "label" : "Migration Type I",
+          "type" : "out",
+          "parent" : 104,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10402,
+          "label" : "Migration Type II",
+          "type" : "out",
+          "parent" : 104,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10403,
+          "label" : "Migration Type III",
+          "type" : "out",
+          "parent" : 104,
+          "cluster" : 1,
+          "group" : "out1"
+        }, {
+          "id" : 10404,
+          "label" : "Migration Type IV",
+          "type" : "out",
+          "parent" : 104,
+          "cluster" : 1,
+          "group" : "out1"
+        } ]
+      } ]
+    }, {
+      "id" : 2,
+      "label" : "Define Elasticity Strategy",
+      "type" : "dP",
+      "parent" : 0,
+      "classification" : "Cloud Migration specific / Application Migration in General",
+      "cluster" : 2,
+      "group" : "dP2",
+      "children" : [ {
+        "id" : 201,
+        "label" : "Define Scalability Level",
+        "type" : "dec",
+        "parent" : 2,
+        "classification" : "Cloud Migration specific / Application Migration in General",
+        "cluster" : 2,
+        "group" : "dec201",
+        "children" : [ {
+          "id" : 20101,
+          "label" : "No Scaling",
+          "type" : "out",
+          "parent" : 201,
+          "cluster" : 2,
+          "group" : "out2"
+        }, {
+          "id" : 20102,
+          "label" : "OS/VM Level Scaling",
+          "type" : "out",
+          "parent" : 201,
+          "cluster" : 2,
+          "group" : "out2"
+        }, {
+          "id" : 20103,
+          "label" : "Middleware Level Scaling",
+          "type" : "out",
+          "parent" : 201,
+          "cluster" : 2,
+          "group" : "out2"
+        }, {
+          "id" : 20104,
+          "label" : "Application Level Scaling",
+          "type" : "out",
+          "parent" : 201,
+          "cluster" : 2,
+          "group" : "out2"
+        }, {
+          "id" : 20105,
+          "label" : "OS/VM + Middleware Level Scaling",
+          "type" : "out",
+          "parent" : 201,
+          "cluster" : 2,
+          "group" : "out2"
+        }, {
+          "id" : 20106,
+          "label" : "OS/VM + Application Level Scaling",
+          "type" : "out",
+          "parent" : 201,
+          "cluster" : 2,
+          "group" : "out2"
+        }, {
+          "id" : 20107,
+          "label" : "Middleware + Application Level Scaling",
+          "type" : "out",
+          "parent" : 201,
+          "cluster" : 2,
+          "group" : "out2"
+        }, {
+          "id" : 20108,
+          "label" : "OS/VM + Middleware + Application Level Scaling",
+          "type" : "out",
+          "parent" : 201,
+          "cluster" : 2,
+          "group" : "out2"
+        } ]
+      }, {
+        "id" : 202,
+        "label" : "Select Scaling Type",
+        "type" : "dec",
+        "parent" : 2,
+        "classification" : "Cloud Migration specific / Application Migration in General",
+        "cluster" : 2,
+        "group" : "dec202",
+        "children" : [ {
+          "id" : 20201,
+          "label" : "Vertical Scaling",
+          "type" : "out",
+          "parent" : 202,
+          "cluster" : 2,
+          "group" : "out2"
+        }, {
+          "id" : 20202,
+          "label" : "Horizontal Scaling",
+          "type" : "out",
+          "parent" : 202,
+          "cluster" : 2,
+          "group" : "out2"
+        }, {
+          "id" : 20203,
+          "label" : "Hybrid Scaling",
+          "type" : "out",
+          "parent" : 202,
+          "cluster" : 2,
+          "group" : "out2"
+        } ]
+      }, {
+        "id" : 203,
+        "label" : "Select Elasticity Automation Degree",
+        "type" : "dec",
+        "parent" : 2,
+        "classification" : "Cloud Migration specific / Application Migration in General",
+        "cluster" : 2,
+        "group" : "dec203",
+        "children" : [ {
+          "id" : 20301,
+          "label" : "Manual Scaling",
+          "type" : "out",
+          "parent" : 203,
+          "cluster" : 2,
+          "group" : "out2"
+        }, {
+          "id" : 20302,
+          "label" : "Semi-Automatic Scaling",
+          "type" : "out",
+          "parent" : 203,
+          "cluster" : 2,
+          "group" : "out2"
+        }, {
+          "id" : 20303,
+          "label" : "Semi-Automatic Third-Party Scaling",
+          "type" : "out",
+          "parent" : 203,
+          "cluster" : 2,
+          "group" : "out2"
+        }, {
+          "id" : 20304,
+          "label" : "Automatic Scaling",
+          "type" : "out",
+          "parent" : 203,
+          "cluster" : 2,
+          "group" : "out2"
+        }, {
+          "id" : 20305,
+          "label" : "Automatic Third-Party Scaling",
+          "type" : "out",
+          "parent" : 203,
+          "cluster" : 2,
+          "group" : "out2"
+        } ]
+      }, {
+        "id" : 204,
+        "label" : "Select Scaling Trigger",
+        "type" : "dec",
+        "parent" : 2,
+        "classification" : "Cloud Migration specific / Application Migration in General",
+        "cluster" : 2,
+        "group" : "dec204",
+        "children" : [ {
+          "id" : 20401,
+          "label" : "No Trigger",
+          "type" : "out",
+          "parent" : 204,
+          "cluster" : 2,
+          "group" : "out2"
+        }, {
+          "id" : 20402,
+          "label" : "Event-Driven Trigger",
+          "type" : "out",
+          "parent" : 204,
+          "cluster" : 2,
+          "group" : "out2"
+        }, {
+          "id" : 20403,
+          "label" : "Proactive Trigger",
+          "type" : "out",
+          "parent" : 204,
+          "cluster" : 2,
+          "group" : "out2"
+        } ]
+      } ]
+    }, {
+      "id" : 3,
+      "label" : "Define Multi-Tenancy Requirements",
+      "type" : "dP",
+      "parent" : 0,
+      "classification" : "Cloud Migration specific",
+      "cluster" : 3,
+      "group" : "dP3",
+      "children" : [ {
+        "id" : 301,
+        "label" : "Select Multi-Tenancy Architecture",
+        "type" : "dec",
+        "parent" : 3,
+        "classification" : "Cloud Migration specific",
+        "cluster" : 3,
+        "group" : "dec301",
+        "children" : [ {
+          "id" : 30101,
+          "label" : "Multi-Tenancy Architecture 0",
+          "type" : "out",
+          "parent" : 301,
+          "cluster" : 3,
+          "group" : "out3"
+        }, {
+          "id" : 30102,
+          "label" : "Multi-Tenancy Architecture 1",
+          "type" : "out",
+          "parent" : 301,
+          "cluster" : 3,
+          "group" : "out3"
+        }, {
+          "id" : 30103,
+          "label" : "Multi-Tenancy Architecture 2",
+          "type" : "out",
+          "parent" : 301,
+          "cluster" : 3,
+          "group" : "out3"
+        }, {
+          "id" : 30104,
+          "label" : "Multi-Tenancy Architecture 3",
+          "type" : "out",
+          "parent" : 301,
+          "cluster" : 3,
+          "group" : "out3"
+        } ]
+      } ]
+    }, {
+      "id" : 4,
+      "label" : "Select Service Provider / Offering",
+      "type" : "dP",
+      "parent" : 0,
+      "classification" : "Cloud Migration specific / Application Migration in General",
+      "cluster" : 4,
+      "group" : "dP4",
+      "children" : [ {
+        "id" : 401,
+        "label" : "Select Cloud Deployment Model",
+        "type" : "dec",
+        "parent" : 4,
+        "classification" : "Cloud Migration specific",
+        "cluster" : 4,
+        "group" : "dec401",
+        "children" : [ {
+          "id" : 40101,
+          "label" : "Public Cloud",
+          "type" : "out",
+          "parent" : 401,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40102,
+          "label" : "Private Cloud",
+          "type" : "out",
+          "parent" : 401,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40103,
+          "label" : "Community Cloud",
+          "type" : "out",
+          "parent" : 401,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40104,
+          "label" : "Hybrid Cloud ",
+          "type" : "out",
+          "parent" : 401,
+          "cluster" : 4,
+          "group" : "out4"
+        } ]
+      }, {
+        "id" : 402,
+        "label" : "Select Cloud Service Model",
+        "type" : "dec",
+        "parent" : 4,
+        "classification" : "Cloud Migration specific",
+        "cluster" : 4,
+        "group" : "dec402",
+        "children" : [ {
+          "id" : 40201,
+          "label" : "IaaS",
+          "type" : "out",
+          "parent" : 402,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40202,
+          "label" : "PaaS ",
+          "type" : "out",
+          "parent" : 402,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40203,
+          "label" : "SaaS",
+          "type" : "out",
+          "parent" : 402,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40204,
+          "label" : "IaaS + PaaS",
+          "type" : "out",
+          "parent" : 402,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40205,
+          "label" : "IaaS + SaaS",
+          "type" : "out",
+          "parent" : 402,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40206,
+          "label" : "PaaS + SaaS",
+          "type" : "out",
+          "parent" : 402,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40207,
+          "label" : "Iaas + PaaS + SaaS",
+          "type" : "out",
+          "parent" : 402,
+          "cluster" : 4,
+          "group" : "out4"
+        } ]
+      }, {
+        "id" : 403,
+        "label" : "Define Cloud Hosting",
+        "type" : "dec",
+        "parent" : 4,
+        "classification" : "Cloud Migration specific / Application Migration in General",
+        "cluster" : 4,
+        "group" : "dec403",
+        "children" : [ {
+          "id" : 40301,
+          "label" : "On-Premise Hosting",
+          "type" : "out",
+          "parent" : 403,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40302,
+          "label" : "Off-Premise Hosting",
+          "type" : "out",
+          "parent" : 403,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40303,
+          "label" : "Hybrid Hosting",
+          "type" : "out",
+          "parent" : 403,
+          "cluster" : 4,
+          "group" : "out4"
+        } ]
+      }, {
+        "id" : 404,
+        "label" : "Define Roles of Responsibility",
+        "type" : "dec",
+        "parent" : 4,
+        "classification" : "Cloud Migration specific / Application Migration in General",
+        "cluster" : 4,
+        "group" : "dec404",
+        "children" : [ {
+          "id" : 40401,
+          "label" : "Role Set 1",
+          "type" : "out",
+          "parent" : 404,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40402,
+          "label" : "Role Set 7",
+          "type" : "out",
+          "parent" : 404,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40403,
+          "label" : "Role Set 8",
+          "type" : "out",
+          "parent" : 404,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40404,
+          "label" : "Role Set 1 + 7",
+          "type" : "out",
+          "parent" : 404,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40405,
+          "label" : "Role Set 1 + 8",
+          "type" : "out",
+          "parent" : 404,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40406,
+          "label" : "Role Set 7 + 8",
+          "type" : "out",
+          "parent" : 404,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40407,
+          "label" : "Role Set 1 + 7 + 8",
+          "type" : "out",
+          "parent" : 404,
+          "cluster" : 4,
+          "group" : "out4"
+        } ]
+      }, {
+        "id" : 405,
+        "label" : "Select Cloud Vendor",
+        "type" : "dec",
+        "parent" : 4,
+        "classification" : "Cloud Migration specific / Application Migration in General",
+        "cluster" : 4,
+        "group" : "dec405",
+        "children" : [ {
+          "id" : 40501,
+          "label" : "Evaluated Cloud Vendor",
+          "type" : "out",
+          "parent" : 405,
+          "cluster" : 4,
+          "group" : "out4"
+        } ]
+      }, {
+        "id" : 406,
+        "label" : "Select Pricing Model",
+        "type" : "dec",
+        "parent" : 4,
+        "classification" : "Cloud Migration specific",
+        "cluster" : 4,
+        "group" : "dec406",
+        "children" : [ {
+          "id" : 40601,
+          "label" : "Free",
+          "type" : "out",
+          "parent" : 406,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40602,
+          "label" : "Pay-Per-Use",
+          "type" : "out",
+          "parent" : 406,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40603,
+          "label" : "Pay-Per-Unit",
+          "type" : "out",
+          "parent" : 406,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40604,
+          "label" : "Charge-Per-Use (Subscription)",
+          "type" : "out",
+          "parent" : 406,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40605,
+          "label" : "Combined Pricing Model",
+          "type" : "out",
+          "parent" : 406,
+          "cluster" : 4,
+          "group" : "out4"
+        } ]
+      }, {
+        "id" : 407,
+        "label" : "Define Resource Location",
+        "type" : "dec",
+        "parent" : 4,
+        "classification" : "Cloud Migration specific / Application Migration in General",
+        "cluster" : 4,
+        "group" : "dec407",
+        "children" : [ {
+          "id" : 40701,
+          "label" : "Data Location under same jurisdiction as company",
+          "type" : "out",
+          "parent" : 407,
+          "cluster" : 4,
+          "group" : "out4"
+        }, {
+          "id" : 40702,
+          "label" : "Data Location outside jurisdiction of company",
+          "type" : "out",
+          "parent" : 407,
+          "cluster" : 4,
+          "group" : "out4"
+        } ]
+      } ]
+    } ]
+  },
+  "links" : [ {
+    "source" : 101,
+    "target" : 103,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 101,
+    "target" : 104,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 101,
+    "target" : 301,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 101,
+    "target" : 103,
+    "relationGroup" : "decRel",
+    "type" : "Requiring"
+  }, {
+    "source" : 102,
+    "target" : 103,
+    "relationGroup" : "decRel",
+    "type" : "Requiring"
+  }, {
+    "source" : 103,
+    "target" : 101,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 103,
+    "target" : 104,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 103,
+    "target" : 201,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 103,
+    "target" : 301,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 103,
+    "target" : 402,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 103,
+    "target" : 104,
+    "relationGroup" : "decRel",
+    "type" : "Requiring"
+  }, {
+    "source" : 103,
+    "target" : 402,
+    "relationGroup" : "decRel",
+    "type" : "Requiring"
+  }, {
+    "source" : 104,
+    "target" : 101,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 104,
+    "target" : 103,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 104,
+    "target" : 201,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 104,
+    "target" : 301,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 104,
+    "target" : 402,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 104,
+    "target" : 103,
+    "relationGroup" : "decRel",
+    "type" : "Requiring"
+  }, {
+    "source" : 201,
+    "target" : 103,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 201,
+    "target" : 104,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 201,
+    "target" : 202,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 201,
+    "target" : 203,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 201,
+    "target" : 204,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 201,
+    "target" : 301,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 201,
+    "target" : 402,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 201,
+    "target" : 405,
+    "relationGroup" : "decRel",
+    "type" : "Affecting"
+  }, {
+    "source" : 201,
+    "target" : 402,
+    "relationGroup" : "decRel",
+    "type" : "Requiring"
+  }, {
+    "source" : 202,
+    "target" : 201,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 202,
+    "target" : 402,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 202,
+    "target" : 405,
+    "relationGroup" : "decRel",
+    "type" : "Affecting"
+  }, {
+    "source" : 202,
+    "target" : 201,
+    "relationGroup" : "decRel",
+    "type" : "Requiring"
+  }, {
+    "source" : 203,
+    "target" : 201,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 203,
+    "target" : 204,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 203,
+    "target" : 402,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 203,
+    "target" : 405,
+    "relationGroup" : "decRel",
+    "type" : "Affecting"
+  }, {
+    "source" : 203,
+    "target" : 202,
+    "relationGroup" : "decRel",
+    "type" : "Requiring"
+  }, {
+    "source" : 203,
+    "target" : 204,
+    "relationGroup" : "decRel",
+    "type" : "Requiring"
+  }, {
+    "source" : 204,
+    "target" : 201,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 204,
+    "target" : 203,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 204,
+    "target" : 402,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 204,
+    "target" : 405,
+    "relationGroup" : "decRel",
+    "type" : "Affecting"
+  }, {
+    "source" : 204,
+    "target" : 203,
+    "relationGroup" : "decRel",
+    "type" : "Requiring"
+  }, {
+    "source" : 301,
+    "target" : 101,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 301,
+    "target" : 103,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 301,
+    "target" : 104,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 301,
+    "target" : 201,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 301,
+    "target" : 402,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 301,
+    "target" : 405,
+    "relationGroup" : "decRel",
+    "type" : "Affecting"
+  }, {
+    "source" : 301,
+    "target" : 402,
+    "relationGroup" : "decRel",
+    "type" : "Requiring"
+  }, {
+    "source" : 401,
+    "target" : 403,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 401,
+    "target" : 404,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 401,
+    "target" : 405,
+    "relationGroup" : "decRel",
+    "type" : "Affecting"
+  }, {
+    "source" : 401,
+    "target" : 403,
+    "relationGroup" : "decRel",
+    "type" : "Requiring"
+  }, {
+    "source" : 401,
+    "target" : 405,
+    "relationGroup" : "decRel",
+    "type" : "Requiring"
+  }, {
+    "source" : 402,
+    "target" : 103,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 402,
+    "target" : 104,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 402,
+    "target" : 201,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 402,
+    "target" : 202,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 402,
+    "target" : 203,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 402,
+    "target" : 204,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 402,
+    "target" : 301,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 402,
+    "target" : 405,
+    "relationGroup" : "decRel",
+    "type" : "Affecting"
+  }, {
+    "source" : 403,
+    "target" : 401,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 403,
+    "target" : 404,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 403,
+    "target" : 405,
+    "relationGroup" : "decRel",
+    "type" : "Affecting"
+  }, {
+    "source" : 403,
+    "target" : 407,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 403,
+    "target" : 407,
+    "relationGroup" : "decRel",
+    "type" : "Requiring"
+  }, {
+    "source" : 404,
+    "target" : 401,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 404,
+    "target" : 403,
+    "relationGroup" : "decRel",
+    "type" : "Influencing"
+  }, {
+    "source" : 404,
+    "target" : 405,
+    "relationGroup" : "decRel",
+    "type" : "Affecting"
+  }, {
+    "source" : 405,
+    "target" : 201,
+    "relationGroup" : "decRel",
+    "type" : "Binding"
+  }, {
+    "source" : 405,
+    "target" : 202,
+    "relationGroup" : "decRel",
+    "type" : "Binding"
+  }, {
+    "source" : 405,
+    "target" : 203,
+    "relationGroup" : "decRel",
+    "type" : "Binding"
+  }, {
+    "source" : 405,
+    "target" : 204,
+    "relationGroup" : "decRel",
+    "type" : "Binding"
+  }, {
+    "source" : 405,
+    "target" : 301,
+    "relationGroup" : "decRel",
+    "type" : "Binding"
+  }, {
+    "source" : 405,
+    "target" : 401,
+    "relationGroup" : "decRel",
+    "type" : "Binding"
+  }, {
+    "source" : 405,
+    "target" : 402,
+    "relationGroup" : "decRel",
+    "type" : "Binding"
+  }, {
+    "source" : 405,
+    "target" : 403,
+    "relationGroup" : "decRel",
+    "type" : "Binding"
+  }, {
+    "source" : 405,
+    "target" : 404,
+    "relationGroup" : "decRel",
+    "type" : "Binding"
+  }, {
+    "source" : 405,
+    "target" : 406,
+    "relationGroup" : "decRel",
+    "type" : "Binding"
+  }, {
+    "source" : 405,
+    "target" : 407,
+    "relationGroup" : "decRel",
+    "type" : "Binding"
+  }, {
+    "source" : 406,
+    "target" : 405,
+    "relationGroup" : "decRel",
+    "type" : "Affecting"
+  }, {
+    "source" : 407,
+    "target" : 405,
+    "relationGroup" : "decRel",
+    "type" : "Affecting"
+  } ],
+  "outcomeLinks" : [ {
+    "source" : 10101,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10101,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10101,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10101,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10101,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10101,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10101,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10101,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10101,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10101,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10101,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10101,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10101,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10101,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10101,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10102,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10102,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10102,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10102,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10102,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10102,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10102,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10102,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10102,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10102,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10102,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10102,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10102,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10102,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10102,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10103,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10103,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10103,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10103,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10103,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10103,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10103,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10103,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10103,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10103,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10103,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10103,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10103,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10103,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10103,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10104,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10104,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10104,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10104,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10104,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10104,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10104,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10104,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10104,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10104,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10104,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10104,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10104,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10104,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10104,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10105,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10105,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10105,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10105,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10105,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10105,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10105,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10105,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10105,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10105,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10105,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10105,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10105,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10105,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10105,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10106,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10106,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10106,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10106,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10106,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10106,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10106,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10106,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10106,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10106,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10106,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10106,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10106,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10106,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10106,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10107,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10107,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10107,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10107,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10107,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10107,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10107,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10107,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10107,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10107,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10107,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10107,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10107,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10107,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10107,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10201,
+    "target" : 10201,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10201,
+    "target" : 10202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10201,
+    "target" : 10203,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10202,
+    "target" : 10201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10202,
+    "target" : 10202,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10202,
+    "target" : 10203,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10203,
+    "target" : 10201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10203,
+    "target" : 10202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10203,
+    "target" : 10203,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10204,
+    "target" : 10201,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10204,
+    "target" : 10202,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10204,
+    "target" : 10203,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10205,
+    "target" : 10201,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10205,
+    "target" : 10202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10205,
+    "target" : 10203,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10206,
+    "target" : 10201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10206,
+    "target" : 10202,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10206,
+    "target" : 10203,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10207,
+    "target" : 10201,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10207,
+    "target" : 10202,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10207,
+    "target" : 10203,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10301,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10301,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10301,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10301,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10301,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10301,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10301,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10301,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10301,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10301,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10301,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10301,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10301,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10301,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10301,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10301,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10301,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10301,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10301,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10301,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10301,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10301,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10302,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10302,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10302,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10302,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10302,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10302,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10302,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10302,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10302,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10302,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10302,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10302,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10302,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10302,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10302,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10302,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10302,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10302,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10302,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10302,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10302,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10302,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10303,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10303,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10303,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10303,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10303,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10303,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10303,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10303,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10303,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10303,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10303,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10303,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10303,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10303,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10303,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10303,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10303,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10303,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10303,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10303,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10303,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10303,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10304,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10304,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10304,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10304,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10304,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10304,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10304,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10304,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10304,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10304,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10304,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10304,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10304,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10304,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10304,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10304,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10304,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10304,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10304,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10304,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10304,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10304,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10305,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10305,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10305,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10305,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10305,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10305,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10305,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10305,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10305,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10305,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10305,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10305,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10305,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10305,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10305,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10305,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10305,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10305,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10305,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10305,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10305,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10305,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10306,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10306,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10306,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10306,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10306,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10306,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10306,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10306,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10306,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10306,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10306,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10306,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10306,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10306,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10306,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10306,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10306,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10306,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10306,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10306,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10306,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10306,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10307,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10307,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10307,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10307,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10307,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10307,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10307,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10307,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10307,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10307,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10307,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10307,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10307,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10307,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10307,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10307,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10307,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10307,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10307,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10307,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10307,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10307,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10308,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10308,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10308,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10308,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10308,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10308,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10308,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10308,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10308,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10308,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10308,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10308,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10308,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10308,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10308,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10308,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10308,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10308,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10308,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10308,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10308,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10308,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10401,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10401,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10401,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10401,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10401,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10401,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10401,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10401,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10401,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10401,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10401,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10401,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10401,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10401,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10401,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10401,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10401,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10401,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10401,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10401,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10401,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10401,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10402,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10402,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10402,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10402,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10402,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10402,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10402,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10402,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10402,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10402,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10402,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10402,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10402,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10402,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10402,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10402,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10402,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10402,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10402,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10402,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10402,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10402,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10403,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10403,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10403,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10403,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10403,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10403,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10403,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10403,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10403,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10403,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10403,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10403,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10403,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10403,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10403,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10403,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10403,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10403,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10403,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10403,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10404,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10404,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10404,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10404,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10404,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10404,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10404,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10404,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10404,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 10404,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10404,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10404,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10404,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10404,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10404,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10404,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10404,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10404,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 10404,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 10404,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20101,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20101,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20101,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20101,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20101,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20101,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20101,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20101,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20101,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20101,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20101,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20102,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20102,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20102,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20102,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20102,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20102,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20103,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20103,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20103,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20103,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20103,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20103,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20103,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20103,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20103,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20103,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20103,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20103,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20103,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20103,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20103,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20103,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20103,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20103,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20103,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20103,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20103,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20103,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20103,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20103,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20103,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20103,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20103,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20103,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20104,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20104,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20104,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20104,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20104,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20104,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20104,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20104,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20104,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20104,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20104,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20104,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20104,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20104,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20104,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20104,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20104,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20104,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20104,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20104,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20104,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20104,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20104,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20104,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20104,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20104,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20104,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20104,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20105,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20105,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20105,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20105,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20105,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20105,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20105,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20105,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20105,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20106,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20106,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20106,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20106,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20106,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20106,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20106,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20106,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20106,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20106,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20107,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20107,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20107,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20107,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20107,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20107,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20107,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20107,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20107,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20107,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20107,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20107,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20107,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20107,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20107,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20107,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20107,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20107,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20107,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20107,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20107,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20107,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20107,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20107,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20107,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20107,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20107,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20107,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20108,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20108,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20108,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20108,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20108,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20108,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20108,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20108,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20108,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20201,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20201,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20201,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20201,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20201,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20201,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20201,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20201,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20201,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20202,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20202,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20202,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20202,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20202,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20202,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20202,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20202,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20202,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20203,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20203,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20203,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20203,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20203,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20203,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20203,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20203,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20203,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20301,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20301,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20301,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20301,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20301,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20301,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20301,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20301,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20301,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20301,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20301,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20301,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20301,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20301,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20301,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20302,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20302,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20302,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20302,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20302,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20302,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20302,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20302,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20302,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20302,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20302,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20302,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20302,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20302,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20302,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20303,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20303,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20303,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20303,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20303,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20303,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20303,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20303,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20303,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20303,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20303,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 20303,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20303,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20303,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20304,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20304,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20304,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20304,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20304,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20304,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20304,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20304,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20304,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20304,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20304,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20304,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20304,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20304,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20304,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20305,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20305,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20305,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20305,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20305,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20305,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20305,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20305,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20305,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20305,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20305,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 20305,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 20305,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20401,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20401,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20401,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20401,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20401,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20401,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20401,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20401,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20401,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20401,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20401,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20401,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20401,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20401,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20401,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20402,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20402,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20402,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20402,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20402,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20402,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20402,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20402,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20402,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20402,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20402,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20402,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20402,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20402,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20403,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20403,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20403,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20403,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20403,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20403,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20403,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20403,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20403,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20403,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 20403,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 20403,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 20403,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30101,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30101,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30101,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30101,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30101,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30101,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30101,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30101,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30101,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30101,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 30101,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 30101,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30101,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30101,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 30101,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 30101,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30101,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30101,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30101,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30101,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30101,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30101,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30102,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30102,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30102,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30102,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30102,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30102,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30102,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30102,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30102,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30102,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 30102,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 30102,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30102,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30102,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 30102,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 30102,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30102,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30102,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30102,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30102,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30102,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30102,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30103,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30103,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30103,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30103,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30103,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30103,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30103,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30103,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30103,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30103,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30103,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 30103,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30103,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30103,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30103,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 30103,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30103,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30103,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30103,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30103,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 30103,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 30103,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30104,
+    "target" : 10101,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30104,
+    "target" : 10102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30104,
+    "target" : 10103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30104,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30104,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30104,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30104,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30104,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30104,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30104,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30104,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 30104,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30104,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30104,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30104,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30104,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30104,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30104,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 30104,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 30104,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 30104,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 30104,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40101,
+    "target" : 40101,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40101,
+    "target" : 40102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40101,
+    "target" : 40103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40101,
+    "target" : 40104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40101,
+    "target" : 40301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40101,
+    "target" : 40302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40101,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40101,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40101,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40102,
+    "target" : 40101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40102,
+    "target" : 40102,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40102,
+    "target" : 40103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40102,
+    "target" : 40104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40102,
+    "target" : 40301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40102,
+    "target" : 40302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40102,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40102,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40102,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40103,
+    "target" : 40101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40103,
+    "target" : 40102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40103,
+    "target" : 40103,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40103,
+    "target" : 40104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40103,
+    "target" : 40301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40103,
+    "target" : 40302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40103,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40103,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40103,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40104,
+    "target" : 40101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40104,
+    "target" : 40102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40104,
+    "target" : 40103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40104,
+    "target" : 40104,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40104,
+    "target" : 40301,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40104,
+    "target" : 40302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40104,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40104,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40104,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40201,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40201,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40201,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40202,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40202,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40202,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40202,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40202,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40202,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40202,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40202,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40202,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40202,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40202,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40203,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40203,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40203,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40203,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40203,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40203,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40203,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40203,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40203,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40203,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40203,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40203,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40203,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40203,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40203,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40203,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40203,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40203,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40203,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40203,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40203,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40203,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40203,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40203,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40203,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40203,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40203,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40203,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40203,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40204,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40204,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40204,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40204,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40205,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40205,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40206,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40206,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40206,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40206,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40206,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40206,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40206,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40206,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40206,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40206,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40206,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40206,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40206,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40206,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40206,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40206,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40206,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40206,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40206,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40206,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40206,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40206,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40206,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40206,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40206,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40206,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40206,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40206,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40206,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40207,
+    "target" : 10301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 10302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 10303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 10304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 10401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 10402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 10403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 10404,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40207,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40207,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40207,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40301,
+    "target" : 40101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40301,
+    "target" : 40102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40301,
+    "target" : 40103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40301,
+    "target" : 40104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40301,
+    "target" : 40301,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40301,
+    "target" : 40302,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40301,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40301,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40301,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40301,
+    "target" : 40701,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40301,
+    "target" : 40702,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40302,
+    "target" : 40101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40302,
+    "target" : 40102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40302,
+    "target" : 40103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40302,
+    "target" : 40104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40302,
+    "target" : 40301,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40302,
+    "target" : 40302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40302,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40302,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40302,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40302,
+    "target" : 40701,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40302,
+    "target" : 40702,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40303,
+    "target" : 40101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40303,
+    "target" : 40102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40303,
+    "target" : 40103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40303,
+    "target" : 40104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40303,
+    "target" : 40301,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40303,
+    "target" : 40302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40303,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40303,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40303,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40303,
+    "target" : 40701,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40303,
+    "target" : 40702,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40401,
+    "target" : 40101,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40401,
+    "target" : 40102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40401,
+    "target" : 40103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40401,
+    "target" : 40104,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40401,
+    "target" : 40301,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40401,
+    "target" : 40302,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40401,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40401,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40401,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40402,
+    "target" : 40101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40402,
+    "target" : 40102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40402,
+    "target" : 40103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40402,
+    "target" : 40104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40402,
+    "target" : 40301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40402,
+    "target" : 40302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40402,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40402,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40402,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40403,
+    "target" : 40101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40403,
+    "target" : 40102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40403,
+    "target" : 40103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40403,
+    "target" : 40104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40403,
+    "target" : 40301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40403,
+    "target" : 40302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40403,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40403,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40403,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40404,
+    "target" : 40101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40404,
+    "target" : 40102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40404,
+    "target" : 40103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40404,
+    "target" : 40104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40404,
+    "target" : 40301,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40404,
+    "target" : 40302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40404,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40404,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40404,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40405,
+    "target" : 40101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40405,
+    "target" : 40102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40405,
+    "target" : 40103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40405,
+    "target" : 40104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40405,
+    "target" : 40301,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40405,
+    "target" : 40302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40405,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40405,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40405,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40406,
+    "target" : 40101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40406,
+    "target" : 40102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40406,
+    "target" : 40103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40406,
+    "target" : 40104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40406,
+    "target" : 40301,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40406,
+    "target" : 40302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40406,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40406,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40406,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40407,
+    "target" : 40101,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40407,
+    "target" : 40102,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40407,
+    "target" : 40103,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40407,
+    "target" : 40104,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40407,
+    "target" : 40301,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40407,
+    "target" : 40302,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40407,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40407,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40407,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40501,
+    "target" : 20101,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 20102,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 20103,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 20104,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 20201,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 20202,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 20203,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 20301,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 20302,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 20303,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 20304,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 20305,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 20401,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 20402,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 20403,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 30101,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 30102,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 30103,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 30104,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40101,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40102,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40103,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40104,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40201,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40202,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40203,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40301,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40302,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40601,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40602,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40603,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40604,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40701,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40501,
+    "target" : 40702,
+    "relationGroup" : "outRel",
+    "type" : "eb"
+  }, {
+    "source" : 40601,
+    "target" : 40601,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40601,
+    "target" : 40602,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40601,
+    "target" : 40603,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40601,
+    "target" : 40604,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40602,
+    "target" : 40601,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40602,
+    "target" : 40602,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40602,
+    "target" : 40603,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40602,
+    "target" : 40604,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40603,
+    "target" : 40601,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40603,
+    "target" : 40602,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40603,
+    "target" : 40603,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40603,
+    "target" : 40604,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40604,
+    "target" : 40601,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40604,
+    "target" : 40602,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40604,
+    "target" : 40603,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40604,
+    "target" : 40604,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40605,
+    "target" : 40601,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40605,
+    "target" : 40602,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40605,
+    "target" : 40603,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40605,
+    "target" : 40604,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40701,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40701,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40701,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "ex"
+  }, {
+    "source" : 40701,
+    "target" : 40701,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  }, {
+    "source" : 40701,
+    "target" : 40702,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40702,
+    "target" : 40401,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40702,
+    "target" : 40402,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40702,
+    "target" : 40403,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40702,
+    "target" : 40701,
+    "relationGroup" : "outRel",
+    "type" : "a"
+  }, {
+    "source" : 40702,
+    "target" : 40702,
+    "relationGroup" : "outRel",
+    "type" : "in"
+  } ]
+}

@@ -7,6 +7,7 @@ import java.util.List;
 import util.CloudDSFEntityComparator;
 import util.RelationComparator;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -34,44 +35,12 @@ public class CloudDSF extends CloudDSFEntity {
 		super(id, type, label);
 	}
 
-	public DecisionPoint getDecisionPoint(String decisionPointName) {
-		for (DecisionPoint decisionPoint : decisionPoints) {
-			if (decisionPoint.getLabel().equals(decisionPointName)) {
-				return decisionPoint;
-			}
-		}
-		return null;
-	}
-
-	private Task getTask(String taskName) {
-		for (Task t : tasks) {
-			if (t.getLabel().equals(taskName)) {
-				return t;
-			}
-		}
-		return null;
-	}
-
-	private Decision getDecision(String decisionName) {
-		for (DecisionPoint dp : decisionPoints) {
-			Decision d = dp.getDecision(decisionName);
-			if (d != null) {
-				return d;
-			}
-		}
-		return null;
-	}
-
-	private Outcome getOutcome(String outcomeName) {
-		for (DecisionPoint dp : decisionPoints) {
-			for (Decision d : dp.getDecisions()) {
-				Outcome o = d.getOutcome(outcomeName);
-				if (o != null) {
-					return o;
-				}
-			}
-		}
-		return null;
+	public void setDecisionRelation(String startDecision, String endDecision,
+			String type, String explanation, String additionalInfo) {
+		int source = getDecision(startDecision).getId();
+		int target = getDecision(endDecision).getId();
+		influencingDecisions.add(new DecisionRelation(source, target, type,
+				explanation, additionalInfo));
 	}
 
 	/**
@@ -99,11 +68,11 @@ public class CloudDSF extends CloudDSFEntity {
 	 *            Type of outcome e.g. ex, in, a
 	 */
 	public void setOutcomeRelation(String startOutcome, String endOutcome,
-			String label) {
+			String type, String explanation, String additionalInfo) {
 		int source = getOutcome(startOutcome).getId();
 		int target = getOutcome(endOutcome).getId();
-		OutcomeRelation or = new OutcomeRelation(source, target, label);
-		influencingOutcomes.add(or);
+		influencingOutcomes.add(new OutcomeRelation(source, target, type,
+				explanation, additionalInfo));
 	}
 
 	public void setTaskRelation(String sourceDesc, String targetDesc,
@@ -131,8 +100,44 @@ public class CloudDSF extends CloudDSFEntity {
 		influencingTasks.add(tr);
 	}
 
-	public void addTask(Task task) {
-		tasks.add(task);
+	public DecisionPoint getDecisionPoint(String decisionPointName) {
+		for (DecisionPoint decisionPoint : decisionPoints) {
+			if (decisionPoint.getLabel().equals(decisionPointName)) {
+				return decisionPoint;
+			}
+		}
+		return null;
+	}
+
+	private Decision getDecision(String decisionName) {
+		for (DecisionPoint dp : decisionPoints) {
+			Decision d = dp.getDecision(decisionName);
+			if (d != null) {
+				return d;
+			}
+		}
+		return null;
+	}
+
+	private Outcome getOutcome(String outcomeName) {
+		for (DecisionPoint dp : decisionPoints) {
+			for (Decision d : dp.getDecisions()) {
+				Outcome o = d.getOutcome(outcomeName);
+				if (o != null) {
+					return o;
+				}
+			}
+		}
+		return null;
+	}
+
+	private Task getTask(String taskName) {
+		for (Task t : tasks) {
+			if (t.getLabel().equals(taskName)) {
+				return t;
+			}
+		}
+		return null;
 	}
 
 	/**
@@ -164,24 +169,22 @@ public class CloudDSF extends CloudDSFEntity {
 		Collections.sort(influencingRelations, new RelationComparator());
 	}
 
-	public List<TaskRelation> getInfluencingTasks() {
-		return influencingTasks;
-	}
-
-	public void setInfluencingTasks(List<TaskRelation> influencingTasks) {
-		this.influencingTasks = influencingTasks;
-	}
-
 	public void addDecisionPoint(DecisionPoint dp) {
 		decisionPoints.add(dp);
 	}
 
-	public List<OutcomeRelation> getInfluencingOutcomes() {
-		return influencingOutcomes;
+	public void addTask(Task task) {
+		tasks.add(task);
 	}
 
-	public void setInfluencingOutcomes(List<OutcomeRelation> influencingOutcomes) {
-		this.influencingOutcomes = influencingOutcomes;
+	@JsonIgnore
+	public List<TaskRelation> getInfluencingTasks() {
+		return influencingTasks;
+	}
+
+	@JsonIgnore
+	public List<OutcomeRelation> getInfluencingOutcomes() {
+		return influencingOutcomes;
 	}
 
 	@JsonProperty("children")
@@ -189,33 +192,27 @@ public class CloudDSF extends CloudDSFEntity {
 		return decisionPoints;
 	}
 
-	public void setDecisionPoints(List<DecisionPoint> decisionPoints) {
-		this.decisionPoints = decisionPoints;
-	}
-
+	@JsonIgnore
 	public List<DecisionRelation> getInfluencingDecisions() {
 		return influencingDecisions;
 	}
 
-	public void setInfluencingDecisions(
-			List<DecisionRelation> influencingDecisions) {
-		this.influencingDecisions = influencingDecisions;
-	}
-
+	@JsonIgnore
 	public List<Task> getTasks() {
 		return tasks;
 	}
 
-	public void setTasks(List<Task> tasks) {
-		this.tasks = tasks;
-	}
-
+	@JsonIgnore
 	public List<Relation> getInfluencingRelations() {
 		return influencingRelations;
 	}
 
-	public void setInfluencingRelations(List<Relation> influencingRelations) {
-		this.influencingRelations = influencingRelations;
+	public void setInfluencingRelations() {
+		influencingRelations.clear();
+		influencingRelations.addAll(influencingDecisions);
+		influencingRelations.addAll(influencingTasks);
+		influencingRelations.addAll(influencingOutcomes);
+		sortInfluencingRelations();
 	}
 
 	/**
@@ -237,13 +234,12 @@ public class CloudDSF extends CloudDSFEntity {
 			for (Decision d : dp.getDecisions()) {
 				damount++;
 				System.out.println("Decision " + d.getLabel() + " ID "
-						+ d.getId() + " parentId " + d.getParent());
+						+ d.getId() + " parentId ");
 
 				for (Outcome o : d.getOutcomes()) {
 					oamount++;
 					System.out.println("Outcome " + o.getLabel() + " ID "
-							+ o.getId() + " parentId " + o.getParent()
-							+ " Weight ");
+							+ o.getId() + " parentId " + " Weight ");
 				}
 			}
 		}
@@ -280,18 +276,5 @@ public class CloudDSF extends CloudDSFEntity {
 		System.out.println("#Relations between Outcomes = " + oRelationsAmount);
 		System.out.println("#Relations between Tasks and Decision = "
 				+ tRelations);
-	}
-
-	public void setDecisionRelation(String startDecision, String endDecision,
-			String relationName) {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void setInfluencingRelations() {
-		influencingRelations.clear();
-		influencingRelations.addAll(influencingDecisions);
-		influencingRelations.addAll(influencingTasks);
-		sortInfluencingRelations();
 	}
 }
