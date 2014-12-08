@@ -3,22 +3,24 @@ package cloudDSF;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+/**
+ * Class represents object with all tasks of the legacy cloudDSF
+ * @author Metz
+ *
+ */
 public class TaskTree extends CloudDSFEntity {
-	
+
 	private List<Task> tasks = new ArrayList<Task>();
 
+	/**
+	 * Constructor for Legacy Task Tree
+	 */
 	public TaskTree() {
-		this.setId(9);
-		this.setType("root");
-		this.setLabel("Tasks");
+		super(9, "root", "Tasks");
 	}
 
-	public TaskTree(int id, String type, String label) {
-		this.setId(id);
-		this.setType(type);
-		this.setLabel(label);
-	}
-
+	@JsonProperty("children")
 	public List<Task> getTasks() {
 		return tasks;
 	}

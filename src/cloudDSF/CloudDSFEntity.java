@@ -1,12 +1,37 @@
 package cloudDSF;
 
+/**
+ * Superclass for all entities of the cloudDSF
+ * 
+ * @author Metz
+ *
+ */
 public class CloudDSFEntity {
-
+	// Basic Information
+	// unique id
 	private int id;
-	private String type;
-	private int parent;
-	private String classification;
+	// name of object
 	private String label;
+	// object type e.g. out, dec, dp
+	private String type;
+	// parent in hierarchy
+	private int parent;
+	// classification (legacy)
+	private String classification;
+	// decision point group e.g. 1, 2, 3, 4
+	private int cluster;
+	// type and cluster e.g. out1, dp4
+	private String group;
+	// description of the object
+	private String description;
+	// additional information
+	private String additionalInfo;
+
+	public CloudDSFEntity(int id, String type, String label) {
+		this.id = id;
+		this.type = type;
+		this.label = label;
+	}
 
 	public int getId() {
 		return id;
@@ -14,6 +39,14 @@ public class CloudDSFEntity {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getLabel() {
+		return label;
+	}
+
+	public void setLabel(String label) {
+		this.label = label;
 	}
 
 	public String getType() {
@@ -40,11 +73,19 @@ public class CloudDSFEntity {
 		this.classification = classification;
 	}
 
-	public String getLabel() {
-		return label;
+	public void setCluster(int cluster) {
+		this.cluster = cluster;
 	}
 
-	public void setLabel(String label) {
-		this.label = label;
+	public void setGroup(String group) {
+		this.group = group;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public void setAdditionalInfo(String additionalInfo) {
+		this.additionalInfo = additionalInfo;
 	}
 }

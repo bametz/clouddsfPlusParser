@@ -5,31 +5,46 @@ import java.util.Collections;
 import java.util.List;
 
 import util.CloudDSFEntityComparator;
-import util.Views;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonView;
 
 /**
- * Represents one decision of the cloudDSF
+ * Represents a decision of the cloudDSF
  * 
  * @author Metz
  *
  */
 public class Decision extends CloudDSFEntity {
-	@JsonView(Views.NoOutcomes.class)
+
 	private List<Outcome> outcomes = new ArrayList<Outcome>();
 
-	public Decision(String label, String classification, int id, int parent) {
-		this.setLabel(label);
+	public Decision(String label, int id, int cluster, int parent,
+			String classification, String description) {
+		super(id, "dec", label);
 		this.setClassification(classification);
-		this.setId(id);
+		this.setDescription(description);
+		this.setCluster(cluster);
+		this.setGroup("dec" + id);
 		this.setParent(parent);
-		this.setType("decision");
+		// this.setAdditionalInfo(additionalInfo);
 	}
 
 	/**
-	 * Sorts array list to offer outcomes sorted by ascending id for json
+	 * Decision constructor for legacy cloudDSF
+	 * 
+	 * @param label
+	 * @param classification
+	 * @param id
+	 * @param parent
+	 */
+	public Decision(String label, String classification, int id, int parent) {
+		super(id, "decision", label);
+		this.setClassification(classification);
+		this.setParent(parent);
+	}
+
+	/**
+	 * Sorts outcomes by ascending id for better readability in json
 	 */
 	public void sortOutcomes() {
 		Collections.sort(outcomes, new CloudDSFEntityComparator());
@@ -47,6 +62,7 @@ public class Decision extends CloudDSFEntity {
 	public void addOutcome(Outcome outcome) {
 		outcomes.add(outcome);
 	}
+
 	@JsonProperty("children")
 	public List<Outcome> getOutcomes() {
 		return outcomes;

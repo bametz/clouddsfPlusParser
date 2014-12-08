@@ -8,8 +8,15 @@ package cloudDSF;
  */
 public class OutcomeRelation extends Relation {
 
-	public OutcomeRelation(int source, int target, String label) {
-		super(source, target, "auto", 1, label, "OutRel");
-
+	public OutcomeRelation(int source, int target, String type,
+			String explanation, String additionalInfo) {
+		super(source, target, type);
+		this.setRelationGroup("outRel");
+		// this.setAdditionalInfo(additionalInfo);
+		// this.setExplanation(explanation);
+	}
+	
+	public OutcomeRelation(int source, int target, String type) {
+		super(source, target, type);
 	}
 }

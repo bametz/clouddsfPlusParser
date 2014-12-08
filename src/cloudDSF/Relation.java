@@ -1,21 +1,22 @@
 package cloudDSF;
-
+/**
+ * Superclass for relations between entities in the cloudDSF
+ * @author Metz
+ *
+ */
 public class Relation {
 	private int source;
 	private int target;
 	private String dir;
-	private int weight;
-	private String label;
+	private String relationGroup;
 	private String type;
+	private String explanation;
+	private String additionalInfo;
 
-	public Relation(int source, int target, String dir, int weight,
-			String label, String type) {
+	public Relation(int source, int target, String type) {
 		this.source = source;
 		this.target = target;
-		this.label = label;
 		this.type = type;
-		this.weight = weight;
-		this.dir = dir;
 	}
 
 	public int getTarget() {
@@ -42,27 +43,35 @@ public class Relation {
 		this.dir = dir;
 	}
 
-	public int getWeight() {
-		return weight;
-	}
-
-	public void setWeight(int weight) {
-		this.weight = weight;
-	}
-
-	public String getLabel() {
-		return label;
-	}
-
-	public void setLabel(String label) {
-		this.label = label;
-	}
-
 	public String getType() {
 		return type;
 	}
 
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	public String getExplanation() {
+		return explanation;
+	}
+
+	public void setExplanation(String explanation) {
+		this.explanation = explanation;
+	}
+
+	public String getAdditionalInfo() {
+		return additionalInfo;
+	}
+
+	public void setAdditionalInfo(String additionalInfo) {
+		this.additionalInfo = additionalInfo;
+	}
+
+	public String getRelationGroup() {
+		return relationGroup;
+	}
+
+	public void setRelationGroup(String relationGroup) {
+		this.relationGroup = relationGroup;
 	}
 }

@@ -1,41 +1,33 @@
 package cloudDSF;
 
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-import java.util.Locale;
-
 /**
- * Represents one outcome of the cloudDSF
+ * Represents a outcome of the cloudDSF
  * 
  * @author Metz
  *
  */
+
 public class Outcome extends CloudDSFEntity {
 
-	private double weight;
-
-	public Outcome(String label, int id, int parent) {
-		this.setLabel(label);
-		this.setId(id);
+	public Outcome(String label, int id, int cluster, int parent,
+			String description) {
+		super(id, "out", label);
+		this.setDescription(description);
+		this.setCluster(cluster);
+		this.setGroup("out" + cluster);
 		this.setParent(parent);
-		this.setType("outcome");
+		// this.setAdditionalInfo(additionalInfo);
 	}
 
 	/**
-	 * formats the calculated weight to a two digit number separated with .
+	 * Outcome constructor for legacy cloudDSF
 	 * 
-	 * @param weight
+	 * @param label
+	 * @param id
+	 * @param parent
 	 */
-	public void setWeight(double weight) {
-		Locale locale = new Locale("en", "UK");
-		String pattern = "#.###";
-		DecimalFormat decimalFormat = (DecimalFormat) NumberFormat
-				.getNumberInstance(locale);
-		decimalFormat.applyPattern(pattern);
-		this.weight = Double.valueOf(decimalFormat.format(weight));
-	}
-
-	public double getWeight() {
-		return weight;
+	public Outcome(String label, int id, int parent) {
+		super(id, "outcome", label);
+		this.setParent(parent);
 	}
 }

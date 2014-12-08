@@ -10,7 +10,10 @@ import util.RelationComparator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * @author Metz Main class to represent the CloudDSF object with dps, ds and os.
+ * Represents the (legacy) cloudDSF object with dps, ds and os and their
+ * relations.
+ * 
+ * @author Metz
  */
 
 public class CloudDSF extends CloudDSFEntity {
@@ -26,6 +29,10 @@ public class CloudDSF extends CloudDSFEntity {
 	private transient List<Task> tasks = new ArrayList<Task>();
 
 	private transient List<Relation> influencingRelations = new ArrayList<Relation>();
+
+	public CloudDSF(int id, String type, String label) {
+		super(id, type, label);
+	}
 
 	public DecisionPoint getDecisionPoint(String decisionPointName) {
 		for (DecisionPoint decisionPoint : decisionPoints) {
@@ -76,13 +83,11 @@ public class CloudDSF extends CloudDSFEntity {
 	 * @param label
 	 *            Type of relation e.g. influencing, binding, affecting
 	 */
-	public void setDecisionRelation(String startDecision, String endDecision,
-			String label) {
+	public void setLegacyDecisionRelation(String startDecision,
+			String endDecision) {
 		int source = getDecision(startDecision).getId();
 		int target = getDecision(endDecision).getId();
-		// label is rather type
-		DecisionRelation di = new DecisionRelation(source, target, label);
-		influencingDecisions.add(di);
+		influencingDecisions.add(new DecisionRelation(source, target));
 	}
 
 	/**
@@ -122,7 +127,7 @@ public class CloudDSF extends CloudDSFEntity {
 			dir = "auto";
 			break;
 		}
-		TaskRelation tr = new TaskRelation(source, target, dir, label);
+		TaskRelation tr = new TaskRelation(source, target, dir);
 		influencingTasks.add(tr);
 	}
 
@@ -238,7 +243,7 @@ public class CloudDSF extends CloudDSFEntity {
 					oamount++;
 					System.out.println("Outcome " + o.getLabel() + " ID "
 							+ o.getId() + " parentId " + o.getParent()
-							+ " Weight " + o.getWeight());
+							+ " Weight ");
 				}
 			}
 		}
@@ -250,13 +255,13 @@ public class CloudDSF extends CloudDSFEntity {
 		for (DecisionRelation dRelation : influencingDecisions) {
 			System.out.println("Decision Relationship from "
 					+ dRelation.getSource() + " to " + dRelation.getTarget()
-					+ " with 'type' " + dRelation.getLabel());
+					+ " with 'type' ");
 			dRelations++;
 		}
 		for (OutcomeRelation oRelation : influencingOutcomes) {
 			System.out.println("Outcome Relationship from "
 					+ oRelation.getSource() + " to " + oRelation.getTarget()
-					+ " with 'type' " + oRelation.getLabel());
+					+ " with 'type' ");
 			oRelationsAmount++;
 		}
 
@@ -275,5 +280,18 @@ public class CloudDSF extends CloudDSFEntity {
 		System.out.println("#Relations between Outcomes = " + oRelationsAmount);
 		System.out.println("#Relations between Tasks and Decision = "
 				+ tRelations);
+	}
+
+	public void setDecisionRelation(String startDecision, String endDecision,
+			String relationName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void setInfluencingRelations() {
+		influencingRelations.clear();
+		influencingRelations.addAll(influencingDecisions);
+		influencingRelations.addAll(influencingTasks);
+		sortInfluencingRelations();
 	}
 }
