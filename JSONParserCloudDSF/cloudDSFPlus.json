@@ -9,11 +9,11 @@
     "children" : [ {
       "id" : 1,
       "label" : "Distribute Application",
-      "type" : "dP",
+      "type" : "dp",
       "parent" : 0,
       "classification" : "Cloud Migration specific / Application Migration in General",
       "cluster" : 1,
-      "group" : "dP1",
+      "group" : "dp1",
       "description" : "Comprises decisions regarding what parts of an application and how they are migrated. The distribution can be based on layers, tiers and components.",
       "abbrev" : "DDA",
       "children" : [ {
@@ -298,11 +298,11 @@
     }, {
       "id" : 2,
       "label" : "Define Elasticity Strategy",
-      "type" : "dP",
+      "type" : "dp",
       "parent" : 0,
       "classification" : "Cloud Migration specific / Application Migration in General",
       "cluster" : 2,
-      "group" : "dP2",
+      "group" : "dp2",
       "description" : "Comprises decisions regarding which components and how they are scaled.",
       "abbrev" : "DES",
       "children" : [ {
@@ -524,11 +524,11 @@
     }, {
       "id" : 3,
       "label" : "Define Multi-Tenancy Requirements",
-      "type" : "dP",
+      "type" : "dp",
       "parent" : 0,
       "classification" : "Cloud Migration specific",
       "cluster" : 3,
-      "group" : "dP3",
+      "group" : "dp3",
       "description" : "Comprises decision to denote if and how  multi-tenancy is supported by the migrated application.",
       "abbrev" : "DMTS",
       "children" : [ {
@@ -582,11 +582,11 @@
     }, {
       "id" : 4,
       "label" : "Select Service Provider / Offering",
-      "type" : "dP",
+      "type" : "dp",
       "parent" : 0,
       "classification" : "Cloud Migration specific / Application Migration in General",
       "cluster" : 4,
-      "group" : "dP4",
+      "group" : "dp4",
       "description" : "Comprises decision concerned with essential  technical as well as organizational aspects for the cloud solution. ",
       "abbrev" : "SSPO\n",
       "children" : [ {
