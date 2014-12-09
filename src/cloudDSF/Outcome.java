@@ -10,14 +10,14 @@ package cloudDSF;
 public class Outcome extends CloudDSFEntity {
 
 	public Outcome(String label, int id, int cluster, int parent,
-			String description) {
+			String description, String additionalInfo, String abbrev) {
 		super(id, "out", label);
 		this.setDescription(description);
 		this.setCluster(cluster);
 		this.setGroup("out" + cluster);
 		this.setParent(parent);
-		// todo
-		// this.setAdditionalInfo(additionalInfo);
+		this.setAdditionalInfo(additionalInfo);
+		this.setAbbrev(abbrev);
 	}
 
 	/**

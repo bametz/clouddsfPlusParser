@@ -19,14 +19,15 @@ public class DecisionPoint extends CloudDSFEntity {
 	private List<Decision> decisions = new ArrayList<Decision>();
 
 	public DecisionPoint(String label, int id, int cluster,
-			String classification, String description) {
+			String classification, String description, String additionalInfo,
+			String abbrev) {
 		super(id, "dP", label);
 		this.setClassification(classification);
 		this.setDescription(description);
 		this.setCluster(cluster);
 		this.setGroup("dP" + cluster);
-		// todo
-		// this.setAdditionalInfo(additionalInfo);
+		this.setAdditionalInfo(additionalInfo);
+		this.setAbbrev(abbrev);
 		// parent stays null
 	}
 

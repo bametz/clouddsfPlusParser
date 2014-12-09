@@ -9,13 +9,13 @@
       "label" : "Distribute Application",
       "type" : "decisionPoint",
       "parent" : 0,
-      "classification" : "Cloud Migration specific / Application Migration in General",
+      "classification" : "Enables a selection based on the logical distribution of to be migrated application parts.",
       "children" : [ {
         "id" : 101,
         "label" : "Select Application Layer",
         "type" : "decision",
         "parent" : 1,
-        "classification" : "Application Migration in General",
+        "classification" : "Comprises decisions regarding what parts of an application and how they are migrated. The distribution can be based on layers, tiers and components.",
         "children" : [ {
           "id" : 10101,
           "label" : "Presentation Layer",
@@ -57,7 +57,7 @@
         "label" : "Select Application Tier",
         "type" : "decision",
         "parent" : 1,
-        "classification" : "Application Migration in General",
+        "classification" : "",
         "children" : [ {
           "id" : 10201,
           "label" : "Client Tier",
@@ -99,7 +99,7 @@
         "label" : "Select Application Components",
         "type" : "decision",
         "parent" : 1,
-        "classification" : "Application Migration in General",
+        "classification" : "",
         "children" : [ {
           "id" : 10301,
           "label" : "Application Component",
@@ -146,7 +146,7 @@
         "label" : "Select Migration Type",
         "type" : "decision",
         "parent" : 1,
-        "classification" : "Cloud Migration specific",
+        "classification" : "",
         "children" : [ {
           "id" : 10401,
           "label" : "Migration Type I",
@@ -174,13 +174,13 @@
       "label" : "Define Elasticity Strategy",
       "type" : "decisionPoint",
       "parent" : 0,
-      "classification" : "Cloud Migration specific / Application Migration in General",
+      "classification" : "Enables defintion on which level the migrated component(s) will be scaled.",
       "children" : [ {
         "id" : 201,
         "label" : "Define Scalability Level",
         "type" : "decision",
         "parent" : 2,
-        "classification" : "Cloud Migration specific / Application Migration in General",
+        "classification" : "Comprises decisions regarding which components and how they are scaled.",
         "children" : [ {
           "id" : 20101,
           "label" : "No Scaling",
@@ -227,7 +227,7 @@
         "label" : "Select Scaling Type",
         "type" : "decision",
         "parent" : 2,
-        "classification" : "Cloud Migration specific / Application Migration in General",
+        "classification" : "",
         "children" : [ {
           "id" : 20201,
           "label" : "Vertical Scaling",
@@ -249,7 +249,7 @@
         "label" : "Select Elasticity Automation Degree",
         "type" : "decision",
         "parent" : 2,
-        "classification" : "Cloud Migration specific / Application Migration in General",
+        "classification" : "",
         "children" : [ {
           "id" : 20301,
           "label" : "Manual Scaling",
@@ -281,7 +281,7 @@
         "label" : "Select Scaling Trigger",
         "type" : "decision",
         "parent" : 2,
-        "classification" : "Cloud Migration specific / Application Migration in General",
+        "classification" : "",
         "children" : [ {
           "id" : 20401,
           "label" : "No Trigger",
@@ -304,13 +304,13 @@
       "label" : "Define Multi-Tenancy Requirements",
       "type" : "decisionPoint",
       "parent" : 0,
-      "classification" : "Cloud Migration specific",
+      "classification" : "Enables selection of a specific multi-tenancy architecture.",
       "children" : [ {
         "id" : 301,
         "label" : "Select Multi-Tenancy Architecture",
         "type" : "decision",
         "parent" : 3,
-        "classification" : "Cloud Migration specific",
+        "classification" : "Comprises decision to denote if and how  multi-tenancy is supported by the migrated application.",
         "children" : [ {
           "id" : 30101,
           "label" : "Multi-Tenancy Architecture 0",
@@ -338,13 +338,13 @@
       "label" : "Select Service Provider / Offering",
       "type" : "decisionPoint",
       "parent" : 0,
-      "classification" : "Cloud Migration specific / Application Migration in General",
+      "classification" : "Enables selection which of the cloud deployment models shall be used.",
       "children" : [ {
         "id" : 401,
         "label" : "Select Cloud Deployment Model",
         "type" : "decision",
         "parent" : 4,
-        "classification" : "Cloud Migration specific",
+        "classification" : "Comprises decision concerned with essential  technical as well as organizational aspects for the cloud solution. ",
         "children" : [ {
           "id" : 40101,
           "label" : "Public Cloud",
@@ -371,7 +371,7 @@
         "label" : "Select Cloud Service Model",
         "type" : "decision",
         "parent" : 4,
-        "classification" : "Cloud Migration specific",
+        "classification" : "",
         "children" : [ {
           "id" : 40201,
           "label" : "IaaS",
@@ -413,7 +413,7 @@
         "label" : "Define Cloud Hosting",
         "type" : "decision",
         "parent" : 4,
-        "classification" : "Cloud Migration specific / Application Migration in General",
+        "classification" : "",
         "children" : [ {
           "id" : 40301,
           "label" : "On-Premise Hosting",
@@ -435,7 +435,7 @@
         "label" : "Define Roles of Responsibility",
         "type" : "decision",
         "parent" : 4,
-        "classification" : "Cloud Migration specific / Application Migration in General",
+        "classification" : "",
         "children" : [ {
           "id" : 40401,
           "label" : "Role Set 1",
@@ -477,7 +477,7 @@
         "label" : "Select Cloud Vendor",
         "type" : "decision",
         "parent" : 4,
-        "classification" : "Cloud Migration specific / Application Migration in General",
+        "classification" : "",
         "children" : [ {
           "id" : 40501,
           "label" : "Evaluated Cloud Vendor",
@@ -489,7 +489,7 @@
         "label" : "Select Pricing Model",
         "type" : "decision",
         "parent" : 4,
-        "classification" : "Cloud Migration specific",
+        "classification" : "",
         "children" : [ {
           "id" : 40601,
           "label" : "Free",
@@ -521,7 +521,7 @@
         "label" : "Define Resource Location",
         "type" : "decision",
         "parent" : 4,
-        "classification" : "Cloud Migration specific / Application Migration in General",
+        "classification" : "",
         "children" : [ {
           "id" : 40701,
           "label" : "Data Location under same jurisdiction as company",

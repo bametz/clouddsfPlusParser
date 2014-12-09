@@ -1,6 +1,5 @@
 package cloudDSF;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * Superclass for all entities of the cloudDSF
@@ -28,6 +27,7 @@ public class CloudDSFEntity {
 	private String description;
 	// additional information
 	private String additionalInfo;
+	private String abbrev;
 
 	public CloudDSFEntity(int id, String type, String label) {
 		this.id = id;
@@ -89,5 +89,9 @@ public class CloudDSFEntity {
 
 	public int getParent() {
 		return this.parent;
+	}
+
+	public void setAbbrev(String abbrev) {
+		this.abbrev = abbrev;
 	}
 }

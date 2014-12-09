@@ -24,6 +24,20 @@ public class CloudDSFPlusParser {
 
 	private final CloudDSF cdsf;
 	private final XSSFWorkbook workbook;
+	// row numbers
+	private int dpCol = 0;
+	private int decCol = 1;
+	private int outCol = 2;
+
+	private int dpDescCol = 3;
+	private int decDescCol = 4;
+	private int outDescCol = 5;
+	private int dpClassCol = 6;
+	private int decClassCol = 7;
+
+	// private int dpAddInfoCol = 8;
+	// private int decAddInfoCol = 9;
+	// private int outAddInfoCol = 10;
 
 	public CloudDSFPlusParser(XSSFWorkbook workbook) {
 		this.cdsf = new CloudDSF(0, "root", "CloudDSFPlus");
@@ -39,6 +53,7 @@ public class CloudDSFPlusParser {
 	 */
 	public CloudDSF readExcel() {
 		// Get first/desired sheet from the workbook
+		// workbook.setMissingCellPolicy(Row.RETURN_BLANK_AS_NULL);
 		XSSFSheet sheet = workbook.getSheet("Knowledge Base");
 		// XSSFSheet sheet = workbook.getSheetAt(0);
 
@@ -59,30 +74,27 @@ public class CloudDSFPlusParser {
 			// row 2 gets selected
 			Row row = sheet.getRow(j);
 			// select cell A
-			Cell cell = row.getCell(0);
+			Cell cell = row.getCell(dpCol);
 			// if not empty than new decision Point
 			if (cell.getStringCellValue().equals("") == false) {
 				decisionPointID++;
 				decisionID = decisionPointID * 100 + 1;
 				outcomeID = decisionID * 100 + 1;
-				// Create new DecisionPoint
 				decisionPointName = cell.getStringCellValue();
-				// ToDo Description
-				decisionPoint = new DecisionPoint(decisionPointName,
-						decisionPointID, decisionPointID, row.getCell(4)
-								.getStringCellValue(), null);
+				// Create new DecisionPoint
+				decisionPoint = generateDecisionPoint(cell, decisionPointID,
+						row);
 				// Create new Decision
-				Cell decisionCell = row.getCell(1);
+				Cell decisionCell = row.getCell(decCol);
 				decisionName = decisionCell.getStringCellValue();
 				// todo description
-				decision = new Decision(decisionName, decisionID,
-						decisionPointID, decisionPointID, row.getCell(3)
-								.getStringCellValue(), null);
+				decision = generateDecision(decisionCell, decisionID,
+						decisionPointID, row);
 				// Create new outcome
-				Cell outcomeCell = row.getCell(2);
+				Cell outcomeCell = row.getCell(outCol);
 				// ToDo Description
-				outcome = new Outcome(outcomeCell.getStringCellValue(),
-						outcomeID, decisionPointID, decisionID, null);
+				outcome = generateOutcome(outcomeCell, decisionID,
+						decisionPointID, outcomeID, row);
 				// Add outcome to decision
 				decision.addOutcome(outcome);
 				// add decision to decisionPoint
@@ -91,19 +103,18 @@ public class CloudDSFPlusParser {
 				cdsf.addDecisionPoint(decisionPoint);
 			} else {
 				// Select Cell B
-				Cell decisionCell = row.getCell(1);
+				Cell decisionCell = row.getCell(decCol);
 				// if text than new decision
 				if (decisionCell.getStringCellValue().equals("") == false) {
 					decisionID++;
 					outcomeID = decisionID * 100 + 1;
 					decisionName = decisionCell.getStringCellValue();
-					decision = new Decision(decisionName, decisionID,
-							decisionPointID, decisionPointID, row.getCell(3)
-									.getStringCellValue(), null);
+					decision = generateDecision(decisionCell, decisionID,
+							decisionPointID, row);
 					// create new outcome object
-					Cell outcomeCell = row.getCell(2);
-					outcome = new Outcome(outcomeCell.getStringCellValue(),
-							outcomeID, decisionPointID, decisionID, null);
+					Cell outcomeCell = row.getCell(outCol);
+					outcome = generateOutcome(outcomeCell, decisionID,
+							decisionPointID, outcomeID, row);
 					decision.addOutcome(outcome);
 					cdsf.getDecisionPoint(decisionPointName).addDecision(
 							decision);
@@ -111,9 +122,9 @@ public class CloudDSFPlusParser {
 					// if no text in dp or d than new outcome
 					outcomeID++;
 					// create new outcome object
-					Cell outcomeCell = row.getCell(2);
-					outcome = new Outcome(outcomeCell.getStringCellValue(),
-							outcomeID, decisionPointID, decisionID, null);
+					Cell outcomeCell = row.getCell(outCol);
+					outcome = generateOutcome(outcomeCell, decisionID,
+							decisionPointID, outcomeID, row);
 					cdsf.getDecisionPoint(decisionPointName)
 							.getDecision(decisionName).addOutcome(outcome);
 				}
@@ -125,6 +136,39 @@ public class CloudDSFPlusParser {
 		cdsf.sortEntities();
 		cdsf.sortLists();
 		return cdsf;
+
+	}
+
+	private Outcome generateOutcome(Cell cell, int decisionID,
+			int decisionPointID, int outcomeID, Row row) {
+		String label = cell.getStringCellValue();
+		String description = row.getCell(outDescCol).getStringCellValue();
+		String abbrev = cell.getCellComment().getString().getString();
+		Outcome o = new Outcome(label, outcomeID, decisionPointID, decisionID,
+				description, null, abbrev);
+		return o;
+	}
+
+	private Decision generateDecision(Cell cell, int decisionID,
+			int decisionPointID, Row row) {
+		String label = cell.getStringCellValue();
+		String classification = row.getCell(decClassCol).getStringCellValue();
+		String description = row.getCell(decDescCol).getStringCellValue();
+		String abbrev = cell.getCellComment().getString().getString();
+		Decision d = new Decision(label, decisionID, decisionPointID,
+				decisionPointID, classification, description, null, abbrev);
+		return d;
+	}
+
+	private DecisionPoint generateDecisionPoint(Cell cell, int decisionPointID,
+			Row row) {
+		String label = cell.getStringCellValue();
+		String classification = row.getCell(dpClassCol).getStringCellValue();
+		String description = row.getCell(dpDescCol).getStringCellValue();
+		String abbrev = cell.getCellComment().getString().getString();
+		DecisionPoint dp = new DecisionPoint(label, decisionPointID,
+				decisionPointID, classification, description, null, abbrev);
+		return dp;
 	}
 
 	/**
@@ -163,6 +207,7 @@ public class CloudDSFPlusParser {
 				}
 			}
 		}
+
 	}
 
 	/**
@@ -232,4 +277,5 @@ public class CloudDSFPlusParser {
 			}
 		}
 	}
+
 }

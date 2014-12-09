@@ -5,6 +5,7 @@
     "type" : "root",
     "parent" : 0,
     "cluster" : 0,
+    "group" : "root",
     "children" : [ {
       "id" : 1,
       "label" : "Distribute Application",
@@ -13,6 +14,8 @@
       "classification" : "Cloud Migration specific / Application Migration in General",
       "cluster" : 1,
       "group" : "dP1",
+      "description" : "Comprises decisions regarding what parts of an application and how they are migrated. The distribution can be based on layers, tiers and components.",
+      "abbrev" : "DDA",
       "children" : [ {
         "id" : 101,
         "label" : "Select Application Layer",
@@ -21,55 +24,71 @@
         "classification" : "Application Migration in General",
         "cluster" : 1,
         "group" : "dec1",
+        "description" : "Enables a selection based on the logical distribution of to be migrated application parts.",
+        "abbrev" : "SAL",
         "children" : [ {
           "id" : 10101,
           "label" : "Presentation Layer",
           "type" : "out",
           "parent" : 101,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "The complete presentation layer shall be migrated e.g. a web server or a rich client. ",
+          "abbrev" : "PL"
         }, {
           "id" : 10102,
           "label" : "Business Layer",
           "type" : "out",
           "parent" : 101,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "The complete business layer shall be migrated e.g. an application server or an ESB.",
+          "abbrev" : "BL"
         }, {
           "id" : 10103,
           "label" : "Resource Layer",
           "type" : "out",
           "parent" : 101,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "The comple resource layer shall be migrated e.g. a database.",
+          "abbrev" : "RL"
         }, {
           "id" : 10104,
           "label" : "Presentation + Business Layer",
           "type" : "out",
           "parent" : 101,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "The complete presentation and business layer shall be migrated.",
+          "abbrev" : "P+BL"
         }, {
           "id" : 10105,
           "label" : "Presentation + Resource Layer",
           "type" : "out",
           "parent" : 101,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "The complete presentation and resource layer shall be migrated.",
+          "abbrev" : "P+RL"
         }, {
           "id" : 10106,
           "label" : "Business + Resource Layer",
           "type" : "out",
           "parent" : 101,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "The complete business and resource layer shall be migrated.",
+          "abbrev" : "B+RL"
         }, {
           "id" : 10107,
           "label" : "Presentation + Business + Resource Layer",
           "type" : "out",
           "parent" : 101,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "The complete presentation, business and resource layer shall be migrated hence the complete application.",
+          "abbrev" : "P+B+RL"
         } ]
       }, {
         "id" : 102,
@@ -79,55 +98,71 @@
         "classification" : "Application Migration in General",
         "cluster" : 1,
         "group" : "dec1",
+        "description" : "Enables a selection based on the physical distribution of to be migrated application parts.",
+        "abbrev" : "SAT",
         "children" : [ {
           "id" : 10201,
           "label" : "Client Tier",
           "type" : "out",
           "parent" : 102,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "The client tier shall be migrated or rather substituted through the application tier since a migration to the cloud will render a client tier obsolete.",
+          "abbrev" : "CT"
         }, {
           "id" : 10202,
           "label" : "Application Tier",
           "type" : "out",
           "parent" : 102,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "The application tier and all the components which are running on shall be migrated.",
+          "abbrev" : "AT"
         }, {
           "id" : 10203,
           "label" : "Data Tier",
           "type" : "out",
           "parent" : 102,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "The data tier and all the components which are running on shall be migrated.",
+          "abbrev" : "DT"
         }, {
           "id" : 10204,
           "label" : "Client + Application Tier",
           "type" : "out",
           "parent" : 102,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "The client and applicaton tier shall be migrated.",
+          "abbrev" : "C+AT"
         }, {
           "id" : 10205,
           "label" : "Client + Data Tier",
           "type" : "out",
           "parent" : 102,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "The client and data tier shall be migrated.",
+          "abbrev" : "C+DT"
         }, {
           "id" : 10206,
           "label" : "Application + Data Tier",
           "type" : "out",
           "parent" : 102,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "The application and data tier shall be migrated.",
+          "abbrev" : "A+DT"
         }, {
           "id" : 10207,
           "label" : "Client + Application + Data Tier",
           "type" : "out",
           "parent" : 102,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "The client, application and data tier shall be migrated hence the complete application.",
+          "abbrev" : "C+A+DT"
         } ]
       }, {
         "id" : 103,
@@ -137,62 +172,80 @@
         "classification" : "Application Migration in General",
         "cluster" : 1,
         "group" : "dec1",
+        "description" : "Enables a selection based on to be migrated components according to their type and amount.  ",
+        "abbrev" : "SAC",
         "children" : [ {
           "id" : 10301,
           "label" : "Application Component",
           "type" : "out",
           "parent" : 103,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "A single application component shall be migrated e.g. an application server.",
+          "abbrev" : "AC"
         }, {
           "id" : 10302,
           "label" : "Application Components",
           "type" : "out",
           "parent" : 103,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "Multiple application components shall be migrated e.g. a rich client and an ESB.",
+          "abbrev" : "ACs"
         }, {
           "id" : 10303,
           "label" : "Middleware Component",
           "type" : "out",
           "parent" : 103,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "A single middleware component shall be migrated e.g. a database.",
+          "abbrev" : "MC"
         }, {
           "id" : 10304,
           "label" : "Middleware Components",
           "type" : "out",
           "parent" : 103,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "Multiple middleware components shall be migrated e.g. multiple databases, a caching server and a database cluster.",
+          "abbrev" : "MCs"
         }, {
           "id" : 10305,
           "label" : "Application + Middleware Component",
           "type" : "out",
           "parent" : 103,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "A single application and a single middleware component shall be migrated.",
+          "abbrev" : "A+MC"
         }, {
           "id" : 10306,
           "label" : "Application Component + Middleware Components",
           "type" : "out",
           "parent" : 103,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "A single application and multiple middleware components shall be migrated.",
+          "abbrev" : "AC+MCs"
         }, {
           "id" : 10307,
           "label" : "Middleware Component + Application Components",
           "type" : "out",
           "parent" : 103,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "A single middleware component and multiple application components shall be migrated.",
+          "abbrev" : "MC+ACs"
         }, {
           "id" : 10308,
           "label" : "Application + Middleware Components",
           "type" : "out",
           "parent" : 103,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "Multiple application and middleware components shall be migrated.",
+          "abbrev" : "ACs+MCs"
         } ]
       }, {
         "id" : 104,
@@ -202,34 +255,44 @@
         "classification" : "Cloud Migration specific",
         "cluster" : 1,
         "group" : "dec1",
+        "description" : "Enables selection of the kind of migration implying various constraints.",
+        "abbrev" : "SMT",
         "children" : [ {
           "id" : 10401,
           "label" : "Migration Type I",
           "type" : "out",
           "parent" : 104,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "Migration of a single component with IaaS, PaaS or SaaS.",
+          "abbrev" : "MTI"
         }, {
           "id" : 10402,
           "label" : "Migration Type II",
           "type" : "out",
           "parent" : 104,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "Migration of multiple components with IaaS, PaaS or SaaS.",
+          "abbrev" : "MTII"
         }, {
           "id" : 10403,
           "label" : "Migration Type III",
           "type" : "out",
           "parent" : 104,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "Migration of the whole application as-is with IaaS.",
+          "abbrev" : "MTIII"
         }, {
           "id" : 10404,
           "label" : "Migration Type IV",
           "type" : "out",
           "parent" : 104,
           "cluster" : 1,
-          "group" : "out1"
+          "group" : "out1",
+          "description" : "Migration of the whole application based on cloud services with PaaS or SaaS.",
+          "abbrev" : "MTIV"
         } ]
       } ]
     }, {
@@ -240,6 +303,8 @@
       "classification" : "Cloud Migration specific / Application Migration in General",
       "cluster" : 2,
       "group" : "dP2",
+      "description" : "Comprises decisions regarding which components and how they are scaled.",
+      "abbrev" : "DES",
       "children" : [ {
         "id" : 201,
         "label" : "Define Scalability Level",
@@ -248,62 +313,80 @@
         "classification" : "Cloud Migration specific / Application Migration in General",
         "cluster" : 2,
         "group" : "dec2",
+        "description" : "Enables defintion on which level the migrated component(s) will be scaled.",
+        "abbrev" : "DSL",
         "children" : [ {
           "id" : 20101,
           "label" : "No Scaling",
           "type" : "out",
           "parent" : 201,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The migrated components will not have to scale.",
+          "abbrev" : "NoS"
         }, {
           "id" : 20102,
           "label" : "OS/VM Level Scaling",
           "type" : "out",
           "parent" : 201,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The application shall scale on VM level e.g. by instantiating new machines or requiring more resources for existing ones.",
+          "abbrev" : "VM-S"
         }, {
           "id" : 20103,
           "label" : "Middleware Level Scaling",
           "type" : "out",
           "parent" : 201,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The application shall scale on the middleware level e.g. by adding or removing application servers.",
+          "abbrev" : "MW-S"
         }, {
           "id" : 20104,
           "label" : "Application Level Scaling",
           "type" : "out",
           "parent" : 201,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The application shall scale on the application level e.g. by adding or removing instances inside an application server.",
+          "abbrev" : "A-S"
         }, {
           "id" : 20105,
           "label" : "OS/VM + Middleware Level Scaling",
           "type" : "out",
           "parent" : 201,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The application shall scale on the VM as well as on the middleware level.",
+          "abbrev" : "VM+M-S"
         }, {
           "id" : 20106,
           "label" : "OS/VM + Application Level Scaling",
           "type" : "out",
           "parent" : 201,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The application shall scale on the VM and the application level.",
+          "abbrev" : "VM+A-S"
         }, {
           "id" : 20107,
           "label" : "Middleware + Application Level Scaling",
           "type" : "out",
           "parent" : 201,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The application shall scale on the middleware and the application level.",
+          "abbrev" : "M+A-S"
         }, {
           "id" : 20108,
           "label" : "OS/VM + Middleware + Application Level Scaling",
           "type" : "out",
           "parent" : 201,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The application shall scale on the VM, the middleware and the application level.",
+          "abbrev" : "VM+M+A-S"
         } ]
       }, {
         "id" : 202,
@@ -313,27 +396,35 @@
         "classification" : "Cloud Migration specific / Application Migration in General",
         "cluster" : 2,
         "group" : "dec2",
+        "description" : "Enables selection if the scaled component(s) will be scaled up/out or both.",
+        "abbrev" : "SST",
         "children" : [ {
           "id" : 20201,
           "label" : "Vertical Scaling",
           "type" : "out",
           "parent" : 202,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The component shall scale up and down i.e. through adding or removing resources.",
+          "abbrev" : "VS"
         }, {
           "id" : 20202,
           "label" : "Horizontal Scaling",
           "type" : "out",
           "parent" : 202,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The component shall scale out and in i.e. adding or removing instances.",
+          "abbrev" : "HS"
         }, {
           "id" : 20203,
           "label" : "Hybrid Scaling",
           "type" : "out",
           "parent" : 202,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The component shall scale up and down as well as in and out.",
+          "abbrev" : "HyS"
         } ]
       }, {
         "id" : 203,
@@ -343,41 +434,53 @@
         "classification" : "Cloud Migration specific / Application Migration in General",
         "cluster" : 2,
         "group" : "dec2",
+        "description" : "Enables selection of the automation degree of the applied scaling level and type.",
+        "abbrev" : "SEAD",
         "children" : [ {
           "id" : 20301,
           "label" : "Manual Scaling",
           "type" : "out",
           "parent" : 203,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The scaling shall be performed manually.",
+          "abbrev" : "MS"
         }, {
           "id" : 20302,
           "label" : "Semi-Automatic Scaling",
           "type" : "out",
           "parent" : 203,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The scaling shall be performed semi-automatically i.e. by defining tresholds which trigger defined scaling actions.",
+          "abbrev" : "SAS"
         }, {
           "id" : 20303,
           "label" : "Semi-Automatic Third-Party Scaling",
           "type" : "out",
           "parent" : 203,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The scaling shall be performed semi-automatically i.e. by defining tresholds which trigger defined scaling actions and entirely performed by a third party.",
+          "abbrev" : "SA3S"
         }, {
           "id" : 20304,
           "label" : "Automatic Scaling",
           "type" : "out",
           "parent" : 203,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The scaling shall be fully automatic without prior manual set up.",
+          "abbrev" : "AS"
         }, {
           "id" : 20305,
           "label" : "Automatic Third-Party Scaling",
           "type" : "out",
           "parent" : 203,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The scaling shall be fully automatic without prior manual set up and entirely performed by a third party.",
+          "abbrev" : "A3S"
         } ]
       }, {
         "id" : 204,
@@ -387,27 +490,35 @@
         "classification" : "Cloud Migration specific / Application Migration in General",
         "cluster" : 2,
         "group" : "dec2",
+        "description" : "Enables selection if and how the scaling is triggered.",
+        "abbrev" : "Metz:\nSST",
         "children" : [ {
           "id" : 20401,
           "label" : "No Trigger",
           "type" : "out",
           "parent" : 204,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The scaling action shall not be triggered by anything. Notifications are not subsumed under triggers.",
+          "abbrev" : "NT"
         }, {
           "id" : 20402,
           "label" : "Event-Driven Trigger",
           "type" : "out",
           "parent" : 204,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The scaling shall be triggered by events e.g. exceeding thresholds.",
+          "abbrev" : "EDT"
         }, {
           "id" : 20403,
           "label" : "Proactive Trigger",
           "type" : "out",
           "parent" : 204,
           "cluster" : 2,
-          "group" : "out2"
+          "group" : "out2",
+          "description" : "The scaling shall be triggered prior to the unexpected resource limitation.",
+          "abbrev" : "PT"
         } ]
       } ]
     }, {
@@ -418,6 +529,8 @@
       "classification" : "Cloud Migration specific",
       "cluster" : 3,
       "group" : "dP3",
+      "description" : "Comprises decision to denote if and how  multi-tenancy is supported by the migrated application.",
+      "abbrev" : "DMTS",
       "children" : [ {
         "id" : 301,
         "label" : "Select Multi-Tenancy Architecture",
@@ -426,34 +539,44 @@
         "classification" : "Cloud Migration specific",
         "cluster" : 3,
         "group" : "dec3",
+        "description" : "Enables selection of a specific multi-tenancy architecture.",
+        "abbrev" : "SMTA",
         "children" : [ {
           "id" : 30101,
           "label" : "Multi-Tenancy Architecture 0",
           "type" : "out",
           "parent" : 301,
           "cluster" : 3,
-          "group" : "out3"
+          "group" : "out3",
+          "description" : "The application stack shall only be shared between tenants on the level of infrastructure e.g. hardware, facility.",
+          "abbrev" : "MTA0"
         }, {
           "id" : 30102,
           "label" : "Multi-Tenancy Architecture 1",
           "type" : "out",
           "parent" : 301,
           "cluster" : 3,
-          "group" : "out3"
+          "group" : "out3",
+          "description" : "The application stack shall only be shared between tenants on the level of the operating system, virtual machines (hypervisor level) and below.",
+          "abbrev" : "MTA1"
         }, {
           "id" : 30103,
           "label" : "Multi-Tenancy Architecture 2",
           "type" : "out",
           "parent" : 301,
           "cluster" : 3,
-          "group" : "out3"
+          "group" : "out3",
+          "description" : "The application stack shall only be shared between tenants on the level of the middleware and below e.g. sharing the same enterprise service bus or application server.",
+          "abbrev" : "MTA2"
         }, {
           "id" : 30104,
           "label" : "Multi-Tenancy Architecture 3",
           "type" : "out",
           "parent" : 301,
           "cluster" : 3,
-          "group" : "out3"
+          "group" : "out3",
+          "description" : "The application stack shall be fully shared between tenantes i.e. they use the same application instance.",
+          "abbrev" : "MTA3"
         } ]
       } ]
     }, {
@@ -464,6 +587,8 @@
       "classification" : "Cloud Migration specific / Application Migration in General",
       "cluster" : 4,
       "group" : "dP4",
+      "description" : "Comprises decision concerned with essential  technical as well as organizational aspects for the cloud solution. ",
+      "abbrev" : "SSPO\n",
       "children" : [ {
         "id" : 401,
         "label" : "Select Cloud Deployment Model",
@@ -472,34 +597,44 @@
         "classification" : "Cloud Migration specific",
         "cluster" : 4,
         "group" : "dec4",
+        "description" : "Enables selection which of the cloud deployment models shall be used.",
+        "abbrev" : "SCDM",
         "children" : [ {
           "id" : 40101,
           "label" : "Public Cloud",
           "type" : "out",
           "parent" : 401,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application shall be deployed in a public cloud environment.",
+          "abbrev" : "PC"
         }, {
           "id" : 40102,
           "label" : "Private Cloud",
           "type" : "out",
           "parent" : 401,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application shall be deployed in a private cloud environment.",
+          "abbrev" : "PrC"
         }, {
           "id" : 40103,
           "label" : "Community Cloud",
           "type" : "out",
           "parent" : 401,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application shall be deployed in a community cloud environment.",
+          "abbrev" : "CC"
         }, {
           "id" : 40104,
           "label" : "Hybrid Cloud ",
           "type" : "out",
           "parent" : 401,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application shall be deployed in a public and private cloud environment.",
+          "abbrev" : "HyC"
         } ]
       }, {
         "id" : 402,
@@ -509,55 +644,71 @@
         "classification" : "Cloud Migration specific",
         "cluster" : 4,
         "group" : "dec4",
+        "description" : "Enables selection which of the cloud service models shall be used.",
+        "abbrev" : "SCSM",
         "children" : [ {
           "id" : 40201,
           "label" : "IaaS",
           "type" : "out",
           "parent" : 402,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application shall use a Infrastructure as a Service offering.",
+          "abbrev" : "IaaS"
         }, {
           "id" : 40202,
           "label" : "PaaS ",
           "type" : "out",
           "parent" : 402,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application shall use a Platforma as a Service offering.",
+          "abbrev" : "PaaS"
         }, {
           "id" : 40203,
           "label" : "SaaS",
           "type" : "out",
           "parent" : 402,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application shall use a Software as a Service offering.",
+          "abbrev" : "SaaS"
         }, {
           "id" : 40204,
           "label" : "IaaS + PaaS",
           "type" : "out",
           "parent" : 402,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application shall use a combination of IaaS and PaaS offering.",
+          "abbrev" : "I/PaaS"
         }, {
           "id" : 40205,
           "label" : "IaaS + SaaS",
           "type" : "out",
           "parent" : 402,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application shall use a combination of PaaS and SaaS offering.",
+          "abbrev" : "I/SaaS"
         }, {
           "id" : 40206,
           "label" : "PaaS + SaaS",
           "type" : "out",
           "parent" : 402,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application shall use a combination of IaaS and SaaS offering.",
+          "abbrev" : "P/SaaS"
         }, {
           "id" : 40207,
           "label" : "Iaas + PaaS + SaaS",
           "type" : "out",
           "parent" : 402,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application shall use a combination of Iaas, PaaS and SaaS offering.",
+          "abbrev" : "I/P/SaaS"
         } ]
       }, {
         "id" : 403,
@@ -567,27 +718,35 @@
         "classification" : "Cloud Migration specific / Application Migration in General",
         "cluster" : 4,
         "group" : "dec4",
+        "description" : "Enables selection where the cloud application will be hosted.",
+        "abbrev" : "DCH",
         "children" : [ {
           "id" : 40301,
           "label" : "On-Premise Hosting",
           "type" : "out",
           "parent" : 403,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application shall be hosted on-premise.",
+          "abbrev" : "Metz:\nOnPH"
         }, {
           "id" : 40302,
           "label" : "Off-Premise Hosting",
           "type" : "out",
           "parent" : 403,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application shall be hosted off-premise.",
+          "abbrev" : "OffPH"
         }, {
           "id" : 40303,
           "label" : "Hybrid Hosting",
           "type" : "out",
           "parent" : 403,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The applicaton shall be hosted on- as well as off-premise.",
+          "abbrev" : "HyH"
         } ]
       }, {
         "id" : 404,
@@ -597,55 +756,71 @@
         "classification" : "Cloud Migration specific / Application Migration in General",
         "cluster" : 4,
         "group" : "dec4",
+        "description" : "Enables selection of organizational responsibility for ownership, operation and management.",
+        "abbrev" : "DRR",
         "children" : [ {
           "id" : 40401,
           "label" : "Role Set 1",
           "type" : "out",
           "parent" : 404,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The hardware is owned by the company which also operates and manages the migrated cloud application and environment.",
+          "abbrev" : "RS1"
         }, {
           "id" : 40402,
           "label" : "Role Set 7",
           "type" : "out",
           "parent" : 404,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The cloud environment and the underlying hardware is owned and operated by a third party whereas the cloud application is managed by the company.",
+          "abbrev" : "RS7"
         }, {
           "id" : 40403,
           "label" : "Role Set 8",
           "type" : "out",
           "parent" : 404,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The hardware and the cloud environment is owned and operated by a third party which also manages the application.",
+          "abbrev" : "RS8"
         }, {
           "id" : 40404,
           "label" : "Role Set 1 + 7",
           "type" : "out",
           "parent" : 404,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "Combination of Role Set 1 and 7.",
+          "abbrev" : "RS1+7"
         }, {
           "id" : 40405,
           "label" : "Role Set 1 + 8",
           "type" : "out",
           "parent" : 404,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "Combination of Role Set 1 and 8.",
+          "abbrev" : "RS1+8"
         }, {
           "id" : 40406,
           "label" : "Role Set 7 + 8",
           "type" : "out",
           "parent" : 404,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "Combination of Role Set 7 and 8.",
+          "abbrev" : "RS7+8"
         }, {
           "id" : 40407,
           "label" : "Role Set 1 + 7 + 8",
           "type" : "out",
           "parent" : 404,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "Combination of Role Set 1, 7 and 8.",
+          "abbrev" : "RS1+7+8"
         } ]
       }, {
         "id" : 405,
@@ -655,13 +830,17 @@
         "classification" : "Cloud Migration specific / Application Migration in General",
         "cluster" : 4,
         "group" : "dec4",
+        "description" : "Decision stands for a cloud vendor such as Amazon, Microsoft or Google.",
+        "abbrev" : "SCV",
         "children" : [ {
           "id" : 40501,
           "label" : "Evaluated Cloud Vendor",
           "type" : "out",
           "parent" : 405,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "Evaluated cloud vendor which has to be determined through a vendor benchmark and selection.",
+          "abbrev" : "ECV"
         } ]
       }, {
         "id" : 406,
@@ -671,41 +850,53 @@
         "classification" : "Cloud Migration specific",
         "cluster" : 4,
         "group" : "dec4",
+        "description" : "Enables selection of a pricing scheme for the used cloud resources.",
+        "abbrev" : "SPM",
         "children" : [ {
           "id" : 40601,
           "label" : "Free",
           "type" : "out",
           "parent" : 406,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "Denotes freely offered serivces through cloud vendors.",
+          "abbrev" : "Free"
         }, {
           "id" : 40602,
           "label" : "Pay-Per-Use",
           "type" : "out",
           "parent" : 406,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application usage shall be charged on a pay-per-use basis e.g. cent per gigabyte of occupied storage over a specific time.",
+          "abbrev" : "PPU"
         }, {
           "id" : 40603,
           "label" : "Pay-Per-Unit",
           "type" : "out",
           "parent" : 406,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application usage shall be charged on a pay-per-unit basis",
+          "abbrev" : "PPU"
         }, {
           "id" : 40604,
           "label" : "Charge-Per-Use (Subscription)",
           "type" : "out",
           "parent" : 406,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application usage shall be charded on a subscription basis e.g. upfront payment for the use to specific terms and conditions.",
+          "abbrev" : "CPU"
         }, {
           "id" : 40605,
           "label" : "Combined Pricing Model",
           "type" : "out",
           "parent" : 406,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The application shall use a combination of pricing models.",
+          "abbrev" : "CPM"
         } ]
       }, {
         "id" : 407,
@@ -715,20 +906,26 @@
         "classification" : "Cloud Migration specific / Application Migration in General",
         "cluster" : 4,
         "group" : "dec4",
+        "description" : "Enables selection of geographical position in relation to the jurisdiction of the company.",
+        "abbrev" : "DRL",
         "children" : [ {
           "id" : 40701,
           "label" : "Data Location under same jurisdiction as company",
           "type" : "out",
           "parent" : 407,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The data location has to be under the same jurisdiction as the company at all time to keep data security laws enforced.",
+          "abbrev" : "DLSJ"
         }, {
           "id" : 40702,
           "label" : "Data Location outside jurisdiction of company",
           "type" : "out",
           "parent" : 407,
           "cluster" : 4,
-          "group" : "out4"
+          "group" : "out4",
+          "description" : "The data location can be under a different jurisdiction than the company is and hence data is allowed to fall under country or region specific laws and regulations.",
+          "abbrev" : "DLOJ"
         } ]
       } ]
     } ]
