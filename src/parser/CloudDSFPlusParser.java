@@ -40,7 +40,9 @@ public class CloudDSFPlusParser {
 	// private int outAddInfoCol = 10;
 
 	public CloudDSFPlusParser(XSSFWorkbook workbook) {
-		this.cdsf = new CloudDSF(0, "root", "CloudDSFPlus");
+		this.cdsf = new CloudDSF(0, "root", "CloudDSF+");
+		cdsf.setAbbrev("CDSF+");
+		cdsf.setDescription("CDSF+ knowledge base containing decision point, decisions and their outcomes.");
 		this.workbook = workbook;
 	}
 
