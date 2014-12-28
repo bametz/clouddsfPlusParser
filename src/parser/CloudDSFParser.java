@@ -27,7 +27,7 @@ public class CloudDSFParser {
 	private final XSSFWorkbook workbook;
 
 	public CloudDSFParser(XSSFWorkbook workbook) {
-		this.cdsf = new CloudDSF(-1, "root", "Legacy CloudDSF");
+		this.cdsf = new CloudDSF(-1, "root", "CloudDSF");
 		this.workbook = workbook;
 	}
 

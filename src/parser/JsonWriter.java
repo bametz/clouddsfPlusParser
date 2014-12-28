@@ -37,7 +37,7 @@ public class JsonWriter {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		writeLegacyJson(workbook);
+		writeCloudDSFJson(workbook);
 		writeCloudDSFPlusJson(workbook);
 	}
 
@@ -50,7 +50,7 @@ public class JsonWriter {
 	 * @throws JsonMappingException
 	 * @throws IOException
 	 */
-	private static void writeLegacyJson(XSSFWorkbook workbook)
+	private static void writeCloudDSFJson(XSSFWorkbook workbook)
 			throws JsonGenerationException, JsonMappingException, IOException {
 		CloudDSFParser parser = new CloudDSFParser(workbook);
 		CloudDSF cdsf = parser.readExcel();
@@ -79,7 +79,7 @@ public class JsonWriter {
 		((ObjectNode) rootNode).putPOJO("linksArray",
 				cdsf.getInfluencingRelations());
 
-		File f = new File("legacyCloudDSF.json");
+		File f = new File("cloudDSF.json");
 		mapper.writeValue(f, rootNode);
 	}
 

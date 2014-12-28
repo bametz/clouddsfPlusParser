@@ -11,25 +11,25 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Represents the coudDSF(Plus) object with decision points, decisions,
- * outcomes and their relations.
+ * Represents the coudDSF(Plus) object with decision points, decisions, outcomes
+ * and their relations.
  * 
  * @author Metz
  */
 
 public class CloudDSF extends CloudDSFEntity {
-	// todo instead of transient annotations possible
+
 	private List<DecisionPoint> decisionPoints = new ArrayList<DecisionPoint>();
 
-	private transient List<DecisionRelation> influencingDecisions = new ArrayList<DecisionRelation>();
+	private List<DecisionRelation> influencingDecisions = new ArrayList<DecisionRelation>();
 
-	private transient List<OutcomeRelation> influencingOutcomes = new ArrayList<OutcomeRelation>();
+	private List<OutcomeRelation> influencingOutcomes = new ArrayList<OutcomeRelation>();
 
-	private transient List<TaskRelation> influencingTasks = new ArrayList<TaskRelation>();
+	private List<TaskRelation> influencingTasks = new ArrayList<TaskRelation>();
 
-	private transient List<Task> tasks = new ArrayList<Task>();
+	private List<Task> tasks = new ArrayList<Task>();
 
-	private transient List<Relation> influencingRelations = new ArrayList<Relation>();
+	private List<Relation> influencingRelations = new ArrayList<Relation>();
 
 	public CloudDSF(int id, String type, String label) {
 		super(id, type, label);
