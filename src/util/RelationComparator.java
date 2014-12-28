@@ -4,7 +4,13 @@ import java.util.Comparator;
 
 import cloudDSF.Relation;
 
-public class RelationComparator implements Comparator<Relation>{
+/**
+ * Comparator to compare Relations by their source
+ * 
+ * @author Metz
+ *
+ */
+public class RelationComparator implements Comparator<Relation> {
 
 	@Override
 	public int compare(Relation r1, Relation r2) {

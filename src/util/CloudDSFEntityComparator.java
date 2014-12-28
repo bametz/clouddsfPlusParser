@@ -4,6 +4,12 @@ import java.util.Comparator;
 
 import cloudDSF.CloudDSFEntity;
 
+/**
+ * Comparator to sort CloudDSFEntities by id
+ * 
+ * @author Metz
+ *
+ */
 public class CloudDSFEntityComparator implements Comparator<CloudDSFEntity> {
 
 	@Override

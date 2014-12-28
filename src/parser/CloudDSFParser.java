@@ -16,7 +16,7 @@ import cloudDSF.Outcome;
 import cloudDSF.Task;
 
 /**
- * Reads excel file and collects all the data necessary for the legacy cloudDSF
+ * Reads excel file and collects all the data necessary for the cloudDSF
  * 
  * @author Metz
  *

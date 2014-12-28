@@ -1,7 +1,7 @@
 package cloudDSF;
 
 /**
- * Represents relation between two outcomes.
+ * Represents relation between two outcomes for the cloudDSFPlus
  * 
  * @author Metz
  *
@@ -12,7 +12,7 @@ public class OutcomeRelation extends Relation {
 			String explanation, String additionalInfo) {
 		super(source, target, type);
 		this.setRelationGroup("outRel");
-		// Todo
+		// No additional info or explanation needed
 		// this.setAdditionalInfo(additionalInfo);
 		// this.setExplanation(explanation);
 	}

@@ -15,7 +15,7 @@ import cloudDSF.DecisionPoint;
 import cloudDSF.Outcome;
 
 /**
- * Reads excel file and collects all the data.
+ * Reads excel file and collects all the data for the cloudDSFPlus
  * 
  * @author Metz
  *

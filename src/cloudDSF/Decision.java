@@ -9,7 +9,7 @@ import util.CloudDSFEntityComparator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Represents a decision of the cloudDSF
+ * Represents a decision of the cloudDSF(Plus)
  * 
  * @author Metz
  *
@@ -18,8 +18,21 @@ public class Decision extends CloudDSFEntity {
 
 	private List<Outcome> outcomes = new ArrayList<Outcome>();
 
+	/**
+	 * Decision constructor for the cloudDSFPlus
+	 * 
+	 * @param label
+	 * @param id
+	 * @param cluster
+	 * @param parent
+	 * @param classification
+	 * @param description
+	 * @param additionalInfo
+	 * @param abbrev
+	 */
 	public Decision(String label, int id, int cluster, int parent,
-			String classification, String description, String additionalInfo, String abbrev) {
+			String classification, String description, String additionalInfo,
+			String abbrev) {
 		super(id, "dec", label);
 		this.setClassification(classification);
 		this.setDescription(description);
@@ -28,11 +41,11 @@ public class Decision extends CloudDSFEntity {
 		this.setParent(parent);
 		this.setAdditionalInfo(additionalInfo);
 		this.setAbbrev(abbrev);
-		
+
 	}
 
 	/**
-	 * Decision constructor for legacy cloudDSF
+	 * Decision constructor for the cloudDSF
 	 * 
 	 * @param label
 	 * @param classification

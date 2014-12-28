@@ -19,7 +19,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 /**
- * Main class to trigger read of excel file and json generation
+ * Reads excel file and generates jsons
  * 
  * @author Metz
  *
@@ -42,8 +42,8 @@ public class JsonWriter {
 	}
 
 	/**
-	 * Generates json file for the legacy CloudDSF. Avoids any unnecessary
-	 * attribute serialization
+	 * Generates json file for the CloudDSF. Avoids any unnecessary attribute
+	 * serialization
 	 * 
 	 * @param workbook
 	 * @throws JsonGenerationException

@@ -1,13 +1,21 @@
 package cloudDSF;
 
 /**
- * Represents a relation between two decisions.
+ * Represents a relation between two decisions in the cloudDSF(Plus).
  * 
  * @author Metz
  *
  */
 public class DecisionRelation extends Relation {
-
+	/**
+	 * Decision relation constructor for cloudDSFPlus
+	 * 
+	 * @param source
+	 * @param target
+	 * @param type
+	 * @param explanation
+	 * @param additionalInfo
+	 */
 	public DecisionRelation(int source, int target, String type,
 			String explanation, String additionalInfo) {
 		super(source, target, type);
@@ -18,7 +26,7 @@ public class DecisionRelation extends Relation {
 	}
 
 	/**
-	 * Decision relation constructor for legacy cloudDSF
+	 * Decision relation constructor for cloudDSF
 	 * 
 	 * @param source
 	 * @param target

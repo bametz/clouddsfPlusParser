@@ -1,7 +1,7 @@
 package cloudDSF;
 
 /**
- * Represents a task of the legacy cloudDSF
+ * Represents a task of the cloudDSF
  * 
  * @author Metz
  *

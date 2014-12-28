@@ -1,7 +1,7 @@
 package cloudDSF;
 
 /**
- * Represents a relation between decision and task for the legacy cloudDSF
+ * Represents a relation between decision and task for the cloudDSF
  * 
  * @author Metz
  *

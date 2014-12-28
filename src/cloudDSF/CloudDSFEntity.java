@@ -1,14 +1,13 @@
 package cloudDSF;
 
-
 /**
- * Superclass for all entities of the cloudDSF
+ * Superclass for all entities of the cloudDSF(Plus)
  * 
  * @author Metz
  *
  */
 public class CloudDSFEntity {
-	// Basic Information
+	// Basic Information. Omitted getter for serialization purposes
 	// unique id
 	private int id;
 	// name of object
@@ -27,6 +26,7 @@ public class CloudDSFEntity {
 	private String description;
 	// additional information
 	private String additionalInfo;
+	// short string for visualization purposes
 	private String abbrev;
 
 	public CloudDSFEntity(int id, String type, String label) {

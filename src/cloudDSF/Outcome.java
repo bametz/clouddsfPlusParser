@@ -1,14 +1,24 @@
 package cloudDSF;
 
 /**
- * Represents a outcome of the cloudDSF
+ * Represents a outcome of the cloudDSF(Plus)
  * 
  * @author Metz
  *
  */
 
 public class Outcome extends CloudDSFEntity {
-
+	/**
+	 * Outcome constructor for the cloudDSFPlus
+	 * 
+	 * @param label
+	 * @param id
+	 * @param cluster
+	 * @param parent
+	 * @param description
+	 * @param additionalInfo
+	 * @param abbrev
+	 */
 	public Outcome(String label, int id, int cluster, int parent,
 			String description, String additionalInfo, String abbrev) {
 		super(id, "out", label);
@@ -21,7 +31,7 @@ public class Outcome extends CloudDSFEntity {
 	}
 
 	/**
-	 * Outcome constructor for legacy cloudDSF
+	 * Outcome constructor for the cloudDSF
 	 * 
 	 * @param label
 	 * @param id

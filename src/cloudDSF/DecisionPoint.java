@@ -9,15 +9,26 @@ import util.CloudDSFEntityComparator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Represents a decision point of the cloudDSF
+ * Represents a decision point of the cloudDSF(Plus)
  * 
  * @author Metz
  *
  */
 public class DecisionPoint extends CloudDSFEntity {
-
+	
 	private List<Decision> decisions = new ArrayList<Decision>();
 
+	/**
+	 * Decision point constructor for the cloudDSFPlus
+	 * 
+	 * @param label
+	 * @param id
+	 * @param cluster
+	 * @param classification
+	 * @param description
+	 * @param additionalInfo
+	 * @param abbrev
+	 */
 	public DecisionPoint(String label, int id, int cluster,
 			String classification, String description, String additionalInfo,
 			String abbrev) {
@@ -32,7 +43,7 @@ public class DecisionPoint extends CloudDSFEntity {
 	}
 
 	/**
-	 * Decision point constructor for legacy cloudDSF
+	 * Decision point constructor for the cloudDSF
 	 * 
 	 * @param label
 	 * @param id

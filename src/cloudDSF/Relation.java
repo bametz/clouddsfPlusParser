@@ -1,7 +1,7 @@
 package cloudDSF;
 
 /**
- * Superclass for relations between entities in the cloudDSF
+ * Superclass for relations between entities in the cloudDSF and cloudDSFPlus
  * 
  * @author Metz
  *

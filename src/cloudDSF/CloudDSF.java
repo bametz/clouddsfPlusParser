@@ -11,14 +11,14 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Represents the (legacy) cloudDSF object with dps, ds and os and their
- * relations.
+ * Represents the coudDSF(Plus) object with decision points, decisions,
+ * outcomes and their relations.
  * 
  * @author Metz
  */
 
 public class CloudDSF extends CloudDSFEntity {
-	// instead of transient annotations possible
+	// todo instead of transient annotations possible
 	private List<DecisionPoint> decisionPoints = new ArrayList<DecisionPoint>();
 
 	private transient List<DecisionRelation> influencingDecisions = new ArrayList<DecisionRelation>();
@@ -217,7 +217,7 @@ public class CloudDSF extends CloudDSFEntity {
 	}
 
 	/**
-	 * Helper Method to print out content of cloudDSF to check content.
+	 * Helper Method to print out content of cloudDSF Object to check content.
 	 */
 	public void printCloudDSF() {
 		int dpamount = 0;
