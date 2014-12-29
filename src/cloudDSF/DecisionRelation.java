@@ -17,11 +17,9 @@ public class DecisionRelation extends Relation {
 	 * @param additionalInfo
 	 */
 	public DecisionRelation(int source, int target, String type,
-			String explanation, String additionalInfo) {
+			String explanation) {
 		super(source, target, type);
 		this.setRelationGroup("decRel");
-		// todo
-		// this.setAdditionalInfo(additionalInfo);
 		// this.setExplanation(explanation);
 	}
 

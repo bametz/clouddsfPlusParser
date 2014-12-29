@@ -47,8 +47,8 @@ public class CloudDSFPlusParser {
 	}
 
 	/**
-	 * Retrieves the knowledge base of the CloudDSF from the sheet and trigger
-	 * retrieving of relations.
+	 * Retrieves the knowledge base of the CloudDSF from the sheet and their
+	 * relations.
 	 * 
 	 * @param workbook
 	 * @return
@@ -72,7 +72,7 @@ public class CloudDSFPlusParser {
 
 		// iterate over all rows
 		// skip headline
-		for (int j = 1; j < sheet.getLastRowNum() + 1; j++) {
+		for (int j = 1; j <= sheet.getLastRowNum(); j++) {
 			// row 2 gets selected
 			Row row = sheet.getRow(j);
 			// select cell A
@@ -132,9 +132,11 @@ public class CloudDSFPlusParser {
 				}
 			}
 		}
+		// retrive relations
 		setInfluencingRelations();
 		setRequiringRelations();
 		setInfluencingOutcomes();
+		// sorting
 		cdsf.sortEntities();
 		cdsf.sortLists();
 		return cdsf;
@@ -174,7 +176,7 @@ public class CloudDSFPlusParser {
 	}
 
 	/**
-	 * Retrieves influencing relations between decisions from sheet
+	 * Retrieves influencing relations between decisions
 	 * 
 	 * @return
 	 */
@@ -189,8 +191,6 @@ public class CloudDSFPlusParser {
 
 		while (rows.hasNext()) {
 			XSSFRow row = (XSSFRow) rows.next();
-			// for (int j = 2; j < sheet.getLastRowNum(); j++) {
-			// Row row = sheet.getRow(j);
 			// select cell C
 			Iterator<Cell> cells = row.cellIterator();
 			while (cells.hasNext()) {
@@ -205,7 +205,7 @@ public class CloudDSFPlusParser {
 							cell.getColumnIndex()).getStringCellValue();
 					// todo additional info and explanation
 					cdsf.setDecisionRelation(startDecision, endDecision,
-							relationType, null, null);
+							relationType, null);
 				}
 			}
 		}
@@ -238,14 +238,14 @@ public class CloudDSFPlusParser {
 							cell.getColumnIndex()).getStringCellValue();
 					// todo explanation additonal info
 					cdsf.setDecisionRelation(startDecision, endDecision,
-							relationType, null, null);
+							relationType, null);
 				}
 			}
 		}
 	}
 
 	/**
-	 * Retrieves relations between outcomes from sheet.
+	 * Retrieves relations between outcomes
 	 * 
 	 * @return
 	 * 
@@ -267,7 +267,8 @@ public class CloudDSFPlusParser {
 				String relationType = cell.getStringCellValue();
 				if (relationType.equals("in") || relationType.equals("ex")
 						|| relationType.equals("a")
-						|| relationType.equals("eb")) {
+						|| relationType.equals("eb")
+						|| relationType.equals("aff")) {
 					String startOutcome = row.getCell(startOutcomeColumn)
 							.getStringCellValue();
 					String endOutcome = endOutcomeRow.getCell(
@@ -279,5 +280,4 @@ public class CloudDSFPlusParser {
 			}
 		}
 	}
-
 }

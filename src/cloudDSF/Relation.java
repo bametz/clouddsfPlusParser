@@ -13,7 +13,6 @@ public class Relation {
 	private String relationGroup;
 	private String type;
 	private String explanation;
-	private String additionalInfo;
 
 	public Relation(int source, int target, String type) {
 		this.source = source;
@@ -59,14 +58,6 @@ public class Relation {
 
 	public void setExplanation(String explanation) {
 		this.explanation = explanation;
-	}
-
-	public String getAdditionalInfo() {
-		return additionalInfo;
-	}
-
-	public void setAdditionalInfo(String additionalInfo) {
-		this.additionalInfo = additionalInfo;
 	}
 
 	public String getRelationGroup() {

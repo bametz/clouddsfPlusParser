@@ -9,11 +9,10 @@ package cloudDSF;
 public class OutcomeRelation extends Relation {
 
 	public OutcomeRelation(int source, int target, String type,
-			String explanation, String additionalInfo) {
+			String explanation) {
 		super(source, target, type);
 		this.setRelationGroup("outRel");
-		// No additional info or explanation needed
-		// this.setAdditionalInfo(additionalInfo);
+		// No explanation needed
 		// this.setExplanation(explanation);
 	}
 

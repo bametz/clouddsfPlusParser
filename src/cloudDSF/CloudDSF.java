@@ -36,12 +36,21 @@ public class CloudDSF extends CloudDSFEntity {
 		this.setGroup("root");
 	}
 
+	/**
+	 * Searches decisions and sets relation between them
+	 * 
+	 * @param startDecision
+	 * @param endDecision
+	 * @param type
+	 * @param explanation
+	 * @param additionalInfo
+	 */
 	public void setDecisionRelation(String startDecision, String endDecision,
-			String type, String explanation, String additionalInfo) {
+			String type, String explanation) {
 		int source = getDecision(startDecision).getId();
 		int target = getDecision(endDecision).getId();
 		influencingDecisions.add(new DecisionRelation(source, target, type,
-				explanation, additionalInfo));
+				explanation));
 	}
 
 	/**
@@ -73,9 +82,17 @@ public class CloudDSF extends CloudDSFEntity {
 		int source = getOutcome(startOutcome).getId();
 		int target = getOutcome(endOutcome).getId();
 		influencingOutcomes.add(new OutcomeRelation(source, target, type,
-				explanation, additionalInfo));
+				explanation));
 	}
 
+	/**
+	 * Sets task relation accordingly to the specified type
+	 * 
+	 * @param sourceDesc
+	 * @param targetDesc
+	 * @param dir
+	 * @param label
+	 */
 	public void setTaskRelation(String sourceDesc, String targetDesc,
 			String dir, String label) {
 		int source = 0;
@@ -91,11 +108,13 @@ public class CloudDSF extends CloudDSFEntity {
 			target = getDecision(targetDesc).getId();
 			dir = "both";
 			break;
+		// switch of source and target
 		case "backwards":
 			source = getDecision(targetDesc).getId();
 			target = getTask(sourceDesc).getId();
 			dir = "auto";
 			break;
+		// no default always has to have a specified direction
 		}
 		TaskRelation tr = new TaskRelation(source, target, dir);
 		influencingTasks.add(tr);
@@ -263,7 +282,7 @@ public class CloudDSF extends CloudDSFEntity {
 		}
 
 		for (TaskRelation tRelation : influencingTasks) {
-			System.out.println("Task Relationshipt from "
+			System.out.println("Task Relationship from "
 					+ tRelation.getSource() + " to " + tRelation.getTarget()
 					+ " with type " + tRelation.getDir());
 			tRelations++;

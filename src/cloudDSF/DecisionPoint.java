@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  *
  */
 public class DecisionPoint extends CloudDSFEntity {
-	
+
 	private List<Decision> decisions = new ArrayList<Decision>();
 
 	/**

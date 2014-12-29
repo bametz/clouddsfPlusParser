@@ -27,7 +27,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 public class JsonWriter {
 
 	public static void main(String[] args) throws IOException {
-		String filePath = "Matrix.xlsx";
+		String filePath = "KnowledgeBase.xlsx";
 		XSSFWorkbook workbook = null;
 		// Create Workbook instance holding reference to .xlsx file
 		InputStream in = JsonWriter.class.getClassLoader().getResourceAsStream(
@@ -54,7 +54,7 @@ public class JsonWriter {
 			throws JsonGenerationException, JsonMappingException, IOException {
 		CloudDSFParser parser = new CloudDSFParser(workbook);
 		CloudDSF cdsf = parser.readExcel();
-
+		//cdsf.printCloudDSF();
 		TaskTree taskTree = new TaskTree();
 		taskTree.setTasks(cdsf.getTasks());
 
@@ -95,7 +95,7 @@ public class JsonWriter {
 			throws JsonGenerationException, JsonMappingException, IOException {
 		CloudDSFPlusParser cloudDSFPlusParser = new CloudDSFPlusParser(workbook);
 		CloudDSF cdsf = cloudDSFPlusParser.readExcel();
-
+		//cdsf.printCloudDSF();
 		// Jackson objectmapper and settings
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.enable(SerializationFeature.INDENT_OUTPUT);

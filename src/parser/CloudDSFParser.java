@@ -25,6 +25,12 @@ public class CloudDSFParser {
 
 	private final CloudDSF cdsf;
 	private final XSSFWorkbook workbook;
+	// row numbers
+	private int dpCol = 0;
+	private int decCol = 1;
+	private int outCol = 2;
+	private int dpClassCol = 6;
+	private int decClassCol = 7;
 
 	public CloudDSFParser(XSSFWorkbook workbook) {
 		this.cdsf = new CloudDSF(-1, "root", "CloudDSF");
@@ -32,8 +38,8 @@ public class CloudDSFParser {
 	}
 
 	/**
-	 * Retrieves the knowledge base of the CloudDSF from the sheet and trigger
-	 * retrieving of relations.
+	 * Retrieves the knowledge base of the CloudDSF from the knowledge base
+	 * sheet and their relations.
 	 * 
 	 * @param workbook
 	 * @return
@@ -56,11 +62,11 @@ public class CloudDSFParser {
 
 		// iterate over all rows
 		// skip headline
-		for (int j = 1; j < sheet.getLastRowNum() + 1; j++) {
+		for (int j = 1; j <= sheet.getLastRowNum(); j++) {
 			// row 2 gets selected
 			Row row = sheet.getRow(j);
 			// select cell A
-			Cell cell = row.getCell(0);
+			Cell cell = row.getCell(dpCol);
 			// if not empty than new decision Point
 			if (cell.getStringCellValue().equals("") == false) {
 				decisionPointID++;
@@ -69,15 +75,16 @@ public class CloudDSFParser {
 				// Create new DecisionPoint
 				decisionPointName = cell.getStringCellValue();
 				decisionPoint = new DecisionPoint(decisionPointName,
-						decisionPointID, row.getCell(4).getStringCellValue());
+						decisionPointID, row.getCell(dpClassCol)
+								.getStringCellValue());
 
 				// Create new Decision
-				Cell decisionCell = row.getCell(1);
+				Cell decisionCell = row.getCell(decCol);
 				decisionName = decisionCell.getStringCellValue();
-				decision = new Decision(decisionName, row.getCell(3)
+				decision = new Decision(decisionName, row.getCell(decClassCol)
 						.getStringCellValue(), decisionID, decisionPointID);
 				// Create new outcome
-				Cell outcomeCell = row.getCell(2);
+				Cell outcomeCell = row.getCell(outCol);
 				outcome = new Outcome(outcomeCell.getStringCellValue(),
 						outcomeID, decisionID);
 				// Add outcome to decision
@@ -88,16 +95,17 @@ public class CloudDSFParser {
 				cdsf.addDecisionPoint(decisionPoint);
 			} else {
 				// Select Cell B
-				Cell decisionCell = row.getCell(1);
+				Cell decisionCell = row.getCell(decCol);
 				// if text than new decision
 				if (decisionCell.getStringCellValue().equals("") == false) {
 					decisionID++;
 					outcomeID = decisionID * 100 + 1;
 					decisionName = decisionCell.getStringCellValue();
-					decision = new Decision(decisionName, row.getCell(3)
-							.getStringCellValue(), decisionID, decisionPointID);
+					decision = new Decision(decisionName, row.getCell(
+							decClassCol).getStringCellValue(), decisionID,
+							decisionPointID);
 					// create new outcome object
-					Cell outcomeCell = row.getCell(2);
+					Cell outcomeCell = row.getCell(outCol);
 					outcome = new Outcome(outcomeCell.getStringCellValue(),
 							outcomeID, decisionID);
 					decision.addOutcome(outcome);
@@ -107,7 +115,7 @@ public class CloudDSFParser {
 					// if no text in dp or d than new outcome
 					outcomeID++;
 					// create new outcome object
-					Cell outcomeCell = row.getCell(2);
+					Cell outcomeCell = row.getCell(outCol);
 					outcome = new Outcome(outcomeCell.getStringCellValue(),
 							outcomeID, decisionID);
 					cdsf.getDecisionPoint(decisionPointName)
@@ -119,15 +127,16 @@ public class CloudDSFParser {
 		setInfluencingRelations();
 		setTasks();
 		setInfluencingTasks();
+		// sort knowledge base and relations
 		cdsf.sortEntities();
 		cdsf.sortLists();
 		return cdsf;
 	}
 
 	/**
-	 * Retrieves influencing relations between decisions from sheet. All
-	 * decisions (influencing, affecting, binding) are parsed and stored as
-	 * basic influencing ones.
+	 * Retrieves influencing relations between decisions. All decisions
+	 * (influencing, affecting, binding) are parsed and stored as basic
+	 * influencing ones for the cloudDSF.
 	 * 
 	 * @return
 	 */
@@ -162,6 +171,9 @@ public class CloudDSFParser {
 		}
 	}
 
+	/**
+	 * Retrieves influencing relations between tasks and decisions.
+	 */
 	private void setInfluencingTasks() {
 		XSSFSheet sheet = workbook.getSheet("Task Level");
 		// Column A has name of start Task
@@ -179,6 +191,8 @@ public class CloudDSFParser {
 						|| ((cell != null) && (cell.getCellType() == Cell.CELL_TYPE_BLANK))) {
 
 				} else {
+					// Depending on the relation type source and target are set
+					// accordingly
 					String relationName = cell.getStringCellValue();
 					String sourceDesc = row.getCell(startTaskColumn)
 							.getStringCellValue();
@@ -203,13 +217,16 @@ public class CloudDSFParser {
 		}
 	}
 
+	/**
+	 * Retrieve defined tasks
+	 */
 	private void setTasks() {
 		// Get first/desired sheet from the workbook
 		XSSFSheet sheet = workbook.getSheet("Task Level");
 		int taskID = 901;
 		// iterate over all rows
 		// skip headline
-		for (int j = 2; j < 12; j++) {
+		for (int j = 2; j <= sheet.getLastRowNum(); j++) {
 			// row 2 gets selected
 			Row row = sheet.getRow(j);
 			// select cell A
