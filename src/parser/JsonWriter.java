@@ -78,7 +78,8 @@ public class JsonWriter {
 		((ObjectNode) rootNode).putPOJO("taskTree", taskTree);
 		((ObjectNode) rootNode).putPOJO("linksArray",
 				cdsf.getInfluencingRelations());
-
+		
+		//PrintWriter out = new PrintWriter(new File("cloudDSF.json"), "UTF-8");
 		File f = new File("cloudDSF.json");
 		mapper.writeValue(f, rootNode);
 	}
