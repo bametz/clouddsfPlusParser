@@ -39,6 +39,7 @@ public class JsonWriter {
 		}
 		writeCloudDSFJson(workbook);
 		writeCloudDSFPlusJson(workbook);
+		System.out.println("Finished");
 	}
 
 	/**
