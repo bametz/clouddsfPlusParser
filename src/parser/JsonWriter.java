@@ -19,7 +19,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 /**
- * Reads excel file and generates jsons
+ * Reads clouddsf knowledge base (excel file) and generates two json files.
  * 
  * @author Metz
  *
@@ -39,6 +39,7 @@ public class JsonWriter {
 		}
 		writeCloudDSFJson(workbook);
 		writeCloudDSFPlusJson(workbook);
+
 		System.out.println("Finished");
 	}
 
@@ -55,7 +56,7 @@ public class JsonWriter {
 			throws JsonGenerationException, JsonMappingException, IOException {
 		CloudDSFParser parser = new CloudDSFParser(workbook);
 		CloudDSF cdsf = parser.readExcel();
-		//cdsf.printCloudDSF();
+		// cdsf.printCloudDSF();
 		TaskTree taskTree = new TaskTree();
 		taskTree.setTasks(cdsf.getTasks());
 
@@ -79,8 +80,7 @@ public class JsonWriter {
 		((ObjectNode) rootNode).putPOJO("taskTree", taskTree);
 		((ObjectNode) rootNode).putPOJO("linksArray",
 				cdsf.getInfluencingRelations());
-		
-		//PrintWriter out = new PrintWriter(new File("cloudDSF.json"), "UTF-8");
+
 		File f = new File("cloudDSF.json");
 		mapper.writeValue(f, rootNode);
 	}
@@ -97,7 +97,7 @@ public class JsonWriter {
 			throws JsonGenerationException, JsonMappingException, IOException {
 		CloudDSFPlusParser cloudDSFPlusParser = new CloudDSFPlusParser(workbook);
 		CloudDSF cdsf = cloudDSFPlusParser.readExcel();
-		//cdsf.printCloudDSF();
+		cdsf.printCloudDSF();
 		// Jackson objectmapper and settings
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.enable(SerializationFeature.INDENT_OUTPUT);
@@ -107,7 +107,7 @@ public class JsonWriter {
 				.withFieldVisibility(JsonAutoDetect.Visibility.ANY)
 				.withGetterVisibility(JsonAutoDetect.Visibility.NONE));
 		mapper.setSerializationInclusion(Include.NON_NULL);
-
+		// create json structure
 		JsonNode rootNode = mapper.createObjectNode();
 		((ObjectNode) rootNode).putPOJO("cdsfPlus", cdsf);
 		((ObjectNode) rootNode)

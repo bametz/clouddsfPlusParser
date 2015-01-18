@@ -55,7 +55,7 @@ public class CloudDSF extends CloudDSFEntity {
 
 	/**
 	 * Sets relation between two decisions by retrieving their id and putting it
-	 * in influencingRelations.
+	 * into influencingRelations.
 	 * 
 	 * @param startDecision
 	 * @param endDecision
@@ -247,21 +247,141 @@ public class CloudDSF extends CloudDSFEntity {
 		int oRelationsAmount = 0;
 		int tamount = 0;
 
+		int aRelations = 0;
+		int inRelations = 0;
+		int exRelations = 0;
+		int affRelations = 0;
+		int binRelations = 0;
+		int dpaRelations = 0;
+		int dpinRelations = 0;
+		int dpexRelations = 0;
+		int dpaffRelations = 0;
+		int dpbinRelations = 0;
+
+		int dreqRelations = 0;
+		int dinfRelations = 0;
+		int daffRelations = 0;
+		int dbinRelations = 0;
+		int dpDecReqRelations = 0;
+		int dpDecinfRelations = 0;
+		int dpdecaffRelations = 0;
+		int dpdecbinRelations = 0;
+
 		for (DecisionPoint dp : getDecisionPoints()) {
+			dpaRelations = 0;
+			dpinRelations = 0;
+			dpexRelations = 0;
+			dpaffRelations = 0;
+			dpbinRelations = 0;
+
+			dpDecReqRelations = 0;
+			dpDecinfRelations = 0;
+			dpdecaffRelations = 0;
+			dpdecbinRelations = 0;
+
 			dpamount++;
 			System.out.println("Decision Point Name = " + dp.getLabel()
 					+ " ID " + dp.getId());
 			for (Decision d : dp.getDecisions()) {
+				aRelations = 0;
+				inRelations = 0;
+				exRelations = 0;
+				affRelations = 0;
+				binRelations = 0;
+
+				dreqRelations = 0;
+				dinfRelations = 0;
+				daffRelations = 0;
+				dbinRelations = 0;
+
 				damount++;
-				System.out.println("Decision " + d.getLabel() + " ID "
-						+ d.getId() + " parentId ");
 
 				for (Outcome o : d.getOutcomes()) {
 					oamount++;
-					System.out.println("Outcome " + o.getLabel() + " ID "
-							+ o.getId() + " parentId " + " Weight ");
+					// System.out.println("Outcome " + o.getLabel() + " ID "
+					// + o.getId() + " parentId " + " Weight ");
+					for (OutcomeRelation oRelation : influencingOutcomes) {
+						if (oRelation.getSource() == o.getId())
+							switch (oRelation.getType()) {
+							case "in":
+								inRelations++;
+								dpinRelations++;
+								break;
+							case "ex":
+								exRelations++;
+								dpexRelations++;
+								break;
+							case "eb":
+								binRelations++;
+								dpbinRelations++;
+								break;
+							case "aff":
+								affRelations++;
+								dpaffRelations++;
+								break;
+							case "a":
+								aRelations++;
+								dpaRelations++;
+								break;
+							default:
+								break;
+							}
+					}
+
 				}
+
+				for (DecisionRelation dRelation : influencingDecisions) {
+					if (dRelation.getSource() == d.getId())
+						switch (dRelation.getType()) {
+						case "Influencing":
+							dinfRelations++;
+							dpDecinfRelations++;
+							break;
+						case "Binding":
+							dbinRelations++;
+							dpdecbinRelations++;
+							break;
+						case "Affecting":
+							daffRelations++;
+							dpdecaffRelations++;
+							break;
+						case "Requiring":
+							dreqRelations++;
+							dpDecReqRelations++;
+							break;
+						default:
+							break;
+						}
+
+				}
+
+				System.out.println("Decision " + d.getLabel() + " has:");
+				System.out.println("Affecting: " + daffRelations);
+				System.out.println("Binding: " + dbinRelations);
+				System.out.println("Influencing: " + dinfRelations);
+				System.out.println("Requiring: " + dreqRelations);
+				System.out.println("#### Corresponding Outcome Relations ####");
+
+				System.out.println("Including: " + inRelations);
+				System.out.println("Excluding: " + exRelations);
+				System.out.println("Allowing: " + aRelations);
+				System.out.println("Affecting: " + affRelations);
+				System.out.println("Binding: " + binRelations);
+
 			}
+			System.out.println("Decision Point " + dp.getLabel() + " has:");
+			System.out.println("Affecting: " + dpdecaffRelations);
+			System.out.println("Binding: " + dpdecbinRelations);
+			System.out.println("Influencing: " + dpDecinfRelations);
+			System.out.println("Requiring: " + dpDecReqRelations);
+
+			System.out.println("#### Corresponding Outcome Relations ####");
+
+			System.out.println("Including: " + dpinRelations);
+			System.out.println("Excluding: " + dpexRelations);
+			System.out.println("Allowing: " + dpaRelations);
+			System.out.println("Affecting: " + dpaffRelations);
+			System.out.println("Binding: " + dpbinRelations);
 		}
 		for (Task t : tasks) {
 			System.out.println("Task " + t.getLabel() + " " + t.getId());
@@ -274,12 +394,42 @@ public class CloudDSF extends CloudDSFEntity {
 					+ " with 'type' ");
 			dRelations++;
 		}
+
+		aRelations = 0;
+		inRelations = 0;
+		exRelations = 0;
+		affRelations = 0;
+		binRelations = 0;
+
 		for (OutcomeRelation oRelation : influencingOutcomes) {
-			System.out.println("Outcome Relationship from "
-					+ oRelation.getSource() + " to " + oRelation.getTarget()
-					+ " with 'type' ");
+			switch (oRelation.getType()) {
+			case "in":
+				inRelations++;
+				break;
+			case "ex":
+				exRelations++;
+				break;
+			case "eb":
+				binRelations++;
+				break;
+			case "aff":
+				affRelations++;
+				break;
+			case "a":
+				aRelations++;
+				break;
+			default:
+				break;
+			}
+			// System.out.println("Outcome Relationship from "
+			// + oRelation.getSource() + " to " + oRelation.getTarget()
+			// + " with type" + oRelation.getType());
 			oRelationsAmount++;
 		}
+		System.out.println("Total outcome Relations " + aRelations
+				+ "a Relations " + exRelations + "ex Relations " + inRelations
+				+ "in Relations " + binRelations + "binding Relations "
+				+ affRelations + "aff Relations");
 
 		for (TaskRelation tRelation : influencingTasks) {
 			System.out.println("Task Relationship from "
