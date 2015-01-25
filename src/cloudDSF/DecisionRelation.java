@@ -18,7 +18,7 @@ public class DecisionRelation extends Relation {
 	 */
 	public DecisionRelation(int source, int target, String type,
 			String explanation) {
-		super(source, target, type);
+		super(source, target, type.toLowerCase());
 		this.setRelationGroup("decRel");
 		// this.setExplanation(explanation);
 	}
