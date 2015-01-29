@@ -37,9 +37,9 @@ public class JsonWriter {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		writeCloudDSFJson(workbook);
-		writeCloudDSFPlusJson(workbook);
-
+		// writeCloudDSFJson(workbook);
+		// writeCloudDSFPlusJson(workbook);
+		checkSanity(workbook);
 		System.out.println("Finished");
 	}
 
@@ -117,5 +117,24 @@ public class JsonWriter {
 
 		File f = new File("cloudDSFPlus.json");
 		mapper.writeValue(f, rootNode);
+	}
+
+	private static void checkSanity(XSSFWorkbook workbook) {
+		CloudDSFPlusParser cloudDSFPlusParser = new CloudDSFPlusParser(workbook);
+		CloudDSF cdsf = cloudDSFPlusParser.readExcel();
+		// System.out.println(cdsf.getInfluencingDecisions().size());
+		// cdsf.checkRelTypesDecisions();
+		// System.out.println(cdsf.getInfluencingOutcomes().size());
+		// cdsf.checkRelTypesOutcomes();
+		// cdsf.checkDecRelComb();
+		//cdsf.checkOutRelTypeForDecRel();
+//		cdsf.checkAffBinDecRelations("affecting", "binding");
+//		cdsf.checkAffBinDecRelations("binding", "affecting");
+//		cdsf.checkAffBinOutRelations("aff", "eb");
+//		cdsf.checkAffBinOutRelations("eb", "aff");
+//		cdsf.checkInAOutRelations("in", "a", "in");
+//		cdsf.checkInAOutRelations("a", "a", "in");
+//		cdsf.checkAffBinOutRelations("ex", "ex");
+		cdsf.checkSingleOutcomeRel();
 	}
 }

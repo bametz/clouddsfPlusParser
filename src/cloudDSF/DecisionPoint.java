@@ -79,4 +79,13 @@ public class DecisionPoint extends CloudDSFEntity {
 	public void addDecision(Decision decision) {
 		this.decisions.add(decision);
 	}
+
+	public Decision getDecision(int decisionId) {
+		for (Decision decision : decisions) {
+			if (decision.getId() == decisionId) {
+				return decision;
+			}
+		}
+		return null;
+	}
 }

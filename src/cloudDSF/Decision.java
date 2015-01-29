@@ -82,4 +82,13 @@ public class Decision extends CloudDSFEntity {
 	public List<Outcome> getOutcomes() {
 		return outcomes;
 	}
+
+	public Outcome getOutcome(int outcomeId)  {
+		for (Outcome outcome : outcomes) {
+			if (outcome.getId() == outcomeId) {
+				return outcome;
+			}
+		}
+		return null;
+	}
 }
