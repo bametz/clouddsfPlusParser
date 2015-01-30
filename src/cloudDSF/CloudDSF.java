@@ -20,17 +20,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 
 public class CloudDSF extends CloudDSFEntity {
-
+	/**
+	 * Contains all decision points of the clouddsf
+	 */
 	private List<DecisionPoint> decisionPoints = new ArrayList<DecisionPoint>();
-
+	/**
+	 * contains all relations between decisions (i.e. requiring, influencing,
+	 * binding, affecting)
+	 */
 	private List<DecisionRelation> influencingDecisions = new ArrayList<DecisionRelation>();
-
+	/**
+	 * contain all relations between decisions (i.e. aff, eb, a, ex, in)
+	 */
 	private List<OutcomeRelation> influencingOutcomes = new ArrayList<OutcomeRelation>();
-
+	/**
+	 * contains all relations between tasks and decisions, null for cloudDSFPlus
+	 */
 	private List<TaskRelation> influencingTasks = new ArrayList<TaskRelation>();
-
+	/**
+	 * contains all tasks of the cloudDSF null in case of the cloudDSFPlus
+	 */
 	private List<Task> tasks = new ArrayList<Task>();
-
+	/**
+	 * Contains all influecing tasks and influencing decisions to enable link
+	 * array for the cloudDSFVisualizations
+	 */
 	private List<Relation> influencingRelations = new ArrayList<Relation>();
 
 	public CloudDSF(int id, String type, String label) {
@@ -185,18 +199,21 @@ public class CloudDSF extends CloudDSFEntity {
 	}
 
 	/**
-	 * Sort of all ArrayLists to produce sorted Output in id ascending order
+	 * Sort of all relations to produce sorted output in id ascending order of
+	 * the source
 	 */
 	public void sortLists() {
-		CloudDSFEntityComparator cec = new CloudDSFEntityComparator();
 		RelationComparator rc = new RelationComparator();
-		Collections.sort(decisionPoints, cec);
 		Collections.sort(influencingDecisions, rc);
 		Collections.sort(influencingOutcomes, rc);
 		Collections.sort(influencingTasks, rc);
 
 	}
 
+	/**
+	 * Sort of all entities of the CloudDSF to produce sorted output depending
+	 * on id in ascending order
+	 */
 	public void sortEntities() {
 		CloudDSFEntityComparator cec = new CloudDSFEntityComparator();
 		Collections.sort(decisionPoints, cec);
@@ -472,64 +489,86 @@ public class CloudDSF extends CloudDSFEntity {
 				+ tRelations);
 	}
 
-	// checks if only valid decision relationship types are present
+	/**
+	 * Executes all verification methods and returns the result
+	 * 
+	 * @return
+	 */
+	public boolean checkSanity() {
+		return (checkAffBinDecRelations("affecting", "binding")
+				&& checkAffBinDecRelations("binding", "affecting")
+				&& checkAffBinOutRelations("aff", "eb")
+				&& checkAffBinOutRelations("eb", "aff") && checkDecRelComb()
+				&& checkInAOutRelations("in", "a", "in")
+				&& checkInAOutRelations("a", "a", "in")
+				&& checkOutRelAmountForDecRel() && checkOutRelTypeForDecRel()
+				&& checkRelTypesDecisions() && checkRelTypesOutcomes()
+				&& checkSingleOutcomeRel() && checkXOROutcomes());
+	}
+
+	/**
+	 * Checks if only valid decision relationship types are present
+	 * 
+	 * @return
+	 */
 	public boolean checkRelTypesDecisions() {
-		for (DecisionRelation infDecisionRelation : influencingDecisions) {
-			switch (infDecisionRelation.getType()) {
+		for (DecisionRelation decRel : influencingDecisions) {
+			switch (decRel.getType()) {
 			case "influencing":
-				// System.out.println("everything fine");
 				break;
 			case "requiring":
-				// System.out.println("everything fine");
 				break;
 			case "affecting":
-				// System.out.println("everything fine");
 				break;
 			case "binding":
-				// System.out.println("everything fine");
 				break;
 			default:
-				System.out.println("Wrong decision relation type found from "
-						+ infDecisionRelation.getSource() + " to "
-						+ infDecisionRelation.getTarget());
+				System.out.println("Fail: Wrong decision relation type "
+						+ decRel.getType() + " found from "
+						+ decRel.getSource() + " to " + decRel.getTarget());
 				return false;
 			}
 		}
-		System.out.println("All decision relationship types are valid");
+		System.out
+				.println("Success: All decision relationship types are valid");
 		return true;
 	}
 
-	// checks if only valid outcome relationship types are present
+	/**
+	 * Checks if only valid outcome relationship types are present
+	 * 
+	 * @return
+	 */
 	public boolean checkRelTypesOutcomes() {
 		for (OutcomeRelation outRel : influencingOutcomes) {
 			switch (outRel.getType()) {
 			case "eb":
-				// System.out.println("everything fine");
 				break;
 			case "in":
-				// System.out.println("everything fine");
 				break;
 			case "a":
-				// System.out.println("everything fine");
 				break;
 			case "ex":
-				// System.out.println("everything fine");
 				break;
 			case "aff":
-				// System.out.println("everything fine");
 				break;
 			default:
-				System.out.println("Wrong outcome relation type found from "
+				System.out.println("Fail: Wrong outcome relation type "
+						+ outRel.getType() + " found from "
 						+ outRel.getSource() + " to " + outRel.getTarget());
 				return false;
 			}
 		}
-		System.out.println("All outcome relationship types are valid");
+		System.out.println("Success: All outcome relationship types are valid");
 		return true;
 	}
 
-	// checks if two or more relations between the same decisions exists and if
-	// so if they are in the correct combinations
+	/**
+	 * Checks if two or more relations between the same decisions exists and if
+	 * so if they are in the correct combinations
+	 * 
+	 * @return
+	 */
 	public boolean checkDecRelComb() {
 		for (DecisionRelation decRel : influencingDecisions) {
 			// type of first decisions
@@ -565,7 +604,7 @@ public class CloudDSF extends CloudDSFEntity {
 						// exists
 						else {
 							System.out
-									.println("Wrong decision relation combination between "
+									.println("Fail: Wrong decision relation combination between "
 											+ decRel.getSource()
 											+ " to "
 											+ decRel.getTarget()
@@ -580,11 +619,17 @@ public class CloudDSF extends CloudDSFEntity {
 				}
 			}
 		}
+		System.out
+				.println("Success: All decision relations are only existing in the only valid combination (requiring + any other)");
 		return true;
 	}
 
-	// checks if the correct relationship types between outcomes are present
-	// according to the decision relationship type
+	/**
+	 * Checks if the correct relationship types between outcomes are present
+	 * according to the decision relationship type
+	 * 
+	 * @return
+	 */
 	public boolean checkOutRelTypeForDecRel() {
 		for (DecisionRelation decRel : influencingDecisions) {
 			if (decRel.getType().equals("requiring") == false) {
@@ -592,7 +637,6 @@ public class CloudDSF extends CloudDSFEntity {
 				Decision sourceDecision = getDecision(decRel.getSource());
 				Decision targetDecision = getDecision(decRel.getTarget());
 				// traverse starting outcomes
-
 				for (Outcome outSource : sourceDecision.getOutcomes()) {
 					// traverse target outcomes
 					for (Outcome outTarget : targetDecision.getOutcomes()) {
@@ -606,13 +650,17 @@ public class CloudDSF extends CloudDSFEntity {
 								if (decRel.getType().equals("affecting")) {
 									if (outRel.getType().equals("aff") == false) {
 										System.out
-												.println("An outcome relation does not match with its decision relation");
+												.println("Fail: An outcome relation ("
+														+ outRel.getType()
+														+ ") does not match with its affecting decision relation");
 										return false;
 									}
 								} else if (decRel.getType().equals("binding")) {
 									if (outRel.getType().equals("eb") == false) {
 										System.out
-												.println("An outcome relation does not match with its decision relation");
+												.println("Fail: An outcome relation ("
+														+ outRel.getType()
+														+ ") does not match with its binding decision relation");
 										return false;
 									}
 								} else if (decRel.getType().equals(
@@ -620,7 +668,9 @@ public class CloudDSF extends CloudDSFEntity {
 									if (outRel.getType().equals("aff")
 											|| outRel.getType().equals("eb")) {
 										System.out
-												.println("An outcome relation does not match with its decision relation");
+												.println("Fail: An outcome relation ("
+														+ outRel.getType()
+														+ ") does not match with its influecing decision relation");
 										return false;
 									}
 								}
@@ -631,12 +681,16 @@ public class CloudDSF extends CloudDSFEntity {
 			}
 		}
 		System.out
-				.println("All outcome relations are valid corresponding to their decision relation");
+				.println("Success: All outcome relations are valid corresponding to their decision relation");
 		return true;
 	}
 
-	// check if the exact amount of relations are present for a decision
-	// relation
+	/**
+	 * check if the exact amount of relations are present for a decision
+	 * relation
+	 * 
+	 * @return
+	 */
 	public boolean checkOutRelAmountForDecRel() {
 		for (DecisionRelation decRel : influencingDecisions) {
 			if (decRel.getType().equals("requiring") == false) {
@@ -662,17 +716,27 @@ public class CloudDSF extends CloudDSFEntity {
 					}
 				}
 				if (foundRelations != 0) {
-					System.out.println("There are " + foundRelations
+					System.out.println("Fails: There are " + foundRelations
 							+ " missing outcome relations");
 					return false;
 				}
 			}
 		}
+		System.out
+				.println("Success: There are the exactly necessary amount of relations between outcomes per decision relation");
 		return true;
 	}
 
-	// check if affecting rel exists into one direction that a binding exists
-	// into the other way around and vice versa for decisions
+	/**
+	 * check if affecting rel exists into one direction that a binding exists
+	 * into the other way around and vice versa for decisions
+	 * 
+	 * @param type1
+	 *            relationship type to check against (e.g. aff)
+	 * @param type2
+	 *            second relationship type (e.g. eb)
+	 * @return
+	 */
 	public boolean checkAffBinDecRelations(String type1, String type2) {
 		int aff = 0;
 		int bin = 0;
@@ -693,17 +757,25 @@ public class CloudDSF extends CloudDSFEntity {
 			}
 		}
 		if (aff != bin) {
-			System.out.println("There are not the same amount of " + type1
-					+ " to " + type2 + " decision relations");
+			System.out.println("Fail: There are not the same amount of "
+					+ type1 + " to " + type2 + " decision relations");
 			return false;
 		}
-		System.out.println("There are the same amount of " + type1 + " to "
-				+ type2 + " decisions relations");
+		System.out.println("Success: There are the same amount of " + type1
+				+ " to " + type2 + " decisions relations");
 		return true;
 	}
 
-	// check if affecting rel exists into one direction that a binding exists
-	// into the other way around and vice versa for outcomes
+	/**
+	 * check if affecting rel exists into one direction that a binding exists
+	 * into the other way around and vice versa for outcomes
+	 * 
+	 * @param type1
+	 *            relationship type to check against (e.g. aff)
+	 * @param type2
+	 *            second relationship type (e.g. eb)
+	 * @return
+	 */
 	public boolean checkAffBinOutRelations(String type1, String type2) {
 		int aff = 0;
 		int bin = 0;
@@ -724,17 +796,27 @@ public class CloudDSF extends CloudDSFEntity {
 			}
 		}
 		if (aff != bin) {
-			System.out.println("There are not the same amount of " + type1
-					+ " to " + type2 + " outcome relations");
+			System.out.println("Fail: There are not the same amount of "
+					+ type1 + " to " + type2 + " outcome relations");
 			return false;
 		}
-		System.out.println("There are the same amount of " + type1 + " to "
-				+ type2 + " outcome relations");
+		System.out.println("Success: There are the same amount of " + type1
+				+ " to " + type2 + " outcome relations");
 		return true;
 	}
 
-	// check if in or a outcome relation from a to b has an in or a relation in
-	// the reverse case as well
+	/**
+	 * check if in or a outcome relation from a to b has an in or a relation in
+	 * the reverse case as well.
+	 * 
+	 * @param type1
+	 *            first relationship type that others are compared with
+	 * @param type2
+	 *            relationship type that is allowed with type1
+	 * @param type3
+	 *            relationship type that is allowed with type1
+	 * @return
+	 */
 	public boolean checkInAOutRelations(String type1, String type2, String type3) {
 		for (OutcomeRelation outRel : influencingOutcomes) {
 			if (outRel.getType().equals(type1)) {
@@ -744,11 +826,10 @@ public class CloudDSF extends CloudDSFEntity {
 							&& outRel.getTarget() == outRelComp.getSource()) {
 						if (outRelComp.getType().equals(type2)
 								|| outRelComp.getType().equals(type3)) {
-							System.out.println("correct");
 							break;
 						} else {
 							System.out
-									.println("There is an conflict between reverse outcome relationship types");
+									.println("Fail: There is a conflict between two (vice versa) outcome relationship types");
 							return false;
 						}
 					}
@@ -756,12 +837,16 @@ public class CloudDSF extends CloudDSFEntity {
 			}
 		}
 		System.out
-				.println("All outcome relations do not have an ex to in/a relation combination in the reverse case");
+				.println("Success: All outcome relations do not have an ex to in/a relation combination in the reverse case");
 		return true;
 	}
 
-	// check if outcomes have a relation to themselves or towards outcome of the
-	// same decision
+	/**
+	 * check if outcomes have a relation to themselves or towards outcome of the
+	 * same decision
+	 * 
+	 * @return
+	 */
 	public boolean checkXOROutcomes() {
 		for (DecisionPoint decisionPoint : decisionPoints) {
 			for (Decision decision : decisionPoint.getDecisions()) {
@@ -770,12 +855,12 @@ public class CloudDSF extends CloudDSFEntity {
 						if (outcome.getId() == outRel.getSource()) {
 							if (outcome.getId() == outRel.getTarget()) {
 								System.out
-										.println("Outcome a a relation to itself");
+										.println("Error: Outcome a a relation to itself");
 								return false;
 							} else if (outcome.getParent() == getOutcome(
 									outRel.getTarget()).getParent()) {
 								System.out
-										.println("Outcome has realtions towards outcome of same decision");
+										.println("Fail: Outcome has relations towards outcome of same decision");
 								return false;
 							}
 						}
@@ -783,11 +868,15 @@ public class CloudDSF extends CloudDSFEntity {
 				}
 			}
 		}
-		System.out.println("All outcomes satisfy XOR rule");
+		System.out.println("Success: All outcomes satisfy the XOR rule");
 		return true;
 	}
 
-	// checks if an outcome has multiple relations towards another outcome
+	/**
+	 * Checks if an outcome has multiple relations towards another outcome
+	 * 
+	 * @return
+	 */
 	public boolean checkSingleOutcomeRel() {
 		for (DecisionPoint decisionPoint : decisionPoints) {
 			for (Decision decision : decisionPoint.getDecisions()) {
@@ -813,7 +902,7 @@ public class CloudDSF extends CloudDSFEntity {
 			}
 		}
 		System.out
-				.println("All outcomes have only one relation towards another outcome");
+				.println("Success: All outcomes have only one relation towards other outcomes");
 		return true;
 	}
 }

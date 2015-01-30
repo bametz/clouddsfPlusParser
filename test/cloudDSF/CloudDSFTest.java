@@ -12,7 +12,11 @@ import org.junit.Test;
 
 import parser.CloudDSFPlusParser;
 import parser.JsonWriter;
-
+/**
+ * Validates the verification Method of the CloudDSF class
+ * @author Metz
+ *
+ */
 public class CloudDSFTest {
 	private CloudDSF cdsf;
 

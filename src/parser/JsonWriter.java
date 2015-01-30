@@ -37,9 +37,8 @@ public class JsonWriter {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		// writeCloudDSFJson(workbook);
-		// writeCloudDSFPlusJson(workbook);
-		checkSanity(workbook);
+		writeCloudDSFJson(workbook);
+		writeCloudDSFPlusJson(workbook);
 		System.out.println("Finished");
 	}
 
@@ -97,44 +96,31 @@ public class JsonWriter {
 			throws JsonGenerationException, JsonMappingException, IOException {
 		CloudDSFPlusParser cloudDSFPlusParser = new CloudDSFPlusParser(workbook);
 		CloudDSF cdsf = cloudDSFPlusParser.readExcel();
-		cdsf.printCloudDSF();
-		// Jackson objectmapper and settings
-		ObjectMapper mapper = new ObjectMapper();
-		mapper.enable(SerializationFeature.INDENT_OUTPUT);
-		// Ignore missing getters to serialize all values
-		mapper.setVisibilityChecker(mapper.getSerializationConfig()
-				.getDefaultVisibilityChecker()
-				.withFieldVisibility(JsonAutoDetect.Visibility.ANY)
-				.withGetterVisibility(JsonAutoDetect.Visibility.NONE));
-		mapper.setSerializationInclusion(Include.NON_NULL);
-		// create json structure
-		JsonNode rootNode = mapper.createObjectNode();
-		((ObjectNode) rootNode).putPOJO("cdsfPlus", cdsf);
-		((ObjectNode) rootNode)
-				.putPOJO("links", cdsf.getInfluencingDecisions());
-		((ObjectNode) rootNode).putPOJO("outcomeLinks",
-				cdsf.getInfluencingOutcomes());
+		if (cdsf.checkSanity()) {
+			cdsf.printCloudDSF();
+			// Jackson objectmapper and settings
+			ObjectMapper mapper = new ObjectMapper();
+			mapper.enable(SerializationFeature.INDENT_OUTPUT);
+			// Ignore missing getters to serialize all values
+			mapper.setVisibilityChecker(mapper.getSerializationConfig()
+					.getDefaultVisibilityChecker()
+					.withFieldVisibility(JsonAutoDetect.Visibility.ANY)
+					.withGetterVisibility(JsonAutoDetect.Visibility.NONE));
+			mapper.setSerializationInclusion(Include.NON_NULL);
+			// create json structure
+			JsonNode rootNode = mapper.createObjectNode();
+			((ObjectNode) rootNode).putPOJO("cdsfPlus", cdsf);
+			((ObjectNode) rootNode).putPOJO("links",
+					cdsf.getInfluencingDecisions());
+			((ObjectNode) rootNode).putPOJO("outcomeLinks",
+					cdsf.getInfluencingOutcomes());
 
-		File f = new File("cloudDSFPlus.json");
-		mapper.writeValue(f, rootNode);
-	}
-
-	private static void checkSanity(XSSFWorkbook workbook) {
-		CloudDSFPlusParser cloudDSFPlusParser = new CloudDSFPlusParser(workbook);
-		CloudDSF cdsf = cloudDSFPlusParser.readExcel();
-		// System.out.println(cdsf.getInfluencingDecisions().size());
-		// cdsf.checkRelTypesDecisions();
-		// System.out.println(cdsf.getInfluencingOutcomes().size());
-		// cdsf.checkRelTypesOutcomes();
-		// cdsf.checkDecRelComb();
-		//cdsf.checkOutRelTypeForDecRel();
-//		cdsf.checkAffBinDecRelations("affecting", "binding");
-//		cdsf.checkAffBinDecRelations("binding", "affecting");
-//		cdsf.checkAffBinOutRelations("aff", "eb");
-//		cdsf.checkAffBinOutRelations("eb", "aff");
-//		cdsf.checkInAOutRelations("in", "a", "in");
-//		cdsf.checkInAOutRelations("a", "a", "in");
-//		cdsf.checkAffBinOutRelations("ex", "ex");
-		cdsf.checkSingleOutcomeRel();
+			File f = new File("cloudDSFPlus.json");
+			mapper.writeValue(f, rootNode);
+			System.out
+					.println("Knowledge Base has been successfully verified and exported");
+		} else {
+			System.out.println("The knowledge base is not valid");
+		}
 	}
 }

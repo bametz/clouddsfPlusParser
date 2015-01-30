@@ -13,9 +13,15 @@ import cloudDSF.CloudDSF;
 import cloudDSF.Outcome;
 import cloudDSF.OutcomeRelation;
 
+/**
+ * Check CloudDSFPlusParser
+ * 
+ * @author Metz
+ *
+ */
 public class CloudDSFPlusParserTest {
-	private  CloudDSFPlusParser cloudDSFPlusParser;
-	private  CloudDSF cdsf;
+	private CloudDSFPlusParser cloudDSFPlusParser;
+	private CloudDSF cdsf;
 
 	@Before
 	public void setUp() throws Exception {
@@ -32,6 +38,10 @@ public class CloudDSFPlusParserTest {
 		cloudDSFPlusParser = new CloudDSFPlusParser(workbook);
 	}
 
+	/**
+	 * Checks if created object from parsed file corresponds to the expected
+	 * results.
+	 */
 	@Test
 	public void testReadExcel() {
 		cdsf = cloudDSFPlusParser.readExcel();
