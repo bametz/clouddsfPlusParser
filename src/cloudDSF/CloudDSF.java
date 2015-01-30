@@ -583,7 +583,8 @@ public class CloudDSF extends CloudDSFEntity {
 		return true;
 	}
 
-	// checks if
+	// checks if the correct relationship types between outcomes are present
+	// according to the decision relationship type
 	public boolean checkOutRelTypeForDecRel() {
 		for (DecisionRelation decRel : influencingDecisions) {
 			if (decRel.getType().equals("requiring") == false) {
@@ -614,6 +615,14 @@ public class CloudDSF extends CloudDSFEntity {
 												.println("An outcome relation does not match with its decision relation");
 										return false;
 									}
+								} else if (decRel.getType().equals(
+										"influencing")) {
+									if (outRel.getType().equals("aff")
+											|| outRel.getType().equals("eb")) {
+										System.out
+												.println("An outcome relation does not match with its decision relation");
+										return false;
+									}
 								}
 							}
 						}
@@ -622,7 +631,7 @@ public class CloudDSF extends CloudDSFEntity {
 			}
 		}
 		System.out
-				.println("All outcome relations are valid corresponding to their reverse case");
+				.println("All outcome relations are valid corresponding to their decision relation");
 		return true;
 	}
 

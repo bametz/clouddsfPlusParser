@@ -13,12 +13,12 @@ import org.junit.Test;
 import parser.CloudDSFPlusParser;
 import parser.JsonWriter;
 
-public class CloudDSFTest {
+public class CloudDSFTestMockKB {
 	private CloudDSF cdsf;
 
 	@Before
 	public void setUp() throws Exception {
-		String filePath = "KnowledgeBase.xlsx";
+		String filePath = "TestKB.xlsx";
 		XSSFWorkbook workbook = null;
 		// Create Workbook instance holding reference to .xlsx file
 		InputStream in = JsonWriter.class.getClassLoader().getResourceAsStream(
@@ -86,7 +86,7 @@ public class CloudDSFTest {
 		assertTrue(cdsf.checkOutRelTypeForDecRel());
 		// set affecting relation between
 		cdsf.setDecisionRelation("Select Cloud Vendor",
-				"Select Application Component", "affecting", "");
+				"Select Application Components", "affecting", "");
 		cdsf.setOutcomeRelation("Evaluated Cloud Vendor",
 				"Application Component", "in", "", "");
 		assertFalse(cdsf.checkOutRelTypeForDecRel());
@@ -159,16 +159,16 @@ public class CloudDSFTest {
 		assertTrue(cdsf.checkInAOutRelations("in", "a", "in"));
 		assertTrue(cdsf.checkInAOutRelations("a", "in", "a"));
 		// add two new contradicting outcome relations a to ex
-		cdsf.setOutcomeRelation("Application Component", "Data Tier", "a", "",
-				"");
-		cdsf.setOutcomeRelation("Data Tier", "Application Component", "ex", "",
-				"");
+		cdsf.setOutcomeRelation("Application Component", "Public Cloud", "a",
+				"", "");
+		cdsf.setOutcomeRelation("Public Cloud", "Application Component", "ex",
+				"", "");
 		assertTrue(cdsf.checkInAOutRelations("in", "a", "in"));
 		assertFalse(cdsf.checkInAOutRelations("a", "a", "in"));
 		// add two new contradicting outcome relations in to ex
-		cdsf.setOutcomeRelation("Application Component", "Client Tier", "in",
+		cdsf.setOutcomeRelation("Application Component", "Private Cloud", "in",
 				"", "");
-		cdsf.setOutcomeRelation("Client Tier", "Application Component", "ex",
+		cdsf.setOutcomeRelation("Private Cloud", "Application Component", "ex",
 				"", "");
 		assertFalse(cdsf.checkInAOutRelations("in", "a", "in"));
 		assertFalse(cdsf.checkInAOutRelations("a", "a", "in"));
