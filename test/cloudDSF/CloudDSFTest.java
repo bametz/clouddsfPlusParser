@@ -12,8 +12,10 @@ import org.junit.Test;
 
 import parser.CloudDSFPlusParser;
 import parser.JsonWriter;
+
 /**
  * Validates the verification Method of the CloudDSF class
+ * 
  * @author Metz
  *
  */
@@ -67,16 +69,16 @@ public class CloudDSFTest {
 	}
 
 	@Test
-	public void testcheckOutRelAmountForDecRel() {
+	public void testCheckOutRelAmountForDecRel() {
 		assertTrue(cdsf.checkOutRelAmountForDecRel());
-		// add additional decision relation withouth outcome relations
+		// add additional decision relation without outcome relations
 		cdsf.setDecisionRelation("Select Application Layer",
 				"Select Cloud Deployment Model", "influencing", "");
 		assertFalse(cdsf.checkOutRelAmountForDecRel());
 	}
 
 	@Test
-	public void testcheckOutRelAmountForDecRel2() {
+	public void testCheckOutRelAmountForDecRel2() {
 		assertTrue(cdsf.checkOutRelAmountForDecRel());
 		// additional outcome relation thus one relation is too much
 		cdsf.setOutcomeRelation("Application Component", "Presentation Layer",
@@ -86,11 +88,11 @@ public class CloudDSFTest {
 
 	// check that only aff are under affecting
 	@Test
-	public void testcheckOutRelTypeForDecRelAffecting() {
+	public void testCheckOutRelTypeForDecRelAffecting() {
 		assertTrue(cdsf.checkOutRelTypeForDecRel());
 		// set affecting relation between
 		cdsf.setDecisionRelation("Select Cloud Vendor",
-				"Select Application Component", "affecting", "");
+				"Select Application Components", "affecting", "");
 		cdsf.setOutcomeRelation("Evaluated Cloud Vendor",
 				"Application Component", "in", "", "");
 		assertFalse(cdsf.checkOutRelTypeForDecRel());
@@ -99,7 +101,7 @@ public class CloudDSFTest {
 
 	// check that only eb are under binding
 	@Test
-	public void testcheckOutRelTypeForDecRelBinding() {
+	public void testCheckOutRelTypeForDecRelBinding() {
 		assertTrue(cdsf.checkOutRelTypeForDecRel());
 		cdsf.setDecisionRelation("Select Application Components",
 				"Select Cloud Vendor", "binding", "");
@@ -110,7 +112,7 @@ public class CloudDSFTest {
 
 	// check that no eb are under influencing
 	@Test
-	public void testcheckOutRelTypeForDecRelInfluencingBin() {
+	public void testCheckOutRelTypeForDecRelInfluencingBin() {
 		assertTrue(cdsf.checkOutRelTypeForDecRel());
 		cdsf.setDecisionRelation("Select Application Components",
 				"Select Cloud Vendor", "influencing", "");
@@ -121,13 +123,22 @@ public class CloudDSFTest {
 
 	// check that no aff is under influencing
 	@Test
-	public void testcheckOutRelTypeForDecRelInfluencingAff() {
+	public void testCheckOutRelTypeForDecRelInfluencingAff() {
 		assertTrue(cdsf.checkOutRelTypeForDecRel());
 		cdsf.setDecisionRelation("Select Application Components",
 				"Select Cloud Vendor", "influencing", "");
 		cdsf.setOutcomeRelation("Application Component",
 				"Evaluated Cloud Vendor", "aff", "", "");
 		assertFalse(cdsf.checkOutRelTypeForDecRel());
+	}
+
+	@Test
+	public void testCheckDecRelForOutRel() {
+		assertTrue(cdsf.checkDecRelForOutRel());
+		// add new outcome relation where no decision relation exists.
+		cdsf.setOutcomeRelation("Presentation Layer",
+				"Public Cloud", "in", "", "");
+		assertFalse(cdsf.checkDecRelForOutRel());
 	}
 
 	@Test
@@ -163,16 +174,16 @@ public class CloudDSFTest {
 		assertTrue(cdsf.checkInAOutRelations("in", "a", "in"));
 		assertTrue(cdsf.checkInAOutRelations("a", "in", "a"));
 		// add two new contradicting outcome relations a to ex
-		cdsf.setOutcomeRelation("Application Component", "Data Tier", "a", "",
-				"");
-		cdsf.setOutcomeRelation("Data Tier", "Application Component", "ex", "",
-				"");
+		cdsf.setOutcomeRelation("Application Component", "Public Cloud", "a",
+				"", "");
+		cdsf.setOutcomeRelation("Public Cloud", "Application Component", "ex",
+				"", "");
 		assertTrue(cdsf.checkInAOutRelations("in", "a", "in"));
 		assertFalse(cdsf.checkInAOutRelations("a", "a", "in"));
 		// add two new contradicting outcome relations in to ex
-		cdsf.setOutcomeRelation("Application Component", "Client Tier", "in",
+		cdsf.setOutcomeRelation("Application Component", "Private Cloud", "in",
 				"", "");
-		cdsf.setOutcomeRelation("Client Tier", "Application Component", "ex",
+		cdsf.setOutcomeRelation("Private Cloud", "Application Component", "ex",
 				"", "");
 		assertFalse(cdsf.checkInAOutRelations("in", "a", "in"));
 		assertFalse(cdsf.checkInAOutRelations("a", "a", "in"));

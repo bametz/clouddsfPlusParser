@@ -499,6 +499,7 @@ public class CloudDSF extends CloudDSFEntity {
 				&& checkAffBinDecRelations("binding", "affecting")
 				&& checkAffBinOutRelations("aff", "eb")
 				&& checkAffBinOutRelations("eb", "aff") && checkDecRelComb()
+				&& checkDecRelForOutRel()
 				&& checkInAOutRelations("in", "a", "in")
 				&& checkInAOutRelations("a", "a", "in")
 				&& checkOutRelAmountForDecRel() && checkOutRelTypeForDecRel()
@@ -625,6 +626,77 @@ public class CloudDSF extends CloudDSFEntity {
 	}
 
 	/**
+	 * Checks if the exact amount of relations are present for a decision
+	 * relation
+	 * 
+	 * @return
+	 */
+	public boolean checkOutRelAmountForDecRel() {
+		for (DecisionRelation decRel : influencingDecisions) {
+			if (decRel.getType().equals("requiring") == false) {
+				// set source and target outcome to check
+				Decision sourceDecision = getDecision(decRel.getSource());
+				Decision targetDecision = getDecision(decRel.getTarget());
+				// traverse starting outcomes
+				int foundRelations = sourceDecision.getOutcomes().size()
+						* targetDecision.getOutcomes().size();
+				for (Outcome outSource : sourceDecision.getOutcomes()) {
+					// traverse target outcomes
+					for (Outcome outTarget : targetDecision.getOutcomes()) {
+						// traverse outcomeRelations
+						for (OutcomeRelation outRel : influencingOutcomes) {
+							// if source and target are found than a
+							// corresponding
+							// relation exists
+							if (outSource.getId() == outRel.getSource()
+									&& outTarget.getId() == outRel.getTarget()) {
+								foundRelations--;
+							}
+						}
+					}
+				}
+				if (foundRelations != 0) {
+					System.out.println("Fails: There are " + foundRelations
+							+ " missing outcome relations");
+					return false;
+				}
+			}
+		}
+		System.out
+				.println("Success: There are the exactly necessary amount of relations between outcomes per decision relation");
+		return true;
+	}
+
+	public boolean checkDecRelForOutRel() {
+		// try {
+		for (OutcomeRelation outRel : influencingOutcomes) {
+
+			Decision decSource = getDecision(getOutcome(outRel.getSource())
+					.getParent());
+			Decision decTarget = getDecision(getOutcome(outRel.getTarget())
+					.getParent());
+			boolean found = false;
+			for (DecisionRelation decRel : influencingDecisions) {
+				if (decSource.getId() == decRel.getSource()
+						&& decTarget.getId() == decRel.getTarget()) {
+					found = true;
+					break;
+				}
+			}
+			if (!found) {
+				return false;
+			}
+		}
+		// } catch (Exception e) {
+		// // Decision is not existent, actually impossible because creation
+		// // prohibits it.
+		// System.out.println("Fail: Decision relation was not found");
+		// return false;
+		// }
+		return true;
+	}
+
+	/**
 	 * Checks if the correct relationship types between outcomes are present
 	 * according to the decision relationship type
 	 * 
@@ -686,49 +758,7 @@ public class CloudDSF extends CloudDSFEntity {
 	}
 
 	/**
-	 * check if the exact amount of relations are present for a decision
-	 * relation
-	 * 
-	 * @return
-	 */
-	public boolean checkOutRelAmountForDecRel() {
-		for (DecisionRelation decRel : influencingDecisions) {
-			if (decRel.getType().equals("requiring") == false) {
-				// set source and target outcome to check
-				Decision sourceDecision = getDecision(decRel.getSource());
-				Decision targetDecision = getDecision(decRel.getTarget());
-				// traverse starting outcomes
-				int foundRelations = sourceDecision.getOutcomes().size()
-						* targetDecision.getOutcomes().size();
-				for (Outcome outSource : sourceDecision.getOutcomes()) {
-					// traverse target outcomes
-					for (Outcome outTarget : targetDecision.getOutcomes()) {
-						// traverse outcomeRelations
-						for (OutcomeRelation outRel : influencingOutcomes) {
-							// if source and target are found than a
-							// corresponding
-							// relation exists
-							if (outSource.getId() == outRel.getSource()
-									&& outTarget.getId() == outRel.getTarget()) {
-								foundRelations--;
-							}
-						}
-					}
-				}
-				if (foundRelations != 0) {
-					System.out.println("Fails: There are " + foundRelations
-							+ " missing outcome relations");
-					return false;
-				}
-			}
-		}
-		System.out
-				.println("Success: There are the exactly necessary amount of relations between outcomes per decision relation");
-		return true;
-	}
-
-	/**
-	 * check if affecting rel exists into one direction that a binding exists
+	 * Checks if affecting rel exists into one direction that a binding exists
 	 * into the other way around and vice versa for decisions
 	 * 
 	 * @param type1
@@ -767,7 +797,7 @@ public class CloudDSF extends CloudDSFEntity {
 	}
 
 	/**
-	 * check if affecting rel exists into one direction that a binding exists
+	 * Checks if affecting rel exists into one direction that a binding exists
 	 * into the other way around and vice versa for outcomes
 	 * 
 	 * @param type1
@@ -806,7 +836,7 @@ public class CloudDSF extends CloudDSFEntity {
 	}
 
 	/**
-	 * check if in or a outcome relation from a to b has an in or a relation in
+	 * Checks if in or a outcome relation from a to b has an in or a relation in
 	 * the reverse case as well.
 	 * 
 	 * @param type1
@@ -842,8 +872,8 @@ public class CloudDSF extends CloudDSFEntity {
 	}
 
 	/**
-	 * check if outcomes have a relation to themselves or towards outcome of the
-	 * same decision
+	 * Checks if outcomes have a relation to themselves or towards outcome of
+	 * the same decision
 	 * 
 	 * @return
 	 */
