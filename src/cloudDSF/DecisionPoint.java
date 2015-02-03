@@ -1,91 +1,98 @@
 package cloudDSF;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import util.CloudDSFEntityComparator;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import util.CloudDSFEntityComparator;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 /**
- * Represents a decision point of the cloudDSF(Plus)
+ * Represents a decision point of the cloudDSF(Plus).
  * 
  * @author Metz
  *
  */
 public class DecisionPoint extends CloudDSFEntity {
 
-	private List<Decision> decisions = new ArrayList<Decision>();
+  private List<Decision> decisions = new ArrayList<Decision>();
 
-	/**
-	 * Decision point constructor for the cloudDSFPlus
-	 * 
-	 * @param label
-	 * @param id
-	 * @param cluster
-	 * @param classification
-	 * @param description
-	 * @param additionalInfo
-	 * @param abbrev
-	 */
-	public DecisionPoint(String label, int id, int cluster,
-			String classification, String description, String additionalInfo,
-			String abbrev) {
-		super(id, "dp", label);
-		this.setClassification(classification);
-		this.setDescription(description);
-		this.setCluster(cluster);
-		this.setGroup("dp" + cluster);
-		this.setAdditionalInfo(additionalInfo);
-		this.setAbbrev(abbrev);
-		// parent stays null
-	}
+  /**
+   * Decision point constructor for the cloudDSFPlus.
+   * 
+   * @param label
+   * @param id
+   * @param cluster
+   * @param classification
+   * @param description
+   * @param additionalInfo
+   * @param abbrev
+   */
+  public DecisionPoint(String label, int id, int cluster, String classification,
+      String description, String additionalInfo, String abbrev) {
+    super(id, "dp", label);
+    this.setClassification(classification);
+    this.setDescription(description);
+    this.setCluster(cluster);
+    this.setGroup("dp" + cluster);
+    this.setAdditionalInfo(additionalInfo);
+    this.setAbbrev(abbrev);
+    // parent stays null
+  }
 
-	/**
-	 * Decision point constructor for the cloudDSF
-	 * 
-	 * @param label
-	 * @param id
-	 * @param classification
-	 */
-	public DecisionPoint(String label, int id, String classification) {
-		super(id, "decisionPoint", label);
-		this.setClassification(classification);
-		// parent stays null
-	}
+  /**
+   * Decision point constructor for the cloudDSF.
+   * 
+   * @param label
+   * @param id
+   * @param classification
+   */
+  public DecisionPoint(String label, int id, String classification) {
+    super(id, "decisionPoint", label);
+    this.setClassification(classification);
+    // parent stays null
+  }
 
-	/**
-	 * Sorts decisions by ascending id for better readability in json
-	 */
-	public void sortDecisions() {
-		Collections.sort(decisions, new CloudDSFEntityComparator());
-	}
+  /**
+   * Sorts decisions by ascending id for better readability in json.
+   */
+  public void sortDecisions() {
+    Collections.sort(decisions, new CloudDSFEntityComparator());
+  }
 
-	public Decision getDecision(String key) {
-		for (Decision decision : decisions) {
-			if (decision.getLabel().equals(key)) {
-				return decision;
-			}
-		}
-		return null;
-	}
+  @JsonProperty("children")
+  public List<Decision> getDecisions() {
+    return decisions;
+  }
 
-	@JsonProperty("children")
-	public List<Decision> getDecisions() {
-		return decisions;
-	}
-
-	public void addDecision(Decision decision) {
-		this.decisions.add(decision);
-	}
-
-	public Decision getDecision(int decisionId) {
-		for (Decision decision : decisions) {
-			if (decision.getId() == decisionId) {
-				return decision;
-			}
-		}
-		return null;
-	}
+  public void addDecision(Decision decision) {
+    this.decisions.add(decision);
+  }
+/**
+ * Gets decision via name.
+ * @param name
+ * @return
+ */
+  public Decision getDecision(String name) {
+    for (Decision decision : decisions) {
+      if (decision.getLabel().equals(name)) {
+        return decision;
+      }
+    }
+    return null;
+  }
+  /**
+   * Gets decision via Id.
+   * @param decisionId
+   * @return
+   */
+  public Decision getDecision(int decisionId) {
+    for (Decision decision : decisions) {
+      if (decision.getId() == decisionId) {
+        return decision;
+      }
+    }
+    return null;
+  }
 }
