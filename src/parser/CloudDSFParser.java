@@ -177,10 +177,10 @@ public class CloudDSFParser {
       Iterator<Cell> cells = row.cellIterator();
       while (cells.hasNext()) {
         XSSFCell cell = (XSSFCell) cells.next();
-//        if ((cell == null) || ((cell != null) && (cell.getCellType() == Cell.CELL_TYPE_BLANK))) {
-//
-//        } else {
-          if (cell != null && cell.getCellType() != Cell.CELL_TYPE_BLANK){
+        // if ((cell == null) || ((cell != null) && (cell.getCellType() == Cell.CELL_TYPE_BLANK))) {
+        //
+        // } else {
+        if (cell != null && cell.getCellType() != Cell.CELL_TYPE_BLANK) {
           // Depending on the relation type source and target are set
           // accordingly
           String relationName = cell.getStringCellValue();
