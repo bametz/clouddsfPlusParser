@@ -647,14 +647,12 @@ public class CloudDSF extends CloudDSFEntity {
   }
 
   /**
-   * Check for every outcome relation if the decicions have reltionship as well.
+   * Check for every outcome relation if the decicions have relationship as well.
    * 
    * @return
    */
   public boolean checkDecRelForOutRel() {
-    // try {
     for (OutcomeRelation outRel : influencingOutcomes) {
-
       Decision decSource = getDecision(getOutcome(outRel.getSource()).getParent());
       Decision decTarget = getDecision(getOutcome(outRel.getTarget()).getParent());
       boolean found = false;
@@ -668,12 +666,6 @@ public class CloudDSF extends CloudDSFEntity {
         return false;
       }
     }
-    // } catch (Exception e) {
-    // // Decision is not existent, actually impossible because creation
-    // // prohibits it.
-    // System.out.println("Fail: Decision relation was not found");
-    // return false;
-    // }
     return true;
   }
 
@@ -872,19 +864,15 @@ public class CloudDSF extends CloudDSFEntity {
     for (DecisionPoint decisionPoint : decisionPoints) {
       for (Decision decision : decisionPoint.getDecisions()) {
         for (Outcome outcome : decision.getOutcomes()) {
-          ArrayList<Integer> targets = new ArrayList<Integer>();
+          Set<Integer> uniqueTargets = new HashSet<Integer>(); // set for target Ids
           for (OutcomeRelation outRel : influencingOutcomes) {
             if (outcome.getId() == outRel.getSource()) {
-              targets.add(outRel.getTarget());
-            }
-          }
-          Set<Integer> uniqueTargets = new HashSet<Integer>();
-          for (Integer target : targets) {
-            // if adding returns false value is already in set thus
-            // a target has been in the target list of the outcome.
-            if (uniqueTargets.add(target) == false) {
-              System.out.println("One outcome has several relations towards another outcome");
-              return false;
+              // if adding returns false value is already in set thus
+              // a target has been twice in the target list for the respective outcome.
+              if (uniqueTargets.add(outRel.getTarget()) == false) {
+                System.out.println("One outcome has several relations towards another outcome");
+                return false;
+              }
             }
           }
         }
