@@ -21,7 +21,7 @@ public class CloudDSFTestMockKB {
  */
   @Before
   public void setUp() throws Exception {
-    String filePath = "TestKB.xlsx";
+    String filePath = "MockKnowledgeBase.xlsx";
     XSSFWorkbook workbook = null;
     // Create Workbook instance holding reference to .xlsx file
     InputStream in = JsonWriter.class.getClassLoader().getResourceAsStream(filePath);

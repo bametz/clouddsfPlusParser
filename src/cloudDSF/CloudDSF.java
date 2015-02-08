@@ -636,7 +636,7 @@ public class CloudDSF extends CloudDSFEntity {
           }
         }
         if (foundRelations != 0) {
-          System.out.println("Fails: There are " + foundRelations + " missing outcome relations");
+          System.out.println("Fail: There are " + foundRelations + " missing outcome relations");
           return false;
         }
       }
@@ -840,7 +840,7 @@ public class CloudDSF extends CloudDSFEntity {
           for (OutcomeRelation outRel : influencingOutcomes) {
             if (outcome.getId() == outRel.getSource()) {
               if (outcome.getId() == outRel.getTarget()) {
-                System.out.println("Error: Outcome a a relation to itself");
+                System.out.println("Fail: Outcome has a relation to itself");
                 return false;
               } else if (outcome.getParent() == getOutcome(outRel.getTarget()).getParent()) {
                 System.out.println("Fail: Outcome has relations towards outcome of same decision");
@@ -870,7 +870,7 @@ public class CloudDSF extends CloudDSFEntity {
               // if adding returns false value is already in set thus
               // a target has been twice in the target list for the respective outcome.
               if (uniqueTargets.add(outRel.getTarget()) == false) {
-                System.out.println("One outcome has several relations towards another outcome");
+                System.out.println("Fail: One outcome has several relations towards another outcome");
                 return false;
               }
             }
