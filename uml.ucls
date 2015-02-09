@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true">  
   <class id="1" language="java" name="util.CloudDSFEntityComparator" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/src/util/CloudDSFEntityComparator.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="668" y="-19"/>    
+    <position height="-1" width="-1" x="99" y="360"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="true"/>      
@@ -12,8 +12,8 @@
   </class>  
   <class id="2" language="java" name="util.RelationComparator" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/src/util/RelationComparator.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="688" y="25"/>    
-    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
+    <position height="37" width="151" x="11" y="386"/>    
+    <display autosize="false" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
@@ -21,8 +21,8 @@
   </class>  
   <class id="3" language="java" name="parser.CloudDSFParser" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/src/parser/CloudDSFParser.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="698" y="-318"/>    
-    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="false" 
+    <position height="37" width="130" x="568" y="-276"/>    
+    <display autosize="false" stereotype="false" package="true" initial-value="false" signature="false" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
@@ -30,8 +30,8 @@
   </class>  
   <class id="4" language="java" name="parser.CloudDSFPlusParser" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/src/parser/CloudDSFPlusParser.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="686" y="-228"/>    
-    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="false" 
+    <position height="37" width="155" x="543" y="-172"/>    
+    <display autosize="false" stereotype="false" package="true" initial-value="false" signature="false" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
@@ -39,8 +39,8 @@
   </class>  
   <class id="5" language="java" name="parser.JsonWriter" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/src/parser/JsonWriter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="682" y="-384"/>    
-    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="false" 
+    <position height="78" width="162" x="536" y="-402"/>    
+    <display autosize="false" stereotype="false" package="true" initial-value="false" signature="false" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="false" package="false" protected="false" private="true" static="true"/>    
@@ -48,7 +48,7 @@
   </class>  
   <class id="6" language="java" name="cloudDSF.DecisionPoint" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/src/cloudDSF/DecisionPoint.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="68" y="-400"/>    
+    <position height="-1" width="-1" x="66" y="-385"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="true"/>      
@@ -57,7 +57,7 @@
   </class>  
   <class id="7" language="java" name="cloudDSF.TaskRelation" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/src/cloudDSF/TaskRelation.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="87" y="186"/>    
+    <position height="-1" width="-1" x="58" y="259"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="true"/>      
@@ -66,8 +66,8 @@
   </class>  
   <class id="8" language="java" name="cloudDSF.DecisionRelation" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/src/cloudDSF/DecisionRelation.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="678" y="186"/>    
-    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
+    <position height="37" width="132" x="577" y="234"/>    
+    <display autosize="false" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
@@ -75,7 +75,7 @@
   </class>  
   <class id="9" language="java" name="cloudDSF.Outcome" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/src/cloudDSF/Outcome.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="68" y="-186"/>    
+    <position height="-1" width="-1" x="66" y="-171"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="true"/>      
@@ -84,7 +84,7 @@
   </class>  
   <class id="10" language="java" name="cloudDSF.OutcomeRelation" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/src/cloudDSF/OutcomeRelation.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="256" y="186"/>    
+    <position height="-1" width="-1" x="227" y="259"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="true"/>      
@@ -93,7 +93,7 @@
   </class>  
   <class id="11" language="java" name="cloudDSF.CloudDSF" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/src/cloudDSF/CloudDSF.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="473" y="-139"/>    
+    <position height="-1" width="-1" x="410" y="-121"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="false" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="true" package="false" protected="false" private="true" static="true"/>      
@@ -102,7 +102,7 @@
   </class>  
   <class id="12" language="java" name="cloudDSF.Task" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/src/cloudDSF/Task.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="226" y="-8"/>    
+    <position height="-1" width="-1" x="214" y="-14"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="true"/>      
@@ -111,7 +111,7 @@
   </class>  
   <class id="13" language="java" name="cloudDSF.Decision" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/src/cloudDSF/Decision.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="67" y="-274"/>    
+    <position height="-1" width="-1" x="65" y="-259"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="true"/>      
@@ -120,7 +120,7 @@
   </class>  
   <class id="14" language="java" name="cloudDSF.CloudDSFEntity" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/src/cloudDSF/CloudDSFEntity.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="219" y="-221"/>    
+    <position height="-1" width="-1" x="217" y="-206"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="true" static="true"/>      
@@ -129,7 +129,7 @@
   </class>  
   <class id="15" language="java" name="cloudDSF.TaskTree" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/src/cloudDSF/TaskTree.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="68" y="-8"/>    
+    <position height="-1" width="-1" x="71" y="-14"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="true"/>      
@@ -138,7 +138,7 @@
   </class>  
   <class id="16" language="java" name="cloudDSF.Relation" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/src/cloudDSF/Relation.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="471" y="286"/>    
+    <position height="-1" width="-1" x="442" y="359"/>    
     <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="true" static="true"/>      
@@ -147,8 +147,8 @@
   </class>  
   <class id="17" language="java" name="cloudDSF.CloudDSFTest" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/test/cloudDSF/CloudDSFTest.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="706" y="-98"/>    
-    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
+    <position height="37" width="115" x="583" y="9"/>    
+    <display autosize="false" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
@@ -156,206 +156,218 @@
   </class>  
   <class id="18" language="java" name="parser.CloudDSFPlusParserTest" project="clouddsfPlusParser" 
     file="/clouddsfPlusParser/test/parser/CloudDSFPlusParserTest.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="674" y="-153"/>    
-    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
+    <position height="37" width="179" x="519" y="-94"/>    
+    <display autosize="false" stereotype="false" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="true"/>      
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
     </display>  
   </class>  
   <association id="19">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="20" name="influencingRelations">        
-        <position height="0" width="0" x="0" y="0"/>      
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="20" name="decisions">        
+        <position height="0" width="0" x="-2" y="15"/>      
       </attribute>      
       <multiplicity id="21" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="16" navigable="true"/>    
-    <display labels="true" multiplicity="false"/>  
-  </association>  
-  <association id="22">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="23" name="decisions">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="24" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
+        <position height="0" width="0" x="-2" y="15"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="false"/>  
   </association>  
-  <generalization id="25">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="16"/>  
-  </generalization>  
-  <association id="26">    
-    <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="27" name="cdsf"/>      
-      <multiplicity id="28" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="false" multiplicity="false"/>  
-  </association>  
-  <association id="29">    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="30" name="cdsf"/>      
-      <multiplicity id="31" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="false" multiplicity="false"/>  
-  </association>  
-  <generalization id="32">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="14"/>  
-  </generalization>  
-  <association id="33">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="34" name="tasks">        
-        <position height="18" width="34" x="138" y="-30"/>      
-      </attribute>      
-      <multiplicity id="35" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="false"/>  
-  </association>  
-  <generalization id="36">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="16"/>  
-  </generalization>  
-  <association id="37">    
+  <association id="22">    
     <bendpoint x="258" y="-390"/>    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="38" name="decisionPoints">        
-        <position height="18" width="77" x="146" y="-381"/>      
+      <attribute id="23" name="decisionPoints">        
+        <position height="18" width="77" x="144" y="-366"/>      
       </attribute>      
-      <multiplicity id="39" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="24" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-2" y="15"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="false"/>  
   </association>  
-  <association id="40">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="41" name="outcomes">        
-        <position height="0" width="0" x="0" y="0"/>      
+  <association id="25">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="26" name="influencingRelations">        
+        <position height="0" width="0" x="-29" y="73"/>      
       </attribute>      
-      <multiplicity id="42" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="27" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-29" y="73"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
+    <end type="TARGET" refId="16" navigable="true"/>    
     <display labels="true" multiplicity="false"/>  
   </association>  
-  <association id="43">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="44" name="tasks">        
-        <position height="18" width="34" x="272" y="-67"/>      
+  <generalization id="28">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="14"/>  
+  </generalization>  
+  <association id="29">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="30" name="tasks">        
+        <position height="18" width="34" x="169" y="32"/>      
       </attribute>      
-      <multiplicity id="45" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="31" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-12" y="-6"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="false"/>  
   </association>  
-  <generalization id="46">    
-    <end type="SOURCE" refId="15"/>    
+  <generalization id="32">    
+    <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="14"/>  
   </generalization>  
-  <association id="47">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="48" name="influencingTasks">        
-        <position height="18" width="88" x="69" y="96"/>      
-      </attribute>      
-      <multiplicity id="49" minimum="0" maximum="2147483647">        
-        <position height="16" width="21" x="87" y="149"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="false"/>  
-  </association>  
-  <generalization id="50">    
-    <end type="SOURCE" refId="7"/>    
+  <generalization id="33">    
+    <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="16"/>  
   </generalization>  
-  <generalization id="51">    
+  <association id="34">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="35" name="outcomes">        
+        <position height="0" width="0" x="-2" y="15"/>      
+      </attribute>      
+      <multiplicity id="36" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-2" y="15"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="false"/>  
+  </association>  
+  <generalization id="37">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="14"/>  
+  </generalization>  
+  <association id="38">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="39" name="cdsf">        
+        <position height="0" width="0" x="-63" y="18"/>      
+      </attribute>      
+      <multiplicity id="40" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-63" y="18"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <association id="41">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="42" name="tasks">        
+        <position height="18" width="34" x="260" y="-73"/>      
+      </attribute>      
+      <multiplicity id="43" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-12" y="-6"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="false"/>  
+  </association>  
+  <generalization id="44">    
     <end type="SOURCE" refId="11"/>    
     <end type="TARGET" refId="14"/>  
   </generalization>  
-  <association id="52">    
+  <association id="45">    
     <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="46" name="cdsf">        
+        <position height="0" width="0" x="-63" y="18"/>      
+      </attribute>      
+      <multiplicity id="47" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-63" y="18"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
+  </association>  
+  <association id="48">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="49" name="influencingDecisions">        
+        <position height="18" width="107" x="612" y="188"/>      
+      </attribute>      
+      <multiplicity id="50" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-78" y="66"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="false"/>  
+  </association>  
+  <generalization id="51">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="52">    
+    <end type="SOURCE" refId="18" navigable="false">      
       <attribute id="53" name="cdsf">        
-        <position height="0" width="0" x="0" y="0"/>      
+        <position height="0" width="0" x="-63" y="18"/>      
       </attribute>      
       <multiplicity id="54" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+        <position height="0" width="0" x="-63" y="18"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="false" multiplicity="false"/>  
   </association>  
   <generalization id="55">    
-    <end type="SOURCE" refId="9"/>    
+    <end type="SOURCE" refId="13"/>    
     <end type="TARGET" refId="14"/>  
   </generalization>  
   <association id="56">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="57" name="influencingDecisions">        
-        <position height="18" width="107" x="654" y="122"/>      
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="57" name="cloudDSFPlusParser">        
+        <position height="0" width="0" x="-81" y="74"/>      
       </attribute>      
-      <multiplicity id="58" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="-36" y="0"/>      
+      <multiplicity id="58" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-81" y="74"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="false"/>  
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="false" multiplicity="false"/>  
   </association>  
   <association id="59">    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="60" name="influencingOutcomes">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <attribute id="60" name="influencingTasks">        
+        <position height="18" width="88" x="40" y="169"/>      
       </attribute>      
       <multiplicity id="61" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
+        <position height="16" width="21" x="58" y="222"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="false"/>  
+  </association>  
+  <generalization id="62">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="63">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="64" name="influencingOutcomes">        
+        <position height="0" width="0" x="-29" y="73"/>      
+      </attribute>      
+      <multiplicity id="65" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-29" y="73"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="false"/>  
   </association>  
-  <association id="62">    
-    <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="63" name="cloudDSFPlusParser"/>      
-      <multiplicity id="64" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="false" multiplicity="false"/>  
-  </association>  
-  <association id="65">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="66" name="cdsf">        
-        <position height="0" width="0" x="0" y="0"/>      
+  <generalization id="66">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="14"/>  
+  </generalization>  
+  <association id="67">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="68" name="cdsf">        
+        <position height="0" width="0" x="-63" y="18"/>      
       </attribute>      
-      <multiplicity id="67" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="69" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-63" y="18"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="false" multiplicity="false"/>  
   </association>  
-  <generalization id="68">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="14"/>  
-  </generalization>  
-  <generalization id="69">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="14"/>  
-  </generalization>  
   <classifier-display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="false">    
     <attributes public="false" package="false" protected="false" private="true" static="true"/>    
