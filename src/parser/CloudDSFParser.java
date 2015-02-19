@@ -48,7 +48,7 @@ public class CloudDSFParser {
   /**
    * Default constructor setting workbook and new cloudDSF object.
    * 
-   * @param workbook
+   * @param workbook excel workbook containing knowledge base
    */
   public CloudDSFParser(XSSFWorkbook workbook) {
     // new cloudDSF object with basic info
@@ -211,13 +211,13 @@ public class CloudDSFParser {
           String targetDesc = endDecisionRow.getCell(cell.getColumnIndex()).getStringCellValue();
           switch (relationName) {
             case "Affecting":
-              cdsf.setTaskRelation(sourceDesc, targetDesc, "oneWay", relationName);
+              cdsf.setTaskRelation(sourceDesc, targetDesc, "oneWay");
               break;
             case "Both":
-              cdsf.setTaskRelation(sourceDesc, targetDesc, "twoWay", relationName);
+              cdsf.setTaskRelation(sourceDesc, targetDesc, "twoWay");
               break;
             case "Affected":
-              cdsf.setTaskRelation(sourceDesc, targetDesc, "backwards", relationName);
+              cdsf.setTaskRelation(sourceDesc, targetDesc, "backwards");
               break;
           // no default
           }

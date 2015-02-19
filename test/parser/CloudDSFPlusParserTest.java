@@ -41,7 +41,7 @@ public class CloudDSFPlusParserTest {
   /**
    * Fetches new instance of the cloudDSF object prior to each test.
    * 
-   * @throws Exception
+   * @throws Exception Reading of Excel file fails
    */
   @Before
   public void setUp() throws Exception {

@@ -38,13 +38,13 @@ public class DecisionPoint extends CloudDSFEntity {
   /**
    * Decision point constructor for the cloudDSFPlus.
    * 
-   * @param label
-   * @param id
-   * @param cluster
-   * @param classification
-   * @param description
-   * @param additionalInfo
-   * @param abbrev
+   * @param label name of decision point
+   * @param id id of decision pont
+   * @param cluster equals id of decision point
+   * @param classification classification of the decision point
+   * @param description meaning of the decision point
+   * @param additionalInfo additional information for decision point (optional)
+   * @param abbrev abbreviation of decision point
    */
   public DecisionPoint(String label, int id, int cluster, String classification,
       String description, String additionalInfo, String abbrev) {
@@ -61,9 +61,9 @@ public class DecisionPoint extends CloudDSFEntity {
   /**
    * Decision point constructor for the cloudDSF.
    * 
-   * @param label
-   * @param id
-   * @param classification
+   * @param label name of decision point
+   * @param id id of decision point
+   * @param classification classification of decision point of CloudDSF
    */
   public DecisionPoint(String label, int id, String classification) {
     super(id, "decisionPoint", label);
@@ -90,8 +90,8 @@ public class DecisionPoint extends CloudDSFEntity {
   /**
    * Gets decision via name.
    * 
-   * @param name
-   * @return
+   * @param name name of decision
+   * @return decision or null if decision does not exists
    */
   public Decision getDecision(String name) {
     for (Decision decision : decisions) {
@@ -105,8 +105,8 @@ public class DecisionPoint extends CloudDSFEntity {
   /**
    * Gets decision via Id.
    * 
-   * @param decisionId
-   * @return
+   * @param decisionId id of decision
+   * @return decision or null if decision does not exists
    */
   public Decision getDecision(int decisionId) {
     for (Decision decision : decisions) {

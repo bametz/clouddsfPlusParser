@@ -25,10 +25,10 @@ public class Task extends CloudDSFEntity {
   /**
    * Default Constructor.for task.
    * 
-   * @param id
-   * @param label
+   * @param id id of task
+   * @param name name of task
    */
-  public Task(int id, String label) {
-    super(id, "task", label);
+  public Task(int id, String name) {
+    super(id, "task", name);
   }
 }

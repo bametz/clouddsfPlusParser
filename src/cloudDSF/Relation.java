@@ -35,9 +35,9 @@ public class Relation {
   /**
    * Constructor for Relation.
    * 
-   * @param source
-   * @param target
-   * @param type
+   * @param source id of source of relation
+   * @param target id of target of relation
+   * @param type relationship type
    */
   public Relation(int source, int target, String type) {
     this.source = source;

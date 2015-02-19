@@ -25,13 +25,13 @@ public class Outcome extends CloudDSFEntity {
   /**
    * Outcome constructor for the cloudDSFPlus.
    * 
-   * @param label
-   * @param id
-   * @param cluster
-   * @param parent
-   * @param description
-   * @param additionalInfo
-   * @param abbrev
+   * @param label name of outcome
+   * @param id id of outcome
+   * @param cluster id of decision point the outcome belongs to
+   * @param parent decision the outcome belongs to
+   * @param description description of the meaning of the outcome
+   * @param additionalInfo additional information for an outcome (optional)
+   * @param abbrev abbreviation of outcome
    */
   public Outcome(String label, int id, int cluster, int parent, String description,
       String additionalInfo, String abbrev) {
@@ -47,9 +47,9 @@ public class Outcome extends CloudDSFEntity {
   /**
    * Outcome constructor for the cloudDSF.
    * 
-   * @param label
-   * @param id
-   * @param parent
+   * @param label name of outcome
+   * @param id id of outcome
+   * @param parent decision the outcome belongs to
    */
   public Outcome(String label, int id, int parent) {
     super(id, "outcome", label);

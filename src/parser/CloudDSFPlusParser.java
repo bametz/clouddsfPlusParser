@@ -55,7 +55,7 @@ public class CloudDSFPlusParser {
   /**
    * Default constructor setting workbook and new cloudDSFPlus object.
    * 
-   * @param workbook
+   * @param workbook excel file containing knowledge base
    */
   public CloudDSFPlusParser(XSSFWorkbook workbook) {
     // create new CloudDSF object with information for the CloudDSFPlus
@@ -68,7 +68,7 @@ public class CloudDSFPlusParser {
   /**
    * Retrieves the knowledge base for the CloudDSFPlus from the sheet and the relations.
    *
-   * @return
+   * @return CloudDSFPlus object
    */
   public CloudDSF readExcel() {
     // Get desired sheet from the workbook

@@ -38,14 +38,14 @@ public class Decision extends CloudDSFEntity {
   /**
    * Decision constructor for the cloudDSFPlus.
    * 
-   * @param label
-   * @param id
-   * @param cluster
-   * @param parent
-   * @param classification
-   * @param description
-   * @param additionalInfo
-   * @param abbrev
+   * @param label name of decision
+   * @param id id of decision
+   * @param cluster id of decision point
+   * @param parent id of decision point
+   * @param classification classification of decision
+   * @param description meaning of the decision
+   * @param additionalInfo additional information for decision (optional)
+   * @param abbrev abbreviation of the name of the decision
    */
   public Decision(String label, int id, int cluster, int parent, String classification,
       String description, String additionalInfo, String abbrev) {
@@ -63,10 +63,10 @@ public class Decision extends CloudDSFEntity {
   /**
    * Decision constructor for the cloudDSF.
    * 
-   * @param label
-   * @param classification
-   * @param id
-   * @param parent
+   * @param label name of decision
+   * @param id id of decision
+   * @param classification classification of decision
+   * @param parent id of decision point
    */
   public Decision(String label, String classification, int id, int parent) {
     super(id, "decision", label);
@@ -93,8 +93,8 @@ public class Decision extends CloudDSFEntity {
   /**
    * Get outcome via name.
    * 
-   * @param label
-   * @return
+   * @param label name of outcome
+   * @return outcome or null if outcome does not exist
    */
   public Outcome getOutcome(String label) {
     for (Outcome outcome : outcomes) {
@@ -108,8 +108,8 @@ public class Decision extends CloudDSFEntity {
   /**
    * Gets outcome via id.
    * 
-   * @param outcomeId
-   * @return
+   * @param outcomeId Id of outcome
+   * @return outcome or null if outcome does not exist
    */
   public Outcome getOutcome(int outcomeId) {
     for (Outcome outcome : outcomes) {

@@ -39,7 +39,7 @@ public class CloudDSFTestMockKB {
   /**
    * Fetches new instance of the cloudDSF object prior to each test.
    * 
-   * @throws Exception
+   * @throws Exception Thrown if reading of excel file fails
    */
   @Before
   public void setUp() throws Exception {

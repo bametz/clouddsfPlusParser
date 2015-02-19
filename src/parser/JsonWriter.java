@@ -43,7 +43,7 @@ public class JsonWriter {
    * Retrieves knowledge base file and starts parsing as well as serialization.
    * 
    * @param args
-   * @throws IOException
+   * @throws IOException Reading of Excel File fails
    */
   public static void main(String[] args) throws IOException {
     String filePath = "KnowledgeBase.xlsx";

@@ -63,9 +63,9 @@ public class CloudDSF extends CloudDSFEntity {
   /**
    * Default constructor
    * 
-   * @param id
-   * @param type
-   * @param label
+   * @param id id of CloudDSF
+   * @param type type of CloudDSF
+   * @param label name of CloudDSF
    */
   public CloudDSF(int id, String type, String label) {
     super(id, type, label);
@@ -79,7 +79,7 @@ public class CloudDSF extends CloudDSFEntity {
    * @param startDecision name of start decision
    * @param endDecision name of end decision
    * @param type relationship type
-   * @param explanation
+   * @param explanation additional information (optional)
    */
   public void setDecisionRelation(String startDecision, String endDecision, String type,
       String explanation) {
@@ -92,8 +92,8 @@ public class CloudDSF extends CloudDSFEntity {
    * /** Sets relation between two decisions by retrieving their id and add new entry into
    * influencingDecisions for the CloudDSF.
    * 
-   * @param startDecision
-   * @param endDecision
+   * @param startDecision name of source decision
+   * @param endDecision name of end decision
    */
   public void setLegacyDecisionRelation(String startDecision, String endDecision) {
     int source = getDecision(startDecision).getId();
@@ -105,9 +105,11 @@ public class CloudDSF extends CloudDSFEntity {
    * Sets relation between two outcomes by retrieving their id and adding new entry to
    * influencingOutcomes.
    * 
-   * @param startOutcome
-   * @param endOutcome
-   * @param type Type of outcome e.g. ex, in, a
+   * @param startOutcome name of source outcome
+   * @param endOutcome name of target outcome
+   * @param type relationship type of outcome e.g. ex, in, a
+   * @param explanation additional information (optional)
+   * @param additionalInfo additional information (optional)
    */
   public void setOutcomeRelation(String startOutcome, String endOutcome, String type,
       String explanation, String additionalInfo) {
@@ -119,12 +121,11 @@ public class CloudDSF extends CloudDSFEntity {
   /**
    * Sets task relation according to the specified type.
    * 
-   * @param sourceDesc
-   * @param targetDesc
-   * @param dir
-   * @param label
+   * @param sourceDesc name of source decision or task
+   * @param targetDesc name of target decision or task
+   * @param dir direction of relationship
    */
-  public void setTaskRelation(String sourceDesc, String targetDesc, String dir, String label) {
+  public void setTaskRelation(String sourceDesc, String targetDesc, String dir) {
     int source = 0;
     int target = 0;
     // depending on direction different relation has to be set.
@@ -558,7 +559,7 @@ public class CloudDSF extends CloudDSFEntity {
   /**
    * Checks if only valid decision relationship types are present.
    * 
-   * @return
+   * @return true if check successful otherwise false
    */
   public boolean checkRelTypesDecisions() {
     for (DecisionRelation decRel : influencingDecisions) {
@@ -584,7 +585,7 @@ public class CloudDSF extends CloudDSFEntity {
   /**
    * Checks if only valid outcome relationship types are present.
    * 
-   * @return
+   * @return true if check successful otherwise false
    */
   public boolean checkRelTypesOutcomes() {
     for (OutcomeRelation outRel : influencingOutcomes) {
@@ -613,7 +614,7 @@ public class CloudDSF extends CloudDSFEntity {
    * Checks if two or more relations between the same decisions exists and if so if they are in the
    * correct combinations.
    * 
-   * @return
+   * @return true if check successful otherwise false
    */
   public boolean checkDecRelComb() {
     for (DecisionRelation decRel : influencingDecisions) {
@@ -664,7 +665,7 @@ public class CloudDSF extends CloudDSFEntity {
   /**
    * Checks if the exact amount of relations are present for a decision relation.
    * 
-   * @return
+   * @return true if check successful otherwise false
    */
   public boolean checkOutRelAmountForDecRel() {
     for (DecisionRelation decRel : influencingDecisions) {
@@ -704,7 +705,7 @@ public class CloudDSF extends CloudDSFEntity {
   /**
    * Checks for every outcome relation if the decicions have relationship as well.
    * 
-   * @return
+   * @return true if check successful otherwise false
    */
   public boolean checkDecRelForOutRel() {
     // iterate over all outcome relations
@@ -732,7 +733,7 @@ public class CloudDSF extends CloudDSFEntity {
    * Checks if the correct relationship types between outcomes are present according to the decision
    * relationship type.
    * 
-   * @return
+   * @return true if check successful otherwise false
    */
   public boolean checkOutRelTypeForDecRel() {
     for (DecisionRelation decRel : influencingDecisions) {
@@ -786,7 +787,7 @@ public class CloudDSF extends CloudDSFEntity {
    * 
    * @param type1 relationship type to check against (e.g. aff)
    * @param type2 second relationship type (e.g. eb)
-   * @return
+   * @return true if check successful otherwise false
    */
   public boolean checkAffBinDecRelations(String type1, String type2) {
     int aff = 0;
@@ -824,7 +825,7 @@ public class CloudDSF extends CloudDSFEntity {
    * 
    * @param type1 relationship type to check against (e.g. aff)
    * @param type2 second relationship type (e.g. eb)
-   * @return
+   * @return true if check successful otherwise false
    */
   public boolean checkAffBinOutRelations(String type1, String type2) {
     int aff = 0;
@@ -863,7 +864,7 @@ public class CloudDSF extends CloudDSFEntity {
    * @param type1 first relationship type that others are compared with
    * @param type2 relationship type that is allowed with type1
    * @param type3 relationship type that is allowed with type1
-   * @return
+   * @return true if check successful otherwise false
    */
   public boolean checkInAOutRelations(String type1, String type2, String type3) {
     for (OutcomeRelation outRel : influencingOutcomes) {
@@ -891,7 +892,7 @@ public class CloudDSF extends CloudDSFEntity {
   /**
    * Checks if outcomes have a relation to themselves or towards outcomes of the same decision.
    * 
-   * @return
+   * @return true if check successful otherwise false
    */
   public boolean checkXOROutcomes() {
     // iterate all outcomes
@@ -922,7 +923,7 @@ public class CloudDSF extends CloudDSFEntity {
   /**
    * Checks if an outcome has multiple relations towards another outcome.
    * 
-   * @return
+   * @return true if check successful otherwise false
    */
   public boolean checkSingleOutcomeRel() {
     // traverse all outcomes

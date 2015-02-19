@@ -37,10 +37,12 @@ import java.io.IOException;
 public class CloudDSFTest {
   private CloudDSF cdsf;
 
+
   /**
    * Fetches new instance of the cloudDSF object prior to each test.
+   * 
+   * @throws Exception Thrown if reading of excel file fails
    */
-
   @Before
   public void setUp() throws Exception {
     String filePath = "KnowledgeBase.xlsx";

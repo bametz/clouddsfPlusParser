@@ -25,9 +25,9 @@ public class TaskRelation extends Relation {
   /**
    * Default Constructor for task relation.
    * 
-   * @param source
-   * @param target
-   * @param dir
+   * @param source id of source decision
+   * @param target id of target decision
+   * @param dir direction of relation
    */
   public TaskRelation(int source, int target, String dir) {
     super(source, target, "taskRel");

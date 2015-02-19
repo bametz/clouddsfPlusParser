@@ -24,10 +24,10 @@ public class OutcomeRelation extends Relation {
   /**
    * Constructor for an outcome relation.
    * 
-   * @param source
-   * @param target
-   * @param type
-   * @param explanation
+   * @param source id of source outcome
+   * @param target id of target outcome
+   * @param type relationship type
+   * @param explanation additional information why relation exists (optional)
    */
   public OutcomeRelation(int source, int target, String type, String explanation) {
     super(source, target, type);

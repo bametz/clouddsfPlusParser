@@ -51,9 +51,9 @@ public class CloudDSFEntity {
   /**
    * Default constructor for the CloudDSFEntity with the three basic information attributes.
    * 
-   * @param id
-   * @param type
-   * @param label
+   * @param id Unique identifier for entity
+   * @param type Type of the entity e.g. dec, out, dp...
+   * @param label Name of the entity
    */
   public CloudDSFEntity(int id, String type, String label) {
     this.id = id;

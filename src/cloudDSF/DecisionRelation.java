@@ -24,10 +24,10 @@ public class DecisionRelation extends Relation {
   /**
    * Decision relation constructor for cloudDSFPlus.
    * 
-   * @param source
-   * @param target
-   * @param type
-   * @param explanation
+   * @param source id of source decision
+   * @param target id of target decision
+   * @param type relationship type
+   * @param explanation additional information (optional)
    */
   public DecisionRelation(int source, int target, String type, String explanation) {
     super(source, target, type.toLowerCase());
@@ -38,8 +38,8 @@ public class DecisionRelation extends Relation {
   /**
    * Decision relation constructor for cloudDSF.
    * 
-   * @param source
-   * @param target
+   * @param source id of source decision
+   * @param target id of target decision
    */
   public DecisionRelation(int source, int target) {
     super(source, target, "DecRel");
