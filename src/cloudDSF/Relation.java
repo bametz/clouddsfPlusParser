@@ -8,15 +8,15 @@ package cloudDSF;
  */
 public class Relation {
   /**
-   * id of decision / outcome
+   * id of decision / outcome.
    */
   private int source;
   /**
-   * id of decision / outcome
+   * id of decision / outcome.
    */
   private int target;
   /**
-   * Direction of relation
+   * Direction of relation.
    */
   private String dir;
   /**
@@ -24,11 +24,11 @@ public class Relation {
    */
   private String relationGroup;
   /**
-   * Relationship type
+   * Relationship type.
    */
   private String type;
   /**
-   * Additional info if necessary
+   * Additional info if necessary.
    */
   private String explanation;
 

@@ -56,12 +56,12 @@ public class CloudDSF extends CloudDSFEntity {
   private List<Task> tasks = new ArrayList<Task>();
   /**
    * Contains all influecing tasks and influencing decisions to enable link array for the
-   * cloudDSFVisualizations, null for cloudDSFPlus
+   * cloudDSFVisualizations, null for cloudDSFPlus.
    */
   private List<Relation> influencingRelations = new ArrayList<Relation>();
 
   /**
-   * Default constructor
+   * Default constructor.
    * 
    * @param id id of CloudDSF
    * @param type type of CloudDSF
@@ -169,7 +169,7 @@ public class CloudDSF extends CloudDSFEntity {
   }
 
   /**
-   * Retrieves decision by name
+   * Retrieves decision by name.
    * 
    * @param decisionName name of desired decision
    * @return decision or null if decision does not exist
@@ -185,7 +185,7 @@ public class CloudDSF extends CloudDSFEntity {
   }
 
   /**
-   * Retrieves decision by id
+   * Retrieves decision by id.
    * 
    * @param decisionName name of deisred decision
    * @return decision or null if decision does not exist
@@ -201,7 +201,7 @@ public class CloudDSF extends CloudDSFEntity {
   }
 
   /**
-   * Retrieves Outcome by name
+   * Retrieves Outcome by name.
    * 
    * @param outcomeName name of desired outcome
    * @return outcome or null if outcome does not exist
@@ -219,7 +219,7 @@ public class CloudDSF extends CloudDSFEntity {
   }
 
   /**
-   * Retrieves Outcome by id
+   * Retrieves Outcome by id.
    * 
    * @param outcomeName name of desired outcome
    * @return outcome or null if outcome does not exist
@@ -237,7 +237,7 @@ public class CloudDSF extends CloudDSFEntity {
   }
 
   /**
-   * Retrieves task by name
+   * Retrieves task by name.
    * 
    * @param taskName name of desired task
    * @return task or null if task does not exist
