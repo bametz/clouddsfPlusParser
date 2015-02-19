@@ -80,7 +80,6 @@ public class CloudDSF extends CloudDSFEntity {
    * @param endDecision name of end decision
    * @param type relationship type
    * @param explanation
-   * @param additionalInfo
    */
   public void setDecisionRelation(String startDecision, String endDecision, String type,
       String explanation) {

@@ -28,7 +28,6 @@ public class DecisionRelation extends Relation {
    * @param target
    * @param type
    * @param explanation
-   * @param additionalInfo
    */
   public DecisionRelation(int source, int target, String type, String explanation) {
     super(source, target, type.toLowerCase());
