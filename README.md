@@ -1,2 +1,2 @@
 # CloudDSF+ Parser
-Parser for the CloudDSF+ Prototype. The parser reads the knowledge base file, creates a representation for the old CloudDSF and the new CloudDSF+ and serializes both into separate JSON files.
+Parser for the [CloudDSF+](https://github.com/bametz/clouddsfPlus). The parser reads the knowledge base file and creates two JSON files as output. The files are used as input for the [CloudDSF+](https://github.com/bametz/clouddsfPlus) visualizations that entail some visualizations of the [CloudDSF](https://github.com/adarsow/clouddsf).
