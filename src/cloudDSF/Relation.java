@@ -7,18 +7,38 @@ package cloudDSF;
  *
  */
 public class Relation {
+  /**
+   * id of decision / outcome
+   */
   private int source;
+  /**
+   * id of decision / outcome
+   */
   private int target;
+  /**
+   * Direction of relation
+   */
   private String dir;
+  /**
+   * type of relation group (decRel, outRel...)
+   */
   private String relationGroup;
+  /**
+   * Relationship type
+   */
   private String type;
+  /**
+   * Additional info if necessary
+   */
   private String explanation;
-/**
- * Constructor for Relation.
- * @param source
- * @param target
- * @param type
- */
+
+  /**
+   * Constructor for Relation.
+   * 
+   * @param source
+   * @param target
+   * @param type
+   */
   public Relation(int source, int target, String type) {
     this.source = source;
     this.target = target;

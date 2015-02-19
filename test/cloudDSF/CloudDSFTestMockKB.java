@@ -1,3 +1,17 @@
+/*
+ * Copyright 2015 Balduin Metz
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License. You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under the License
+ * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+ * or implied. See the License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
 package cloudDSF;
 
 import static org.junit.Assert.assertFalse;
@@ -13,12 +27,20 @@ import parser.JsonWriter;
 import java.io.InputStream;
 import java.io.IOException;
 
+/**
+ * Validates the verification methods of the cloudDSF class with a mock-up knowledge base.
+ * 
+ * @author Metz
+ *
+ */
 public class CloudDSFTestMockKB {
   private CloudDSF cdsf;
-/**
- * * Fetches new instance of the cloudDSF object prior to each test.
- * @throws Exception
- */
+
+  /**
+   * Fetches new instance of the cloudDSF object prior to each test.
+   * 
+   * @throws Exception
+   */
   @Before
   public void setUp() throws Exception {
     String filePath = "MockKnowledgeBase.xlsx";
