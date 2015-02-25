@@ -28,9 +28,8 @@ import java.io.InputStream;
 import java.io.IOException;
 
 /**
- * Testing and development purposes to check the knowledge base.
+ * Testing and development purposes to check the knowledge base. Is not necessary anymore.
  * 
- * @deprecated
  * @author Metz
  *
  */

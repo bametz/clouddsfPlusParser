@@ -45,7 +45,7 @@ public class CloudDSFPlusParserTest {
    */
   @Before
   public void setUp() throws Exception {
-    String filePath = "MockKnowledgeBase.xlsx";
+    String filePath = "MockupKnowledgeBase.xlsx";
     XSSFWorkbook workbook = null;
     // Create Workbook instance holding reference to .xlsx file
     InputStream in = JsonWriter.class.getClassLoader().getResourceAsStream(filePath);
