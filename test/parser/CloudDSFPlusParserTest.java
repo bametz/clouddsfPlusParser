@@ -15,8 +15,9 @@
 package parser;
 
 import static org.junit.Assert.assertTrue;
-
 import cloudDSF.CloudDSF;
+import cloudDSF.DecisionPoint;
+import cloudDSF.DecisionRelation;
 import cloudDSF.Outcome;
 import cloudDSF.OutcomeRelation;
 
@@ -71,6 +72,33 @@ public class CloudDSFPlusParserTest {
     assertTrue(cdsf.getDecisionPoint("Select Service Provider / Offering").getDecisions().size() == 3);
     assertTrue(cdsf.getInfluencingOutcomes().size() == 246);
 
+    int req = 0;
+    int inf = 0;
+    int affecting = 0;
+    int binding = 0;
+
+    for (DecisionRelation dr : cdsf.getInfluencingDecisions()) {
+      switch (dr.getType()) {
+        case "requiring":
+          req++;
+          break;
+        case "influencing":
+          inf++;
+          break;
+        case "affecting":
+          affecting++;
+          break;
+        case "binding":
+          binding++;
+          break;
+      }
+    }
+
+    assertTrue(req == 3);
+    assertTrue(inf == 4);
+    assertTrue(affecting == 2);
+    assertTrue(binding == 2);
+
     int ex = 0;
     int aff = 0;
     int in = 0;
@@ -115,8 +143,15 @@ public class CloudDSFPlusParserTest {
     assertTrue(cdsf.getDecisionPoint("Define Application Distribution").getDecision(102)
         .getOutcome(10209) == null);
 
+    DecisionPoint dp = cdsf.getDecisionPoint("Select Service Provider / Offering");
+    assertTrue(dp.getId() == 2);
+    assertTrue(dp.getParent() == 0);
+
     Outcome sourceOut =
         cdsf.getDecisionPoint("Define Application Distribution").getDecision(102).getOutcome(10207);
+    assertTrue(sourceOut.getLabel().equals("Middleware Component + Application Components"));
+    assertTrue(sourceOut.getParent() == 102);
+    assertTrue(sourceOut.getType() == "out");
     for (OutcomeRelation outRel : cdsf.getInfluencingOutcomes()) {
       if (outRel.getSource() == sourceOut.getId()) {
         if (outRel.getTarget() == 10103) {
