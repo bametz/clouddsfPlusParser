@@ -72,11 +72,11 @@ public class CloudDSFPlusParserTest {
     assertTrue(cdsf.getDecisionPoint("Select Service Provider / Offering").getDecisions().size() == 3);
     assertTrue(cdsf.getInfluencingOutcomes().size() == 246);
 
+    // Check amount of decision relations
     int req = 0;
     int inf = 0;
     int affecting = 0;
     int binding = 0;
-
     for (DecisionRelation dr : cdsf.getInfluencingDecisions()) {
       switch (dr.getType()) {
         case "requiring":
@@ -93,12 +93,12 @@ public class CloudDSFPlusParserTest {
           break;
       }
     }
-
     assertTrue(req == 3);
     assertTrue(inf == 4);
     assertTrue(affecting == 2);
     assertTrue(binding == 2);
 
+    // Check amount of outcome relations
     int ex = 0;
     int aff = 0;
     int in = 0;
@@ -134,6 +134,7 @@ public class CloudDSFPlusParserTest {
     assertTrue(all == 118);
     assertTrue(error == 0);
 
+    // Check knowledge base entities
     assertTrue(cdsf.getDecisionPoint("Define Application Distribution").getDecision(101) != null);
     assertTrue(cdsf.getDecisionPoint("Define Application Distribution").getDecision(102) != null);
     assertTrue(cdsf.getDecisionPoint("Define Application Distribution").getDecision(101)
@@ -152,12 +153,37 @@ public class CloudDSFPlusParserTest {
     assertTrue(sourceOut.getLabel().equals("Middleware Component + Application Components"));
     assertTrue(sourceOut.getParent() == 102);
     assertTrue(sourceOut.getType() == "out");
+    // Check correct parsing of outcome relations
     for (OutcomeRelation outRel : cdsf.getInfluencingOutcomes()) {
       if (outRel.getSource() == sourceOut.getId()) {
         if (outRel.getTarget() == 10103) {
           assertTrue(outRel.getType().equals("ex"));
         } else if (outRel.getTarget() < 10108) {
           assertTrue(outRel.getType().equals("a"));
+        }
+      }
+    }
+
+    // Check types of outcome relations
+    for (OutcomeRelation outRel : cdsf.getInfluencingOutcomes()) {
+      if (outRel.getSource() == 20204) {
+        if (outRel.getTarget() == 10202) {
+          assertTrue(outRel.getType().equals("in"));
+        }
+        if (outRel.getTarget() == 10203) {
+          assertTrue(outRel.getType().equals("ex"));
+        }
+        if (outRel.getTarget() == 20301) {
+          assertTrue(outRel.getType().equals("aff"));
+        }
+      }
+
+      if (outRel.getSource() == 20301) {
+        if (outRel.getTarget() >= 20101 && outRel.getTarget() <= 20104) {
+          assertTrue(outRel.getType().equals("eb"));
+        }
+        if (outRel.getTarget() >= 20201 && outRel.getTarget() <= 20207) {
+          assertTrue(outRel.getType().equals("eb"));
         }
       }
     }
