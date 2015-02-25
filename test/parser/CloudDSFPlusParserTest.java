@@ -15,6 +15,7 @@
 package parser;
 
 import static org.junit.Assert.assertTrue;
+
 import cloudDSF.CloudDSF;
 import cloudDSF.DecisionPoint;
 import cloudDSF.DecisionRelation;
@@ -91,6 +92,7 @@ public class CloudDSFPlusParserTest {
         case "binding":
           binding++;
           break;
+      // no default
       }
     }
     assertTrue(req == 3);
@@ -172,6 +174,9 @@ public class CloudDSFPlusParserTest {
         }
         if (outRel.getTarget() == 10203) {
           assertTrue(outRel.getType().equals("ex"));
+        }
+        if (outRel.getTarget() == 10204) {
+          assertTrue(outRel.getType().equals("a"));
         }
         if (outRel.getTarget() == 20301) {
           assertTrue(outRel.getType().equals("aff"));
