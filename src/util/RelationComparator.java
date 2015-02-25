@@ -19,7 +19,7 @@ import cloudDSF.Relation;
 import java.util.Comparator;
 
 /**
- * Comparator to compare Relations by their source.
+ * Comparator to compare Relations by their ascending source id.
  * 
  * @author Metz
  *

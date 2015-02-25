@@ -19,7 +19,7 @@ import cloudDSF.CloudDSFEntity;
 import java.util.Comparator;
 
 /**
- * Comparator to sort CloudDSFEntities by id.
+ * Comparator to sort CloudDSFEntities by ascending Id.
  * 
  * @author Metz
  *
